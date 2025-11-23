@@ -7,7 +7,7 @@ export function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
                         <h4 className="font-serif font-bold text-lg text-primary mb-2">Daniel Kleiboldt</h4>
-                        <p className="text-sm text-gray-500">Legal Engineering für Arztpraxen.</p>
+                        <p className="text-sm text-gray-500">Legal Engineering für die Gesundheitsbranche</p>
                     </div>
 
                     <div className="flex gap-6 text-sm text-gray-600">
