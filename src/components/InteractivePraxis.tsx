@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/Button";
 const hotspots = [
     {
         id: "reception",
-        label: "AI-Empfang",
+        label: "KI-Empfang",
         icon: Phone,
         position: { top: "55%", left: "25%" }, // Reception Desk
         modal: {
@@ -22,7 +22,7 @@ const hotspots = [
     },
     {
         id: "waiting",
-        label: "Digitale Anmeldung",
+        label: "Self-Check-In",
         icon: Smartphone,
         position: { top: "70%", left: "45%" }, // Waiting Area
         modal: {
@@ -35,7 +35,7 @@ const hotspots = [
     },
     {
         id: "office",
-        label: "DSGVO-Compliance",
+        label: "Datenschutz",
         icon: Shield,
         position: { top: "30%", left: "15%" }, // Back Office
         modal: {
@@ -48,7 +48,7 @@ const hotspots = [
     },
     {
         id: "treatment",
-        label: "Ambient AI-Dokumentation",
+        label: "Auto-Doku",
         icon: Mic,
         position: { top: "40%", left: "60%" }, // Treatment Room
         modal: {
@@ -61,7 +61,7 @@ const hotspots = [
     },
     {
         id: "lab",
-        label: "Supply Chain",
+        label: "Smart Lager",
         icon: Package,
         position: { top: "25%", left: "80%" }, // Lab
         modal: {
@@ -84,10 +84,10 @@ export function InteractivePraxis() {
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-primary mb-6">
-                        Mein Ansatz: Legal Engineering
+                        Legal Engineering in der Praxis
                     </h2>
                     <p className="text-lg text-gray-500 max-w-2xl mx-auto font-light">
-                        Eine moderne Praxis ist ein komplexes System. Klicken Sie auf die Bereiche, um zu sehen, wie wir Technik und Recht verbinden.
+                        Ihre Praxis ist ein komplexes Ökosystem. Entdecken Sie, wie wir jeden Bereich optimieren – rechtssicher und effizient.
                     </p>
                 </div>
 

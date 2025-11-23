@@ -39,6 +39,12 @@ export function Navbar() {
                         Kontakt
                     </Link>
                 </div>
+                {/* Right: CTA Button */}
+                <div className="shrink-0">
+                    <Button className="bg-primary text-white hover:bg-primary/90 rounded-full px-6 text-sm font-medium shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:-translate-y-0.5">
+                        15 Min. Gratis-Check
+                    </Button>
+                </div>
             </nav>
         </div>
     );

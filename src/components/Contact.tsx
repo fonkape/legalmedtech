@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
-import { Calendar, Check, Send } from "lucide-react";
+import { Calendar, Check, Send, ShieldCheck } from "lucide-react";
 
 export function Contact() {
     return (
@@ -8,10 +8,11 @@ export function Contact() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
-                        Bereit für den nächsten Schritt?
+                        Starten Sie Ihre Transformation
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Buchen Sie jetzt Ihre kostenlose Erstberatung – oder lassen Sie uns unverbindlich über Ihre Praxis sprechen.
+                        Kein Verkaufsgespräch. Eine ehrliche Analyse Ihrer Möglichkeiten.
+                        Finden Sie heraus, wie viel Zeit Sie wirklich sparen können.
                     </p>
                 </div>
 
@@ -57,11 +58,14 @@ export function Contact() {
                                     </label>
                                 </div>
 
-                                <Button className="w-full group">
+                                <Button className="w-full group bg-black text-white hover:bg-gray-800">
                                     Anfrage senden
                                     <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </Button>
-                                <p className="text-xs text-center text-gray-500">Antwort innerhalb von 24h</p>
+                                <div className="flex items-center justify-center gap-2 text-xs text-gray-400 mt-4">
+                                    <ShieldCheck className="w-3 h-3" />
+                                    <span>100% Diskretion & Datenschutz nach DSGVO</span>
+                                </div>
                             </form>
                         </CardContent>
                     </Card>
@@ -97,7 +101,7 @@ export function Contact() {
                                 </div>
                             </div>
 
-                            <Button variant="secondary" size="lg" className="w-full relative z-10 bg-white text-primary hover:bg-gray-100">
+                            <Button variant="secondary" size="lg" className="w-full relative z-10 bg-white text-primary hover:bg-gray-100 font-bold">
                                 <Calendar className="mr-2 h-5 w-5" />
                                 Termin wählen
                             </Button>
