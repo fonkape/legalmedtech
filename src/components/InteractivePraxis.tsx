@@ -5,13 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Smartphone, Mic, Pill, Package, Shield, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
-// Hotspot Data - Updated positions for Technical Drawing View
+// Hotspot Data - Updated positions for new Isometric Image V6
 const hotspots = [
     {
         id: "reception",
         label: "KI-Empfang",
         icon: Phone,
-        position: { top: "55%", left: "25%" }, // Reception Desk
+        position: { top: "50%", left: "25%" }, // Reception Desk (Left)
         modal: {
             title: "Nie wieder Warteschleife",
             problem: "Ihre MFA verbringt 4-6 Stunden täglich am Telefon. Patienten hängen 15 Minuten in der Warteschleife.",
@@ -24,7 +24,7 @@ const hotspots = [
         id: "waiting",
         label: "Self-Check-In",
         icon: Smartphone,
-        position: { top: "70%", left: "45%" }, // Waiting Area
+        position: { top: "70%", left: "50%" }, // Waiting Area (Center Bottom)
         modal: {
             title: "Selbst-Check-In am Tablet",
             problem: "Patienten stehen Schlange am Empfang. Versichertenkarte einstecken dauert. Stammdaten-Änderungen manuell.",
@@ -37,7 +37,7 @@ const hotspots = [
         id: "office",
         label: "Datenschutz",
         icon: Shield,
-        position: { top: "30%", left: "15%" }, // Back Office
+        position: { top: "55%", left: "80%" }, // Office (Right)
         modal: {
             title: "Rechtssicherheit by Design",
             problem: "Sie wollen ChatGPT nutzen, aber Datenschutzbeauftragte warnt vor US Cloud Act.",
@@ -50,7 +50,7 @@ const hotspots = [
         id: "treatment",
         label: "Auto-Doku",
         icon: Mic,
-        position: { top: "40%", left: "60%" }, // Treatment Room
+        position: { top: "25%", left: "45%" }, // Treatment Room (Top Center)
         modal: {
             title: "Sprechen statt Tippen",
             problem: "Sie schreiben bis Mitternacht Arztbriefe. 30 Minuten pro Brief. 3 Stunden täglich reine Dokumentation.",
@@ -63,7 +63,7 @@ const hotspots = [
         id: "lab",
         label: "Smart Lager",
         icon: Package,
-        position: { top: "25%", left: "80%" }, // Lab
+        position: { top: "30%", left: "65%" }, // Storage Room (Top Right)
         modal: {
             title: "Nie wieder leere Regale",
             problem: "Impfstoffe nicht vorrätig = Termin verloren. MFA verbringt 3h/Woche mit Bestellungen.",
@@ -91,88 +91,16 @@ export function InteractivePraxis() {
                     </p>
                 </div>
 
-                {/* Map Container - RELATIVE positioning is crucial here */}
-                <div className="relative w-full max-w-5xl mx-auto aspect-[16/9] bg-white rounded-sm shadow-2xl overflow-hidden border-8 border-white ring-1 ring-gray-200">
+                {/* Map Container - Seamless integration */}
+                <div className="relative w-full max-w-5xl mx-auto aspect-[16/9]">
 
-                    {/* Technical Drawing SVG */}
+                    {/* Image Background */}
                     <div className="absolute inset-0">
-                        <svg viewBox="0 0 1000 600" className="w-full h-full">
-                            <defs>
-                                {/* Millimeter Paper Pattern */}
-                                <pattern id="millimeter" width="20" height="20" patternUnits="userSpaceOnUse">
-                                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#E5E7EB" strokeWidth="0.5" />
-                                    <path d="M 10 0 L 10 20 M 0 10 L 20 10" fill="none" stroke="#F3F4F6" strokeWidth="0.5" />
-                                </pattern>
-                            </defs>
-
-                            {/* Background */}
-                            <rect width="100%" height="100%" fill="#FFFFFF" />
-                            <rect width="100%" height="100%" fill="url(#millimeter)" />
-
-                            {/* ARCHITECTURAL DRAWING */}
-                            <g stroke="#374151" strokeWidth="2" fill="none" strokeLinecap="square">
-
-                                {/* Outer Walls */}
-                                <path d="M 100 100 L 900 100 L 900 500 L 100 500 Z" strokeWidth="4" />
-
-                                {/* Internal Walls */}
-                                {/* Reception Area (Bottom Left) */}
-                                <path d="M 100 300 L 350 300" />
-                                <path d="M 350 300 L 350 500" />
-
-                                {/* Waiting Area (Bottom Center) */}
-                                <path d="M 350 300 L 600 300" />
-                                <path d="M 600 300 L 600 500" />
-
-                                {/* Corridor (Center Horizontal) */}
-                                <path d="M 100 200 L 900 200" strokeDasharray="5,5" strokeWidth="1" opacity="0.5" />
-
-                                {/* Treatment Rooms (Top Center) */}
-                                <path d="M 400 100 L 400 300" />
-                                <path d="M 650 100 L 650 300" />
-
-                                {/* Lab/Office (Top Right) */}
-                                <path d="M 750 100 L 750 250 L 900 250" />
-
-                                {/* DOORS (White gaps + Arcs) */}
-                                {/* Reception Door */}
-                                <path d="M 350 400 L 350 450" stroke="white" strokeWidth="6" />
-                                <path d="M 350 400 A 50 50 0 0 1 400 450" strokeWidth="1" strokeDasharray="2,2" />
-
-                                {/* Treatment Door */}
-                                <path d="M 500 300 L 550 300" stroke="white" strokeWidth="6" />
-                                <path d="M 500 300 A 50 50 0 0 0 550 250" strokeWidth="1" strokeDasharray="2,2" />
-                            </g>
-
-                            {/* FURNITURE (Simplified Technical Style) */}
-                            <g stroke="#9CA3AF" strokeWidth="1" fill="none">
-                                {/* Reception Desk (L-Shape) */}
-                                <path d="M 200 350 L 300 350 L 300 450" />
-                                <rect x="220" y="370" width="20" height="20" fill="#E5E7EB" stroke="none" /> {/* Chair */}
-
-                                {/* Waiting Area Chairs */}
-                                <circle cx="400" cy="400" r="10" />
-                                <circle cx="450" cy="400" r="10" />
-                                <circle cx="500" cy="400" r="10" />
-                                <rect x="380" y="450" width="140" height="30" rx="5" /> {/* Bench */}
-
-                                {/* Treatment Table */}
-                                <rect x="450" y="150" width="100" height="40" rx="2" />
-                                <circle cx="430" cy="170" r="8" /> {/* Stool */}
-
-                                {/* Lab Bench */}
-                                <rect x="800" y="120" width="80" height="100" />
-                            </g>
-
-                            {/* LABELS */}
-                            <g fill="#9CA3AF" fontFamily="monospace" fontSize="12" fontWeight="bold" stroke="none">
-                                <text x="120" y="480">EMPFANG</text>
-                                <text x="420" y="480">WARTEZIMMER</text>
-                                <text x="480" y="130">BEHANDLUNG</text>
-                                <text x="820" y="140">LABOR</text>
-                                <text x="120" y="130">BÜRO</text>
-                            </g>
-                        </svg>
+                        <img
+                            src="/praxis-isometric-v6.png"
+                            alt="Interaktive Praxis Übersicht"
+                            className="w-full h-full object-contain"
+                        />
                     </div>
 
                     {/* Hotspots Layer - ABSOLUTE within RELATIVE container */}
@@ -187,11 +115,11 @@ export function InteractivePraxis() {
                             >
                                 <div className="relative">
                                     <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-20" />
-                                    <div className="relative bg-white p-2 rounded-full shadow-md border border-gray-200 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                                        <hotspot.icon className="h-5 w-5" />
+                                    <div className="relative bg-white p-4 rounded-full shadow-xl border border-gray-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                        <hotspot.icon className="h-7 w-7" />
                                     </div>
                                     {/* Label Tooltip */}
-                                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-black text-white text-[10px] font-bold px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-black text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                                         {hotspot.label}
                                     </div>
                                 </div>

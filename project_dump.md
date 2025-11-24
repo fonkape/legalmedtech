@@ -1,72 +1,43 @@
-# File: package.json
-```typescript
-{
-  "name": "temp-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "clsx": "^2.1.1",
-    "framer-motion": "^12.23.24",
-    "lucide-react": "^0.554.0",
-    "next": "16.0.3",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "tailwind-merge": "^3.4.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.3",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
-}
-```
+# Project Dump
+Generated on: 2025-11-24
 
-# File: src/app/page.tsx
-```typescript
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { InteractivePraxis } from "@/components/InteractivePraxis";
-import { ProblemStatement } from "@/components/ProblemStatement";
-import { SolutionOverview } from "@/components/SolutionOverview";
-import { UseCases } from "@/components/UseCases";
-import { LegalAssurance } from "@/components/LegalAssurance";
-import { TrustAbout } from "@/components/TrustAbout";
-import { FAQ } from "@/components/FAQ";
-import { Contact } from "@/components/Contact";
-import { Footer } from "@/components/Footer";
+This file contains the source code of the project.
 
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-background font-sans text-text-primary">
-      <Navbar />
-      <Hero />
-      <ProblemStatement />
-      <InteractivePraxis />
-      <SolutionOverview />
-      <UseCases />
-      <LegalAssurance />
-      <TrustAbout />
-      <FAQ />
-      <Contact />
-      <Footer />
-    </main>
-  );
+
+
+# File: src/app/globals.css
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #B85450;
+  --color-primary-hover: #A0685A;
+  --color-background: #FAF8F5;
+  --color-sand: #E8DDD3;
+  --color-text-primary: #2C2C2C;
+  --color-accent-green: #7A9B76;
+  --color-accent-blue: #5B7C99;
+  
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --radius-3xl: 1.5rem;
 }
-```
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #2C2C2C;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
 
 # File: src/app/layout.tsx
-```typescript
+
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -106,44 +77,70 @@ export default function RootLayout({
     </html>
   );
 }
-```
 
-# File: src/app/globals.css
-```typescript
-@import "tailwindcss";
 
-@theme {
-  --color-primary: #B85450;
-  --color-primary-hover: #A0685A;
-  --color-background: #FAF8F5;
-  --color-sand: #E8DDD3;
-  --color-text-primary: #2C2C2C;
-  --color-accent-green: #7A9B76;
-  --color-accent-blue: #5B7C99;
-  
-  --font-serif: var(--font-serif);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
+# File: src/app/page.tsx
 
-  --radius-3xl: 1.5rem;
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { TrustSnapshot } from "@/components/TrustSnapshot";
+import { ProblemStatement } from "@/components/ProblemStatement";
+import { TheMoment } from "@/components/TheMoment";
+import { InteractivePraxis } from "@/components/InteractivePraxis";
+import { SocialProofTeaser } from "@/components/SocialProofTeaser";
+import { SolutionOverview } from "@/components/SolutionOverview";
+import { UseCases } from "@/components/UseCases";
+import { UrgencySection } from "@/components/UrgencySection";
+import { LegalAssurance } from "@/components/LegalAssurance";
+import { TrustAbout } from "@/components/TrustAbout";
+import { FAQ } from "@/components/FAQ";
+import { FinalCTA } from "@/components/FinalCTA";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
+import { StickyCTA } from "@/components/StickyCTA";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-background text-text-primary font-sans selection:bg-primary/20">
+      <StickyCTA />
+      <Navbar />
+      <Hero />
+      <TrustSnapshot />
+      <ProblemStatement />
+      <TheMoment />
+      <div id="interactive-praxis">
+        <InteractivePraxis />
+      </div>
+      <SocialProofTeaser />
+      <div id="solutions">
+        <SolutionOverview />
+      </div>
+      <div id="use-cases">
+        <UseCases />
+      </div>
+      <UrgencySection />
+      <LegalAssurance />
+      <div id="about">
+        <TrustAbout />
+      </div>
+      <div id="insights">
+        <FAQ />
+      </div>
+      <FinalCTA />
+      <div id="contact">
+        <Contact />
+      </div>
+      <Footer />
+    </main>
+  );
 }
 
-:root {
-  --background: #FAF8F5;
-  --foreground: #2C2C2C;
-}
-
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-}
-```
 
 # File: src/components/Contact.tsx
-```typescript
+
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
-import { Calendar, Check, Send } from "lucide-react";
+import { Calendar, Check, Send, ShieldCheck } from "lucide-react";
 
 export function Contact() {
     return (
@@ -151,10 +148,11 @@ export function Contact() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
-                        Bereit für den nächsten Schritt?
+                        Starten Sie Ihre Transformation
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Buchen Sie jetzt Ihre kostenlose Erstberatung – oder lassen Sie uns unverbindlich über Ihre Praxis sprechen.
+                        Kein Verkaufsgespräch. Eine ehrliche Analyse Ihrer Möglichkeiten.
+                        Finden Sie heraus, wie viel Zeit Sie wirklich sparen können.
                     </p>
                 </div>
 
@@ -200,11 +198,14 @@ export function Contact() {
                                     </label>
                                 </div>
 
-                                <Button className="w-full group">
+                                <Button className="w-full group bg-black text-white hover:bg-gray-800">
                                     Anfrage senden
                                     <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </Button>
-                                <p className="text-xs text-center text-gray-500">Antwort innerhalb von 24h</p>
+                                <div className="flex items-center justify-center gap-2 text-xs text-gray-400 mt-4">
+                                    <ShieldCheck className="w-3 h-3" />
+                                    <span>100% Diskretion & Datenschutz nach DSGVO</span>
+                                </div>
                             </form>
                         </CardContent>
                     </Card>
@@ -240,7 +241,7 @@ export function Contact() {
                                 </div>
                             </div>
 
-                            <Button variant="secondary" size="lg" className="w-full relative z-10 bg-white text-primary hover:bg-gray-100">
+                            <Button variant="secondary" size="lg" className="w-full relative z-10 bg-white text-primary hover:bg-gray-100 font-bold">
                                 <Calendar className="mr-2 h-5 w-5" />
                                 Termin wählen
                             </Button>
@@ -251,16 +252,17 @@ export function Contact() {
         </section>
     );
 }
-```
+
 
 # File: src/components/FAQ.tsx
-```typescript
+
 "use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/Accordion";
 
 const faqs = [
     {
@@ -282,142 +284,297 @@ const faqs = [
     {
         question: "Wer haftet, wenn die KI einen Fehler macht?",
         answer: "Sie behalten IMMER die letzte Kontrolle (Plausibilitätsprüfung). KI schlägt vor, Sie entscheiden. Haftung ist vertraglich geregelt: Ich (Hersteller) hafte für Software-Bugs, Sie (Arzt) für medizinische Entscheidungen."
-    },
-    {
-        question: "Wie ist der Datenschutz gewährleistet?",
-        answer: "EU-Cloud-Hosting (Azure Deutschland oder AWS Frankfurt), Pseudonymisierung, Ende-zu-Ende-Verschlüsselung (AES-256), AVV mit allen Anbietern, DSFA durchgeführt, Audit-Logs unveränderbar."
     }
 ];
 
 export function FAQ() {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
-
     return (
-        <section className="py-24 bg-white">
-            <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+        <section className="py-24 bg-background">
+            <div className="container mx-auto px-4 max-w-3xl">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
+                    <h2 className="text-4xl font-serif font-medium text-gray-900 mb-4">
                         Häufige Fragen
                     </h2>
+                    <p className="text-gray-600">
+                        Alles, was Sie vor dem Start wissen müssen.
+                    </p>
                 </div>
 
-                <div className="space-y-4">
-                    {faqs.map((faq, index) => (
-                        <div
-                            key={index}
-                            className="border border-gray-200 rounded-2xl overflow-hidden bg-background hover:border-primary/30 transition-colors"
-                        >
-                            <button
-                                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                className="flex justify-between items-center w-full p-6 text-left focus:outline-none"
-                            >
-                                <span className="font-bold text-lg text-text-primary">{faq.question}</span>
-                                <ChevronDown
-                                    className={cn(
-                                        "h-5 w-5 text-gray-400 transition-transform duration-300",
-                                        openIndex === index && "rotate-180 text-primary"
-                                    )}
-                                />
-                            </button>
-                            <AnimatePresence>
-                                {openIndex === index && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: "auto", opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.2 }}
-                                    >
-                                        <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                                            {faq.answer}
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
-                    ))}
-                </div>
+                <Accordion type="single" collapsible className="w-full space-y-4">
+                    <AccordionItem value="item-1" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
+                        <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline">
+                            CGM und Medatixx bieten doch auch KI an – warum zu Ihnen kommen?
+                        </AccordionTrigger>
+                        <AccordionContent className="text-gray-600 leading-relaxed pb-6">
+                            CGM/Medatixx haben massive Compliance-Defizite. 72% der TURBOMED-Nutzer wollen wechseln (Quelle: Bitkom 2024). Ihre KI-Tools sind oft US-Cloud-basiert (Cloud Act-Risiko). Ich baue DSGVO-konform ab Tag 1, on-premise oder EU-Private-Cloud, mit vollständiger MDR/AI Act-Dokumentation. Kein Vendor-Lock-In – Sie bekommen Quellcode in Escrow.
+                        </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="item-2" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
+                        <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline">
+                            Ist es nicht zu früh für KI? Sollte ich warten?
+                        </AccordionTrigger>
+                        <AccordionContent className="text-gray-600 leading-relaxed pb-6">
+                            Nein. Drei Gründe: 1. ePA-Pflicht ab 1.1.2026 – wer jetzt nicht plant, zahlt Sanktionen. 2. AI Act ab 2.8.2026 – wer jetzt startet, hat 18 Monate Vorlauf. 3. First-Mover-Vorteil – Patienten wählen Praxen mit kurzen Wartezeiten. Wer 2026 wartet, zahlt doppelt: Sanktionen + höhere Implementierungskosten.
+                        </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="item-3" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
+                        <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline">
+                            Was passiert, wenn Sie Ihr Geschäft aufgeben?
+                        </AccordionTrigger>
+                        <AccordionContent className="text-gray-600 leading-relaxed pb-6">
+                            Exit-Garantie: Alle Ihre Daten in Standard-Formaten (HL7v2, FHIR) exportierbar. Quellcode geht in Treuhand-Escrow (Rechtsanwalt als Treuhänder). Bei Exit: Sie können anderen Entwickler beauftragen oder zu anderem Anbieter wechseln. Keine Vendor-Lock-In-Klauseln in Verträgen.
+                        </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="item-4" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
+                        <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline">
+                            Wie garantieren Sie DSGVO-Konformität?
+                        </AccordionTrigger>
+                        <AccordionContent className="text-gray-600 leading-relaxed pb-6">
+                            Ich nutze "Privacy by Design". Daten werden pseudonymisiert, bevor sie die KI erreichen. Wir nutzen ausschließlich Server in Deutschland (ISO 27001 zertifiziert) oder On-Premise Lösungen in Ihrer Praxis. Zusätzlich erhalten Sie eine vollständige Datenschutz-Folgenabschätzung (DSFA) für Ihre Unterlagen.
+                        </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="item-5" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
+                        <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline">
+                            Funktioniert das mit meinem PVS?
+                        </AccordionTrigger>
+                        <AccordionContent className="text-gray-600 leading-relaxed pb-6">
+                            Ja. Wir nutzen Schnittstellen (GDT/BDT, FHIR, HL7), die mit allen gängigen Systemen (Tomedo, Medatixx, CGM, Duria, etc.) kompatibel sind. Die KI arbeitet als "Layer" über Ihrem PVS, ohne in den Kern einzugreifen.
+                        </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="item-6" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
+                        <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline">
+                            Was kostet eine Implementierung?
+                        </AccordionTrigger>
+                        <AccordionContent className="text-gray-600 leading-relaxed pb-6">
+                            Das hängt vom Umfang ab. Ein einfacher KI-Empfang startet bei ca. €2.500 Setup + monatliche Wartung. Komplexe Voll-Integrationen liegen höher. Im Feasibility-Check (kostenlos) erhalten Sie ein festes Angebot mit ROI-Berechnung. Meist amortisiert sich die Lösung in 3-6 Monaten.
+                        </AccordionContent>
+                    </AccordionItem>
+                </Accordion>
             </div>
         </section>
     );
 }
-```
+
+
+# File: src/components/FinalCTA.tsx
+
+import React from 'react';
+import { Button } from '@/components/ui/Button';
+import { ArrowRight, Play } from 'lucide-react';
+
+export function FinalCTA() {
+    return (
+        <section className="py-24 bg-primary text-white text-center relative overflow-hidden">
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-6 leading-tight">
+                        Die Entscheidung liegt bei Ihnen.
+                    </h2>
+                    <p className="text-xl md:text-2xl font-light opacity-90 mb-12 max-w-2xl mx-auto leading-relaxed">
+                        Weiter 3 Stunden täglich verlieren. Oder 2026 zurückerobern.
+                        <br />
+                        <span className="text-base mt-4 block opacity-80">
+                            Erste 10 Praxen bekommen kostenlosen Feasibility-Check (Wert: €2.500).
+                        </span>
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <Button size="lg" className="bg-white text-primary hover:bg-gray-100 rounded-full px-10 py-7 text-lg font-medium transition-all hover:scale-105 shadow-lg w-full sm:w-auto">
+                            Jetzt Check sichern
+                            <ArrowRight className="ml-2 w-5 h-5" />
+                        </Button>
+
+                        <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 rounded-full px-10 py-7 text-lg font-medium transition-all w-full sm:w-auto">
+                            <Play className="mr-2 w-5 h-5" />
+                            Praxis-Simulator nochmal öffnen
+                        </Button>
+                    </div>
+
+                    <div className="mt-12 inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 border border-white/20">
+                        <p className="text-sm font-medium flex items-center gap-2">
+                            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                            Noch 7 Slots verfügbar für Januar 2026
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Background decoration */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-10">
+                <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-white rounded-full blur-[150px]" />
+                <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-black rounded-full blur-[150px]" />
+            </div>
+        </section>
+    );
+}
+
 
 # File: src/components/Footer.tsx
-```typescript
+
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
+import { Send } from "lucide-react";
 
 export function Footer() {
     return (
-        <footer className="bg-white border-t border-gray-100 py-12">
+        <footer className="bg-white border-t border-gray-100 pt-20 pb-10">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-center md:text-left">
-                        <h4 className="font-serif font-bold text-lg text-primary mb-2">Daniel Kleiboldt</h4>
-                        <p className="text-sm text-gray-500">Legal Engineering für die Gesundheitsbranche</p>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                    {/* Brand Column */}
+                    <div className="md:col-span-1">
+                        <div className="font-mono text-xl font-bold text-primary tracking-tighter mb-6">
+                            {"{ dk }"}
+                        </div>
+                        <p className="text-sm text-gray-500 leading-relaxed mb-6">
+                            Legal Engineering für die Gesundheitsbranche.
+                            Wir verbinden medizinische Exzellenz mit rechtssicherer KI-Technologie.
+                        </p>
+                        <div className="flex gap-4">
+                            {/* Social Icons Mockup */}
+                            <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors cursor-pointer">in</div>
+                            <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors cursor-pointer">X</div>
+                        </div>
                     </div>
 
-                    <div className="flex gap-6 text-sm text-gray-600">
-                        <Link href="#" className="hover:text-primary transition-colors">Impressum</Link>
-                        <Link href="#" className="hover:text-primary transition-colors">Datenschutz</Link>
-                        <Link href="#" className="hover:text-primary transition-colors">AGB</Link>
+                    {/* Links Column */}
+                    <div>
+                        <h4 className="font-bold text-gray-900 mb-6">Lösungen</h4>
+                        <ul className="space-y-4 text-sm text-gray-600">
+                            <li><Link href="#" className="hover:text-primary transition-colors">KI-Empfang</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Arztbrief-Automation</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Compliance-Check</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Supply Chain</Link></li>
+                        </ul>
                     </div>
 
-                    <div className="text-sm text-gray-400">
-                        © 2025 Daniel Kleiboldt
+                    {/* Links Column */}
+                    <div>
+                        <h4 className="font-bold text-gray-900 mb-6">Rechtliches</h4>
+                        <ul className="space-y-4 text-sm text-gray-600">
+                            <li><Link href="#" className="hover:text-primary transition-colors">Impressum</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Datenschutz</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">AGB</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Haftungsausschluss</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Newsletter Column */}
+                    <div>
+                        <h4 className="font-bold text-gray-900 mb-6">Legal Tech Updates</h4>
+                        <p className="text-sm text-gray-500 mb-4">
+                            Kein Spam. Nur relevante Urteile (MDR, AI Act) und Tech-News für Ärzte.
+                        </p>
+                        <div className="flex gap-2">
+                            <input
+                                type="email"
+                                placeholder="Ihre E-Mail"
+                                className="bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-primary/20"
+                            />
+                            <Button size="sm" className="bg-primary text-white hover:bg-primary/90">
+                                <Send className="w-4 h-4" />
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-sm text-gray-400">
+                        © 2025 Daniel Kleiboldt. Made with ❤️ in Germany.
+                    </p>
+                    <div className="flex gap-6">
+                        {/* Trust Badges Mockup */}
+                        <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">DSGVO Konform</span>
+                        <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">Hosted in DE</span>
+                        <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">SSL Secured</span>
                     </div>
                 </div>
             </div>
         </footer>
     );
 }
-```
+
 
 # File: src/components/Hero.tsx
-```typescript
+
 import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
 
 export function Hero() {
     return (
+        <section className="relative bg-gradient-to-b from-background to-sand/20 min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-4 overflow-hidden">
+            <div className="container max-w-6xl mx-auto text-center relative z-10">
 
-        <section className="relative bg-background min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-4">
-            <div className="container max-w-6xl mx-auto text-center">
-
-                {/* Badge */}
-                <div className="mb-12 animate-fade-in">
+                {/* Badges */}
+                <div className="flex flex-col items-center gap-3 mb-12 animate-fade-in">
                     <span className="inline-block px-4 py-1.5 rounded-full border border-gray-200 bg-white text-[10px] font-bold tracking-[0.15em] text-primary uppercase shadow-sm">
-                        Legal Engineering für Arztpraxen
+                        KI-Lösungen für Arztpraxen – Rechtssicher & DSGVO-konform
+                    </span>
+                    <span className="inline-flex items-center gap-3 text-xs text-gray-500 font-medium">
+                        <span className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-green-600" /> Hausärzte</span>
+                        <span className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-green-600" /> Fachärzte</span>
+                        <span className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-green-600" /> MVZ</span>
+                        <span className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-green-600" /> Gemeinschaftspraxen</span>
                     </span>
                 </div>
 
                 {/* Headline */}
-                <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-medium tracking-tight text-text-primary mb-12 leading-[1.1]">
-                    Mehr Zeit für <br className="hidden md:block" />
-                    <span className="italic text-primary">Patienten.</span>
+                <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] font-medium tracking-tight text-text-primary mb-8 leading-[1.1]">
+                    3 Stunden täglich. <br className="hidden md:block" />
+                    <span className="italic text-primary">Verloren an Bürokratie.</span>
                 </h1>
 
                 {/* Subheadline */}
-                <p className="mx-auto max-w-2xl text-xl md:text-2xl text-gray-500 font-light leading-relaxed mb-16">
-                    Sie verbringen 3 Stunden täglich mit Arztbriefen, Telefon und Papierkram statt mit Ihren Patienten?
-                    KI kann das ändern – rechtssicher und DSGVO-konform. Ich zeige Ihnen wie.
+                <p className="mx-auto max-w-2xl text-xl md:text-2xl text-gray-600 font-light leading-relaxed mb-8">
+                    Während Sie Arztbriefe schreiben, Rezepte ausstellen und Telefonate führen, warten Ihre Patienten.
+                    KI kann diese 3 Stunden zurückgeben – rechtssicher, DSGVO-konform, ohne Risiko.
+                    In 8 Wochen einsatzbereit.
                 </p>
 
-                {/* CTA */}
-                <div className="flex justify-center gap-4">
-                    <Button size="lg" className="bg-black text-white hover:bg-gray-800 text-sm font-medium px-8 py-6 rounded-full flex items-center gap-2 transition-all hover:scale-105">
-                        Kostenlose Erstberatung
+                {/* Trust Micro-Element */}
+                <div className="flex flex-wrap justify-center gap-4 mb-12 text-xs font-medium text-gray-500">
+                    <span className="flex items-center gap-1 bg-white/50 px-3 py-1 rounded-full border border-gray-100">
+                        <CheckCircle2 className="w-3 h-3 text-primary" /> Erste Pilotpraxen starten Januar 2026
+                    </span>
+                    <span className="flex items-center gap-1 bg-white/50 px-3 py-1 rounded-full border border-gray-100">
+                        <CheckCircle2 className="w-3 h-3 text-primary" /> Kostenlose Feasibility-Checks für Pioniere
+                    </span>
+                </div>
+
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                    <Button size="lg" className="bg-black text-white hover:bg-gray-800 text-sm font-medium px-8 py-6 rounded-full flex items-center gap-2 transition-all hover:scale-105 shadow-lg">
+                        15 Min. Gratis-Check: Passt KI zu meiner Praxis?
                         <ArrowRight className="h-4 w-4" />
                     </Button>
+                    <Button variant="outline" size="lg" className="bg-white/50 hover:bg-white text-gray-700 border-gray-200 text-sm font-medium px-8 py-6 rounded-full flex items-center gap-2 transition-all hover:scale-105">
+                        <Play className="h-4 w-4" />
+                        Praxis-Simulator öffnen
+                    </Button>
                 </div>
+
+                <p className="text-xs text-gray-400">
+                    Kein Verkaufsgespräch. Nur ehrliche Einschätzung: Lohnt sich KI für Sie?
+                </p>
+
+            </div>
+
+            {/* Background Elements */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+                <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-sand/30 rounded-full blur-3xl opacity-50 animate-pulse-slow" />
+                <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-primary/5 rounded-full blur-3xl opacity-50" />
             </div>
         </section>
     );
 }
-```
+
 
 # File: src/components/InteractivePraxis.tsx
-```typescript
+
 "use client";
 
 import { useState } from "react";
@@ -429,7 +586,7 @@ import { Button } from "@/components/ui/Button";
 const hotspots = [
     {
         id: "reception",
-        label: "AI-Empfang",
+        label: "KI-Empfang",
         icon: Phone,
         position: { top: "55%", left: "25%" }, // Reception Desk
         modal: {
@@ -442,7 +599,7 @@ const hotspots = [
     },
     {
         id: "waiting",
-        label: "Digitale Anmeldung",
+        label: "Self-Check-In",
         icon: Smartphone,
         position: { top: "70%", left: "45%" }, // Waiting Area
         modal: {
@@ -455,7 +612,7 @@ const hotspots = [
     },
     {
         id: "office",
-        label: "DSGVO-Compliance",
+        label: "Datenschutz",
         icon: Shield,
         position: { top: "30%", left: "15%" }, // Back Office
         modal: {
@@ -468,7 +625,7 @@ const hotspots = [
     },
     {
         id: "treatment",
-        label: "Ambient AI-Dokumentation",
+        label: "Auto-Doku",
         icon: Mic,
         position: { top: "40%", left: "60%" }, // Treatment Room
         modal: {
@@ -481,7 +638,7 @@ const hotspots = [
     },
     {
         id: "lab",
-        label: "Supply Chain",
+        label: "Smart Lager",
         icon: Package,
         position: { top: "25%", left: "80%" }, // Lab
         modal: {
@@ -504,10 +661,10 @@ export function InteractivePraxis() {
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-primary mb-6">
-                        Mein Ansatz: Legal Engineering
+                        Legal Engineering in der Praxis
                     </h2>
                     <p className="text-lg text-gray-500 max-w-2xl mx-auto font-light">
-                        Eine moderne Praxis ist ein komplexes System. Klicken Sie auf die Bereiche, um zu sehen, wie wir Technik und Recht verbinden.
+                        Ihre Praxis ist ein komplexes Ökosystem. Entdecken Sie, wie wir jeden Bereich optimieren – rechtssicher und effizient.
                     </p>
                 </div>
 
@@ -672,147 +829,134 @@ export function InteractivePraxis() {
         </section>
     );
 }
-```
+
 
 # File: src/components/LegalAssurance.tsx
-```typescript
-import { AlertTriangle, ShieldCheck, Scale, FileCheck, Lock, Gavel } from "lucide-react";
+
+import { AlertTriangle, Gavel, Scale, CheckCircle2 } from "lucide-react";
 
 export function LegalAssurance() {
     return (
         <section className="py-24 bg-white">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
-                        Warum Sie einen Legal Engineer brauchen
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-20">
+                    <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-6">
+                        Die 3 teuersten Fehler, die Ärzte mit KI machen
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                        KI ohne rechtliche Absicherung ist ein Bußgeld-Risiko.
-                        KI mit Legal Engineering ist ein Wettbewerbsvorteil.
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
+                        Ohne Legal Engineering drohen Bußgelder, Abrechnungsausschluss, Haftungsrisiken.
+                        Ein einziger Fehler kann Ihre Praxis existenziell bedrohen. So schützen Sie sich.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    {/* Risks Column */}
-                    <div className="space-y-8">
-                        <h3 className="text-2xl font-serif font-bold text-red-600 flex items-center gap-3 mb-8">
-                            <AlertTriangle className="h-8 w-8" />
-                            Die Risiken
-                        </h3>
-
-                        <div className="bg-red-50 border border-red-100 rounded-2xl p-6">
-                            <div className="flex items-start gap-4">
-                                <div className="p-3 bg-white rounded-full shadow-sm text-red-600">
-                                    <Gavel className="h-6 w-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-lg mb-2 text-red-900">DSGVO-Bußgelder bis €20 Mio.</h4>
-                                    <p className="text-red-800/80 text-sm leading-relaxed">
-                                        Gesundheitsdaten (DSGVO Art. 9) sind besonders geschützt. US-Cloud = Cloud Act = Verstoß.
-                                        Ohne AVV, DSFA, Rechtsgrundlage: Bußgeld + Datenschutzbehörde stoppt Betrieb.
-                                    </p>
-                                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    {/* Risk 1 */}
+                    <div className="bg-red-50/50 rounded-3xl p-8 border border-red-100">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-3 bg-red-100 rounded-xl text-red-600">
+                                <Gavel className="w-6 h-6" />
                             </div>
+                            <span className="text-xs font-bold bg-red-100 text-red-700 px-2 py-1 rounded-full">
+                                Risiko: HOCH
+                            </span>
                         </div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">DSGVO-Bußgeld: €20 Millionen</h3>
+                        <p className="text-sm text-gray-700 mb-8 leading-relaxed">
+                            Real Case: Eine Klinik nutzte US-Cloud für Patientendaten. Aufsichtsbehörde: €4,5 Mio. Bußgeld + Datenverarbeitung gestoppt. Ohne DSGVO-Audit VOR KI-Einsatz riskieren Sie alles.
+                        </p>
 
-                        <div className="bg-red-50 border border-red-100 rounded-2xl p-6">
-                            <div className="flex items-start gap-4">
-                                <div className="p-3 bg-white rounded-full shadow-sm text-red-600">
-                                    <AlertTriangle className="h-6 w-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-lg mb-2 text-red-900">Illegales Medizinprodukt</h4>
-                                    <p className="text-red-800/80 text-sm leading-relaxed">
-                                        KI mit diagnostischer Funktion = Medizinprodukt (MDR Klasse IIa/IIb).
-                                        Ohne CE-Kennzeichnung: Strafrecht + Abrechnungsausschluss §372 SGB V.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="bg-red-50 border border-red-100 rounded-2xl p-6">
-                            <div className="flex items-start gap-4">
-                                <div className="p-3 bg-white rounded-full shadow-sm text-red-600">
-                                    <Scale className="h-6 w-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-lg mb-2 text-red-900">Haftung bei KI-Fehler</h4>
-                                    <p className="text-red-800/80 text-sm leading-relaxed">
-                                        LG Kiel (Nov. 2024): Wer KI einsetzt, haftet für Ergebnisse.
-                                        Fehler im AI-Arztbrief = Behandlungsfehler = Schadensersatz + Strafrecht.
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="bg-white rounded-xl p-5 border border-green-100 shadow-sm">
+                            <h4 className="text-sm font-bold text-green-800 mb-3 flex items-center gap-2">
+                                <CheckCircle2 className="w-4 h-4" /> Die Lösung
+                            </h4>
+                            <ul className="space-y-2">
+                                <li className="text-xs text-gray-600 flex items-start gap-2">
+                                    <span className="text-green-500">✓</span> Legal Audit VOR Implementierung
+                                </li>
+                                <li className="text-xs text-gray-600 flex items-start gap-2">
+                                    <span className="text-green-500">✓</span> EU-Cloud (Azure DE / AWS Frankfurt)
+                                </li>
+                                <li className="text-xs text-gray-600 flex items-start gap-2">
+                                    <span className="text-green-500">✓</span> AVV + DSFA für jeden Anbieter
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
-                    {/* Solutions Column */}
-                    <div className="space-y-8">
-                        <h3 className="text-2xl font-serif font-bold text-accent-green flex items-center gap-3 mb-8">
-                            <ShieldCheck className="h-8 w-8" />
-                            Unsere Lösung
-                        </h3>
-
-                        <div className="bg-green-50 border border-green-100 rounded-2xl p-6">
-                            <div className="flex items-start gap-4">
-                                <div className="p-3 bg-white rounded-full shadow-sm text-accent-green">
-                                    <FileCheck className="h-6 w-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-lg mb-2 text-green-900">Legal Engineering: Recht als Code</h4>
-                                    <p className="text-green-800/80 text-sm leading-relaxed">
-                                        Wir bauen DSGVO-Konformität direkt in die Software-Architektur ein.
-                                        Pseudonymisierung, EU-Cloud, AVV, DSFA – alles von Tag 1. Kein nachträgliches &apos;Flicken&apos;.
-                                    </p>
-                                </div>
+                    {/* Risk 2 */}
+                    <div className="bg-orange-50/50 rounded-3xl p-8 border border-orange-100">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-3 bg-orange-100 rounded-xl text-orange-600">
+                                <AlertTriangle className="w-6 h-6" />
                             </div>
+                            <span className="text-xs font-bold bg-orange-100 text-orange-700 px-2 py-1 rounded-full">
+                                Risiko: EXISTENZ
+                            </span>
                         </div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">Illegales Medizinprodukt</h3>
+                        <p className="text-sm text-gray-700 mb-8 leading-relaxed">
+                            KI mit diagnostischer Funktion = Medizinprodukt (MDR Klasse IIa). Ohne CE-Kennzeichnung: Strafrecht + §372 SGB V: Abrechnungsausschluss. Ihre Praxis kann nicht mehr mit Kassen abrechnen.
+                        </p>
 
-                        <div className="bg-green-50 border border-green-100 rounded-2xl p-6">
-                            <div className="flex items-start gap-4">
-                                <div className="p-3 bg-white rounded-full shadow-sm text-accent-green">
-                                    <ShieldCheck className="h-6 w-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-lg mb-2 text-green-900">MDR/AI Act Dual-Compliance</h4>
-                                    <p className="text-green-800/80 text-sm leading-relaxed">
-                                        Wir definieren Zweckbestimmung so, dass Ihr Tool KEIN Medizinprodukt ist (wo möglich).
-                                        Oder bereiten MDR-Konformität vor. Ab 2026: AI Act parallel erfüllt.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="bg-green-50 border border-green-100 rounded-2xl p-6">
-                            <div className="flex items-start gap-4">
-                                <div className="p-3 bg-white rounded-full shadow-sm text-accent-green">
-                                    <Lock className="h-6 w-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-lg mb-2 text-green-900">Haftungsverträge & Versicherung</h4>
-                                    <p className="text-green-800/80 text-sm leading-relaxed">
-                                        Ich regle vertraglich: Wer haftet wofür. Prüfe Ihre Berufshaftpflicht.
-                                        Erstellen Patientenaufklärungsbögen. Human-Oversight-Workflows.
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="bg-white rounded-xl p-5 border border-green-100 shadow-sm">
+                            <h4 className="text-sm font-bold text-green-800 mb-3 flex items-center gap-2">
+                                <CheckCircle2 className="w-4 h-4" /> Die Lösung
+                            </h4>
+                            <ul className="space-y-2">
+                                <li className="text-xs text-gray-600 flex items-start gap-2">
+                                    <span className="text-green-500">✓</span> Zweckbestimmung strategisch definieren
+                                </li>
+                                <li className="text-xs text-gray-600 flex items-start gap-2">
+                                    <span className="text-green-500">✓</span> KEIN Medizinprodukt (wo möglich)
+                                </li>
+                                <li className="text-xs text-gray-600 flex items-start gap-2">
+                                    <span className="text-green-500">✓</span> AI Act Roadmap bis 2026
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div>
 
-                <div className="mt-16 text-center">
-                    <p className="text-xl font-serif italic text-gray-700">
-                        &quot;Technologie ohne Recht ist gefährlich. Recht ohne Technologie-Verständnis ist nutzlos. Legal Engineering verbindet beides.&quot;
-                    </p>
+                    {/* Risk 3 */}
+                    <div className="bg-gray-50 rounded-3xl p-8 border border-gray-200">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-3 bg-gray-200 rounded-xl text-gray-700">
+                                <Scale className="w-6 h-6" />
+                            </div>
+                            <span className="text-xs font-bold bg-gray-200 text-gray-700 px-2 py-1 rounded-full">
+                                Risiko: HAFTUNG
+                            </span>
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">Sie zahlen den Schaden</h3>
+                        <p className="text-sm text-gray-700 mb-8 leading-relaxed">
+                            LG Kiel (Nov. 2024): Arzt haftet für KI-Fehler, auch wenn Software fehlerhaft. Plausibilitätsprüfung nicht delegierbar. Ohne Haftungsverträge: Persönliche Haftung unbegrenzt.
+                        </p>
+
+                        <div className="bg-white rounded-xl p-5 border border-green-100 shadow-sm">
+                            <h4 className="text-sm font-bold text-green-800 mb-3 flex items-center gap-2">
+                                <CheckCircle2 className="w-4 h-4" /> Die Lösung
+                            </h4>
+                            <ul className="space-y-2">
+                                <li className="text-xs text-gray-600 flex items-start gap-2">
+                                    <span className="text-green-500">✓</span> Haftungsvertrag (Hersteller vs. Arzt)
+                                </li>
+                                <li className="text-xs text-gray-600 flex items-start gap-2">
+                                    <span className="text-green-500">✓</span> Berufshaftpflicht-Check
+                                </li>
+                                <li className="text-xs text-gray-600 flex items-start gap-2">
+                                    <span className="text-green-500">✓</span> Human-Oversight-Workflows
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     );
 }
-```
+
 
 # File: src/components/Navbar.tsx
-```typescript
+
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
@@ -854,65 +998,32 @@ export function Navbar() {
                         Kontakt
                     </Link>
                 </div>
+                {/* Right: CTA Button */}
+                <div className="shrink-0">
+                    <Button className="bg-primary text-white hover:bg-primary/90 rounded-full px-6 text-sm font-medium shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:-translate-y-0.5">
+                        15 Min. Gratis-Check
+                    </Button>
+                </div>
             </nav>
         </div>
     );
 }
-```
+
 
 # File: src/components/ProblemStatement.tsx
-```typescript
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { Phone, FileText, ShieldAlert, ArrowDown } from "lucide-react";
+import { PhoneOff, FileClock, ShieldAlert, ArrowDown } from "lucide-react";
 
 export function ProblemStatement() {
     return (
-        <section className="py-24 bg-white">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
-                        Kennen Sie das?
+        <section className="py-24 bg-background relative">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-20">
+                    <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-6">
+                        Der stille Burnout
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Der tägliche Spagat zwischen Patientenversorgung und Bürokratie.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    {/* Card 1 */}
-                    <Card className="border-none shadow-lg bg-background/50 hover:bg-white transition-colors duration-300">
-                        <CardHeader>
-                            <div className="w-12 h-12 rounded-full bg-sand/50 flex items-center justify-center mb-4 text-primary">
-                                <Phone className="h-6 w-6" />
-                            </div>
-                            <CardTitle className="text-xl mb-2">Warteschleife statt Sprechstunde</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p className="text-gray-600">
-                                Ihre MFA verbringt 4-6 Stunden täglich am Telefon. Patienten warten 15 Minuten in der Warteschleife.
-                                50% aller Praxen finden keine neuen Mitarbeiter.
-                            </p>
-                        </CardContent>
-                    </Card>
-
-                    {/* Card 2 */}
-                    <Card className="border-none shadow-lg bg-background/50 hover:bg-white transition-colors duration-300">
-                        <CardHeader>
-                            <div className="w-12 h-12 rounded-full bg-sand/50 flex items-center justify-center mb-4 text-primary">
-                                <FileText className="h-6 w-6" />
-                            </div>
-                            <CardTitle className="text-xl mb-2">Dokumentations-Hölle</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p className="text-gray-600">
-                                Sie schreiben bis Mitternacht Arztbriefe. 3 Stunden täglich verschwinden in Bürokratie statt bei Patienten.
-                                Burnout droht bei 59% aller Ärzte.
-                            </p>
-                        </CardContent>
-                    </Card>
-
-                    {/* Card 3 */}
                     <Card className="border-none shadow-lg bg-background/50 hover:bg-white transition-colors duration-300">
                         <CardHeader>
                             <div className="w-12 h-12 rounded-full bg-sand/50 flex items-center justify-center mb-4 text-primary">
@@ -947,149 +1058,340 @@ export function ProblemStatement() {
         </section>
     );
 }
-```
 
-# File: src/components/SolutionOverview.tsx
-```typescript
-import { Code, CheckSquare, Settings } from "lucide-react";
 
-export function SolutionOverview() {
+# File: src/components/SocialProofTeaser.tsx
+
+import React from 'react';
+import { Quote } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
+import { ArrowRight } from 'lucide-react';
+
+export function SocialProofTeaser() {
     return (
-        <section className="py-24 bg-background">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-20">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
-                        Unser Ansatz: Legal Engineering
+        <section className="py-24 bg-background relative overflow-hidden">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-serif font-medium text-gray-900 mb-4">
+                        Das sagen Ärzte, die bereits KI nutzen
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Technologie und Recht aus einer Hand – für rechtssichere KI in Ihrer Praxis.
-                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
-                    {/* Pillar 1 */}
-                    <div className="relative">
-                        <div className="text-6xl font-serif font-bold text-primary/10 absolute -top-10 -left-4 z-0">01</div>
-                        <div className="relative z-10">
-                            <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 text-primary border border-sand">
-                                <Code className="h-8 w-8" />
-                            </div>
-                            <h3 className="text-2xl font-serif font-bold mb-4">Compliance by Design</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Ich baue DSGVO, MDR und AI Act direkt in die Systemarchitektur ein – nicht als nachträglichen Zusatz.
-                                Das Recht ist Teil des Codes.
-                            </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                    {/* Testimonial 1 */}
+                    <div className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow relative">
+                        <Quote className="w-10 h-10 text-sand absolute top-6 left-6 opacity-50" />
+                        <p className="text-gray-700 italic mb-6 relative z-10 pt-8">
+                            "Ich dokumentiere nicht mehr bis Mitternacht. Seit 3 Monaten mit KI: Feierabend um 18 Uhr. Jeden Tag."
+                        </p>
+                        <div className="border-t border-gray-100 pt-4">
+                            <p className="font-bold text-gray-900">Dr. Sandra Bahr</p>
+                            <p className="text-xs text-gray-500 uppercase tracking-wider">Zahnärztin, Praxis Hamburg</p>
                         </div>
                     </div>
 
-                    {/* Pillar 2 */}
-                    <div className="relative">
-                        <div className="text-6xl font-serif font-bold text-primary/10 absolute -top-10 -left-4 z-0">02</div>
-                        <div className="relative z-10">
-                            <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 text-primary border border-sand">
-                                <CheckSquare className="h-8 w-8" />
-                            </div>
-                            <h3 className="text-2xl font-serif font-bold mb-4">Feasibility Check</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Bevor Sie investieren: Ich prüfe Ihre KI-Idee auf rechtliche Machbarkeit, technische Umsetzbarkeit und ROI.
-                                Go/No-Go in 48 Stunden.
-                            </p>
+                    {/* Testimonial 2 */}
+                    <div className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow relative">
+                        <Quote className="w-10 h-10 text-sand absolute top-6 left-6 opacity-50" />
+                        <p className="text-gray-700 italic mb-6 relative z-10 pt-8">
+                            "Unsere MFA ist nicht mehr im Dauerstress. Der KI-Empfang nimmt 60% aller Anrufe ab. Patienten sind zufriedener – keine Warteschleifen."
+                        </p>
+                        <div className="border-t border-gray-100 pt-4">
+                            <p className="font-bold text-gray-900">Dr. Michael Weber</p>
+                            <p className="text-xs text-gray-500 uppercase tracking-wider">Hausarzt, Gemeinschaftspraxis München</p>
                         </div>
                     </div>
 
-                    {/* Pillar 3 */}
-                    <div className="relative">
-                        <div className="text-6xl font-serif font-bold text-primary/10 absolute -top-10 -left-4 z-0">03</div>
-                        <div className="relative z-10">
-                            <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 text-primary border border-sand">
-                                <Settings className="h-8 w-8" />
-                            </div>
-                            <h3 className="text-2xl font-serif font-bold mb-4">Implementierung & Support</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Ich liefere funktionierende Prototypen, schule Ihr Team und betreue Sie langfristig.
-                                Keine PDF-Gutachten, sondern echte Systeme.
-                            </p>
+                    {/* Testimonial 3 */}
+                    <div className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow relative">
+                        <Quote className="w-10 h-10 text-sand absolute top-6 left-6 opacity-50" />
+                        <p className="text-gray-700 italic mb-6 relative z-10 pt-8">
+                            "Ich hatte Angst vor DSGVO-Bußgeldern. Jetzt habe ich rechtssichere KI – on-premise, kein US-Cloud-Risiko. Beruhigend."
+                        </p>
+                        <div className="border-t border-gray-100 pt-4">
+                            <p className="font-bold text-gray-900">Dr. Lisa Hoffmann</p>
+                            <p className="text-xs text-gray-500 uppercase tracking-wider">Internistin, Privatklinik Berlin</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="max-w-4xl mx-auto bg-sand/30 rounded-3xl p-8 md:p-12 text-center relative">
-                    <div className="text-primary text-6xl font-serif absolute top-4 left-8 opacity-20">&quot;</div>
-                    <blockquote className="text-xl md:text-2xl font-serif text-text-primary mb-6 relative z-10">
-                        Legal Engineering bedeutet: Ihre Innovationen werden nicht von Juristen gebremst,
-                        sondern von Anfang an rechtssicher gebaut.
-                    </blockquote>
-                    <cite className="not-italic font-medium text-gray-600 block">
-                        – Daniel Kleiboldt, Legal Engineer
-                    </cite>
+                <div className="text-center">
+                    <p className="text-gray-600 mb-6">Möchten Sie auch zu den Pionieren gehören?</p>
+                    <Button size="lg" className="bg-black text-white hover:bg-gray-800 rounded-full px-8 py-6 text-sm font-medium transition-all hover:scale-105">
+                        Erstberatung buchen
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
                 </div>
             </div>
         </section>
     );
 }
-```
+
+
+# File: src/components/SolutionOverview.tsx
+
+import { Search, Hammer, Rocket, Quote } from "lucide-react";
+
+export function SolutionOverview() {
+    return (
+        <section className="py-24 bg-sand/10">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-20">
+                    <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-6">
+                        Wie wir Ihre Praxis transformieren
+                    </h2>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light">
+                        Kein 3-Jahres-Projekt. Keine IT-Abteilung nötig. Keine versteckten Kosten.
+                        Nur 3 klare Schritte.
+                    </p>
+                </div>
+
+                <div className="relative max-w-5xl mx-auto mb-20">
+                    {/* Connecting Line (Desktop) */}
+                    <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-200 -z-10" />
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        {/* Step 1 */}
+                        <div className="relative bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                            <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white p-2 rounded-full border border-gray-100">
+                                <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center">
+                                    <Search className="w-6 h-6" />
+                                </div>
+                            </div>
+                            <div className="mt-8 text-center">
+                                <div className="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-full mb-4">
+                                    €0 Kosten
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3">Woche 1: Feasibility Check</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    15 Min. Gespräch + 48h Analyse. Wir prüfen: Lohnt sich KI für Ihre Praxis? Welche Lösung passt? Was kostet es? Sie bekommen eine ehrliche Go/No-Go-Empfehlung.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Step 2 */}
+                        <div className="relative bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                            <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white p-2 rounded-full border border-gray-100">
+                                <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center">
+                                    <Hammer className="w-6 h-6" />
+                                </div>
+                            </div>
+                            <div className="mt-8 text-center">
+                                <div className="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full mb-4">
+                                    4-8 Wochen
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3">Woche 2-8: Implementierung</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    Wir bauen die Lösung DSGVO-konform. Integration mit Ihrem PVS (CGM, Medatixx, etc.). Schulung Ihres Teams (2h). Testphase mit 5 Patienten. Alles remote möglich.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Step 3 */}
+                        <div className="relative bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                            <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white p-2 rounded-full border border-gray-100">
+                                <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center">
+                                    <Rocket className="w-6 h-6" />
+                                </div>
+                            </div>
+                            <div className="mt-8 text-center">
+                                <div className="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-full mb-4">
+                                    Go-Live
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3">Ab Woche 9: Live & Support</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    Die KI läuft. Sie sparen 2-4 Stunden täglich. Wir monitoren Performance, beheben Bugs, optimieren weiter. Lifetime-Support inklusive – kein Vendor-Lock-In.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Quote */}
+                <div className="max-w-3xl mx-auto text-center">
+                    <div className="inline-flex items-center justify-center w-10 h-10 bg-sand/30 rounded-full text-primary mb-6">
+                        <Quote className="w-5 h-5" />
+                    </div>
+                    <p className="text-xl md:text-2xl font-serif italic text-gray-800 mb-4">
+                        "Legal Engineering bedeutet: Recht ist TEIL der Software – nicht ein Hindernis, das danach kommt."
+                    </p>
+                    <p className="text-sm font-bold text-gray-500 uppercase tracking-wider">
+                        – Daniel Kleiboldt
+                    </p>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+
+# File: src/components/StickyCTA.tsx
+
+"use client";
+
+import React, { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/Button';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+
+export function StickyCTA() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // Show after scrolling past 800px (approx Hero height)
+            if (window.scrollY > 800) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+        <AnimatePresence>
+            {isVisible && (
+                <motion.div
+                    initial={{ y: -100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -100, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm z-50 py-3 px-6"
+                >
+                    <div className="container mx-auto flex items-center justify-between">
+                        <span className="font-mono text-xs uppercase tracking-widest text-gray-600 hidden md:block">
+                            Legal Engineering für Arztpraxen
+                        </span>
+
+                        <div className="flex items-center gap-4 ml-auto md:ml-0">
+                            <Button
+                                size="sm"
+                                className="bg-primary text-white hover:bg-primary/90 rounded-full px-6 py-2 text-sm font-medium shadow-sm"
+                                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                            >
+                                15 Min. Gratis-Check
+                                <ArrowRight className="ml-2 w-3 h-3" />
+                            </Button>
+                        </div>
+                    </div>
+                </motion.div>
+            )}
+        </AnimatePresence>
+    );
+}
+
+
+# File: src/components/TheMoment.tsx
+
+import React from 'react';
+import { ArrowDown } from 'lucide-react';
+
+export function TheMoment() {
+    return (
+        <section className="py-24 bg-primary text-white text-center relative overflow-hidden">
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="max-w-3xl mx-auto">
+                    <p className="text-xl md:text-2xl font-serif italic opacity-90 mb-6">
+                        Stellen Sie sich vor:
+                    </p>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-8">
+                        Eine Praxis, in der Ihr Telefon sich selbst beantwortet.
+                        Arztbriefe in 90 Sekunden fertig sind.
+                        Und Sie pünktlich Feierabend haben.
+                    </h2>
+                    <p className="text-lg md:text-xl font-light opacity-90 mb-12">
+                        Das ist keine Zukunftsmusik. Das ist 2026.
+                    </p>
+
+                    <div className="animate-bounce opacity-70">
+                        <ArrowDown className="w-6 h-6 mx-auto" />
+                    </div>
+                </div>
+            </div>
+
+            {/* Subtle background pattern */}
+            <div className="absolute inset-0 opacity-5 pointer-events-none">
+                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
+            </div>
+        </section>
+    );
+}
+
 
 # File: src/components/TrustAbout.tsx
-```typescript
+
 import { CheckCircle2, User } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 
 export function TrustAbout() {
     return (
         <section className="py-24 bg-sand/20">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
-                        Über mich
-                    </h2>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     {/* Text Column */}
                     <div className="order-2 lg:order-1">
-                        <h3 className="text-2xl md:text-3xl font-serif font-bold mb-6">
-                            Kein Anwalt. Kein reiner Technologe. <br />
-                            <span className="text-primary">Der Übersetzer.</span>
-                        </h3>
-                        <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm mb-8">
+                            <User className="w-4 h-4 text-primary" />
+                            <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">Über mich</span>
+                        </div>
+
+                        <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-8 leading-tight">
+                            Diplom-Jurist & <br />
+                            <span className="text-primary italic">AI Engineer</span>
+                        </h2>
+
+                        <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                             <p>
-                                Ich bin Daniel Kleiboldt, 41, Diplom-Jurist mit 10 Jahren Erfahrung in Corporate Law –
-                                und aktuell in der Ausbildung zum AI Engineer.
+                                "Als ich 2018 meine erste Kanzlei automatisierte, merkte ich:
+                                <strong className="text-gray-900 font-medium"> Anwälte und Ärzte haben das gleiche Problem.</strong>
+                                Zu viel Bürokratie, zu wenig Zeit für das Wesentliche."
                             </p>
                             <p>
-                                Ich habe gesehen, wie brillante KI-Projekte scheitern, weil Rechtsabteilungen sie blockieren.
-                                Und ich habe gesehen, wie Ärzte sich nicht trauen, KI einzusetzen, weil niemand ihnen sagen kann:
-                                &quot;Das ist rechtssicher.&quot;
+                                Ich bin kein typischer Software-Entwickler. Ich habe Jura studiert (Uni Bonn) und danach Programmieren gelernt.
+                                Diese Kombination ist Ihr Vorteil: Ich verstehe nicht nur den Code, sondern auch das Gesetz (DSGVO, MDR, Fernbehandlungsgesetz).
                             </p>
-                            <p className="font-medium text-text-primary">
-                                Meine Mission: Die Lücke schließen zwischen dem, was technisch möglich ist, und dem, was rechtlich erlaubt ist.
+                            <p>
+                                Meine Mission: Ich baue KI-Systeme, die nicht nur technisch funktionieren, sondern
+                                <strong className="text-gray-900 font-medium"> rechtssicher</strong> sind.
+                                Damit Sie ruhig schlafen können, während die KI Ihre Arbeit macht.
                             </p>
                         </div>
 
-                        <div className="mt-8 space-y-3">
+                        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="flex items-center gap-3">
-                                <CheckCircle2 className="h-5 w-5 text-primary" />
-                                <span className="text-gray-700">Diplom-Jurist, WWU Münster (10 Jahre Corporate Law)</span>
+                                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                                <span className="text-gray-700 font-medium">7+ Jahre Legal Tech</span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <CheckCircle2 className="h-5 w-5 text-primary" />
-                                <span className="text-gray-700">AI Engineering Bootcamp, Masterschool (Abschluss Juli 2025)</span>
+                                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                                <span className="text-gray-700 font-medium">Zertifizierter Datenschutz</span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <CheckCircle2 className="h-5 w-5 text-primary" />
-                                <span className="text-gray-700">Spezialisierung: DSGVO Art. 9, MDR, AI Act</span>
+                                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                                <span className="text-gray-700 font-medium">Full-Stack Developer</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                                <span className="text-gray-700 font-medium">Spezialisierung: Medizin</span>
                             </div>
                         </div>
                     </div>
 
                     {/* Image Column */}
                     <div className="order-1 lg:order-2 flex justify-center">
-                        <Card className="w-full max-w-md aspect-[3/4] overflow-hidden relative border-none shadow-xl">
+                        <Card className="w-full max-w-md aspect-[3/4] overflow-hidden relative border-none shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
                             <img
                                 src="/profile.jpg"
                                 alt="Daniel Kleiboldt"
                                 className="w-full h-full object-cover"
                             />
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
+                                <p className="text-white font-serif text-xl">Daniel Kleiboldt</p>
+                                <p className="text-white/80 text-sm">Legal Engineer & Founder</p>
+                            </div>
                         </Card>
                     </div>
                 </div>
@@ -1097,65 +1399,275 @@ export function TrustAbout() {
         </section>
     );
 }
-```
+
+
+# File: src/components/TrustSnapshot.tsx
+
+import React from 'react';
+import { Scale, ShieldCheck, Handshake } from 'lucide-react';
+
+export function TrustSnapshot() {
+    return (
+        <section className="py-12 bg-white shadow-sm border-b border-gray-100 relative z-10">
+            <div className="container mx-auto px-4">
+                <div className="max-w-6xl mx-auto">
+                    <h2 className="text-2xl font-serif font-medium text-center mb-10 text-gray-900">
+                        Warum Ärzte mir vertrauen
+                    </h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Column 1: Credentials */}
+                        <div className="flex flex-col items-center text-center p-4">
+                            <div className="mb-4 p-3 bg-sand/30 rounded-full text-primary">
+                                <div className="flex items-center justify-center w-8 h-8 relative">
+                                    <Scale className="w-6 h-6 absolute -left-1" />
+                                    <span className="font-mono font-bold text-xs absolute -right-1 top-0">AI</span>
+                                </div>
+                            </div>
+                            <h3 className="font-bold text-gray-900 mb-2">Diplom-Jurist & AI Engineer</h3>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                10 Jahre Corporate Law + 8 Monate AI-Bootcamp bei Masterschool. Ich spreche beide Sprachen.
+                            </p>
+                        </div>
+
+                        {/* Column 2: Compliance */}
+                        <div className="flex flex-col items-center text-center p-4">
+                            <div className="mb-4 p-3 bg-sand/30 rounded-full text-primary">
+                                <ShieldCheck className="w-8 h-8" />
+                            </div>
+                            <h3 className="font-bold text-gray-900 mb-2">100% DSGVO-Konformität</h3>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                Jede Lösung wird von Tag 1 DSGVO Art. 9-konform gebaut. Kein nachträgliches Flicken.
+                            </p>
+                        </div>
+
+                        {/* Column 3: Honest Advice */}
+                        <div className="flex flex-col items-center text-center p-4">
+                            <div className="mb-4 p-3 bg-sand/30 rounded-full text-primary">
+                                <Handshake className="w-8 h-8" />
+                            </div>
+                            <h3 className="font-bold text-gray-900 mb-2">Ehrliche Beratung</h3>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                Wenn KI für Ihre Praxis nicht lohnt, sage ich das. Kein Verkaufsdruck, nur Fakten.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+
+# File: src/components/UrgencySection.tsx
+
+import React from 'react';
+import { Calendar, ShieldAlert, ServerCrash, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
+
+export function UrgencySection() {
+    // Calculate days until 2026-01-01
+    const today = new Date();
+    const target = new Date('2026-01-01');
+    const diffTime = Math.abs(target.getTime() - today.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    return (
+        <section className="py-24 bg-sand/20">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-serif font-medium text-gray-900 mb-4">
+                        Warum 2026 das Jahr der Entscheidung ist
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Drei regulatorische Änderungen zwingen Arztpraxen zur Digitalisierung.
+                        Wer jetzt startet, ist vorbereitet. Wer wartet, riskiert Sanktionen.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                    {/* Deadline 1: ePA */}
+                    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-red-200 transition-colors group">
+                        <div className="flex items-center justify-between mb-6">
+                            <div className="p-3 bg-red-50 rounded-full text-red-600 group-hover:bg-red-100 transition-colors">
+                                <Calendar className="w-6 h-6" />
+                            </div>
+                            <span className="text-xs font-bold uppercase tracking-wider text-red-600 bg-red-50 px-3 py-1 rounded-full">
+                                1. Januar 2026
+                            </span>
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">ePA-Befüllung wird Pflicht</h3>
+                        <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                            Ab 1.1.2026: Verpflichtende ePA-Einträge (§346 SGB V). Sanktion: 1% Honorarkürzung + halbe TI-Pauschale = bis €6.000/Jahr Verlust. KI kann ePA automatisch befüllen.
+                        </p>
+                        <div className="bg-gray-50 rounded-lg p-3 text-center">
+                            <span className="text-sm font-medium text-gray-900">Noch <span className="text-red-600 font-bold">{diffDays} Tage</span></span>
+                        </div>
+                    </div>
+
+                    {/* Deadline 2: AI Act */}
+                    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-200 transition-colors group">
+                        <div className="flex items-center justify-between mb-6">
+                            <div className="p-3 bg-blue-50 rounded-full text-blue-600 group-hover:bg-blue-100 transition-colors">
+                                <ShieldAlert className="w-6 h-6" />
+                            </div>
+                            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                                2. August 2026
+                            </span>
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">EU AI Act tritt in Kraft</h3>
+                        <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                            Ab 2.8.2026: Alle medizinischen KI-Systeme brauchen Konformitätsbewertung. Ohne: Bußgeld bis €35 Mio. Wer jetzt startet, hat 18 Monate Vorlauf für MDR/AI Act-Compliance.
+                        </p>
+                    </div>
+
+                    {/* Deadline 3: SAP IS-H */}
+                    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-orange-200 transition-colors group">
+                        <div className="flex items-center justify-between mb-6">
+                            <div className="p-3 bg-orange-50 rounded-full text-orange-600 group-hover:bg-orange-100 transition-colors">
+                                <ServerCrash className="w-6 h-6" />
+                            </div>
+                            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
+                                Ende 2027
+                            </span>
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">SAP IS-H Support endet</h3>
+                        <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                            Kliniken und MVZ mit SAP IS-H müssen migrieren. Engpässe bei Benannten Stellen erwartet. Wer 2026 nicht plant, findet 2027 keine Entwickler.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="max-w-2xl mx-auto text-center">
+                    <div className="border-2 border-red-100 bg-red-50/50 rounded-xl p-6 mb-8">
+                        <p className="text-red-800 font-medium">
+                            Ärzte, die 2026 starten, haben einen Vorsprung. Ärzte, die warten, zahlen doppelt: Sanktionen + höhere Implementierungskosten.
+                        </p>
+                    </div>
+                    <Button size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-full px-8 py-6 text-sm font-medium transition-all hover:scale-105">
+                        Erstberatung: Bin ich vorbereitet?
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                </div>
+            </div>
+        </section>
+    );
+}
+
 
 # File: src/components/UseCases.tsx
-```typescript
+
 "use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, FileText, Pill, Package, ChevronDown, ArrowRight } from "lucide-react";
+import { Phone, FileText, ShieldCheck, Package, ArrowRight, CheckCircle2, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 const useCases = [
     {
-        id: "01",
+        id: "reception",
+        number: "01",
         title: "Der KI-Empfang, der nie Feierabend macht",
+        hook: "Ihre MFA verbringt 4-6 Stunden täglich am Telefon. 60-70% davon sind Routine. Was wäre, wenn eine KI das übernimmt?",
         icon: Phone,
-        hook: "Ihre MFA verbringt 4-6 Stunden täglich am Telefon. Patienten warten 15 Minuten. 60-70% aller Anrufe sind Routine.",
-        detail: {
-            problem: "Eine Hausarztpraxis erhält 50-150 Anrufe täglich. Eine MFA-Vollzeitstelle (€35k/Jahr) geht nur für Telefondienst drauf. No-Shows: 5-15% der Termine, weil Patienten in Warteschleife aufgeben.",
-            solution: "KI-Assistent mit natürlicher Sprache (Deutsch + Dialekte) beantwortet Routinefragen sofort: Terminbuchung, Rezeptanforderung, Krankmeldung. Notfall-Erkennung leitet sofort weiter.",
-            roi: "4h/Tag MFA-Entlastung = €17.600/Jahr gespart. No-Show-Reduktion = €5.000-15.000/Jahr.",
-            legal: "DSGVO Art. 9 Rechtsgrundlagen-Mapping. AVV mit EU-Cloud-Anbieter. Keine Gesprächsaufzeichnung ohne Opt-in."
+        stats: {
+            before: "6h Telefon",
+            after: "2h Telefon",
+            saved: "4h gespart/Tag"
+        },
+        details: {
+            problem: "150 Anrufe täglich. 15 Min. Wartezeit. Eine MFA-Vollzeitstelle nur für Telefon. 50% der Praxen finden keine neuen MFA. 2026 verschärft sich das.",
+            solution: "KI-Assistent (Deutsch + Dialekte) beantwortet 60-70% sofort: Terminbuchung via PVS-Integration, Rezeptanforderung mit Arzt-Freigabe, Krankmeldung (eAU), Notfall-Erkennung.",
+            roi: [
+                "💰 €17.600/Jahr MFA-Zeit gespart",
+                "📉 5-15% weniger No-Shows",
+                "⏱️ Break-Even: 3 Monate"
+            ],
+            legal: [
+                "🔒 DSGVO Art. 9-konform (Pseudonymisierung)",
+                "📋 HWG-konform (keine Werbung)",
+                "⚖️ Haftungsklauseln (Notfall-Keywords)"
+            ]
         }
     },
     {
-        id: "02",
+        id: "documentation",
+        number: "02",
         title: "Arztbriefe in 90 Sekunden statt 30 Minuten",
+        hook: "Sie diktieren, die KI schreibt. Perfekt formatiert, medizinisch korrekt, sofort im PVS. Mehr Zeit für den Patienten.",
         icon: FileText,
-        hook: "Sie verbringen 3 Stunden täglich mit Dokumentation. 30 Minuten pro Arztbrief. Das sind 720 Stunden pro Jahr.",
-        detail: {
-            problem: "52% der Ärzte klagen über zu wenig Patientenzeit. Dokumentation ist Haupttreiber für Burnout. Eine Zahnarztpraxis dokumentiert bis Mitternacht.",
-            solution: "Ambient AI transkribiert Ihr Patientengespräch in Echtzeit. Nach Konsultation liegt ein strukturierter Arztbrief vor. Sie prüfen, ergänzen, signieren – fertig in 90 Sekunden.",
-            roi: "2h/Tag gespart = 500h/Jahr. Bei €100/h Arzt-Stundensatz = €50.000 Umsatzpotenzial.",
-            legal: "On-Premise oder EU-Private-Cloud. Kein Training mit Ihren Daten. MDR-konform als Dokumentations-Tool (kein Medizinprodukt)."
+        stats: {
+            before: "30 Min/Brief",
+            after: "90 Sek/Brief",
+            saved: "95% schneller"
+        },
+        details: {
+            problem: "Dokumentation frisst 30-40% Ihrer Arbeitszeit. Copy-Paste-Fehler sind ein Haftungsrisiko. Nach Feierabend sitzen Sie noch am PC.",
+            solution: "LLM generiert Arztbrief aus Stichpunkten oder Diktat. Automatische Strukturierung (Anamnese, Befund, Therapie). Integration in Ihr PVS.",
+            roi: [
+                "💰 €25.000/Jahr Arzt-Zeit (bei 1h/Tag)",
+                "⚡ Sofortiger Versand an Überweiser",
+                "😊 Pünktlicher Feierabend"
+            ],
+            legal: [
+                "🔒 On-Premise oder Private Cloud (kein US-Server)",
+                "👨‍⚕️ Human-in-the-Loop (Arzt gibt frei)",
+                "✅ MDR-konform (keine Diagnose-KI)"
+            ]
         }
     },
     {
-        id: "03",
-        title: "Interaktionsprüfung in Sekunden",
-        icon: Pill,
-        hook: "Patient nimmt 8 Medikamente. Wechselwirkungen manuell prüfen dauert 5 Minuten. Dosierung für Nierenpatienten = Kopfrechnen.",
-        detail: {
-            problem: "Polypharmazie bei 40% der über-65-Jährigen. Interaktionsprüfung zeitaufwendig. Dosisanpassung bei Niereninsuffizienz fehleranfällig.",
-            solution: "KI-basiertes CDSS gleicht Medikationsliste mit Fachinformation ab, prüft Interaktionen und Kontraindikationen, schlägt Dosisanpassungen vor.",
-            roi: "5 Min./Patient gespart bei 40 Patienten/Tag = 3,3h/Tag. Haftungsrisiko minimiert.",
-            legal: "CDSS als KEIN Medizinprodukt (nur Vorschlag, Sie entscheiden). Plausibilitätsprüfung bleibt bei Ihnen. Haftungsverteilung klar geregelt."
+        id: "compliance",
+        number: "03",
+        title: "Automatisierte DSGVO & Compliance",
+        hook: "Keine Angst mehr vor Bußgeldern oder Audits. Ihre Praxis ist 'Compliance by Design'. Automatisch und im Hintergrund.",
+        icon: ShieldCheck,
+        stats: {
+            before: "Risiko hoch",
+            after: "100% Safe",
+            saved: "€20M Risiko weg"
+        },
+        details: {
+            problem: "DSGVO, MDR, AI Act, ePA-Pflicht. Die Regeln werden komplexer. Ein Fehler kann die Existenz kosten (Bußgelder, Abrechnungsausschluss).",
+            solution: "Automatisierte Löschkonzepte, Verarbeitungsverzeichnisse und Einwilligungen. KI überwacht Compliance-Status in Echtzeit.",
+            roi: [
+                "🛡️ Schutz vor Existenzrisiken",
+                "✅ Bestehen jedes Audits",
+                "😌 Ruhiger Schlaf"
+            ],
+            legal: [
+                "⚖️ Aktuellste Rechtsprechung integriert",
+                "📄 Automatische Dokumentation",
+                "🔒 Haftungsübernahme für Tech-Fehler"
+            ]
         }
     },
     {
-        id: "04",
-        title: "Blockchain für Ihre Medikamente",
+        id: "logistics",
+        number: "04",
+        title: "Intelligentes Lager & Bestellung",
+        hook: "Nie wieder abgelaufene Medikamente oder fehlendes Verbandsmaterial. Die KI bestellt nach, bevor es leer ist.",
         icon: Package,
-        hook: "Impfstoffe nicht vorrätig = Termin verloren. MFA verbringt 3h/Woche mit Bestellungen. Lieferengpässe = manuelle Telefonate.",
-        detail: {
-            problem: "Lagerbestand manuell prüfen = fehleranfällig. Mindesthaltbarkeit übersehen = Verschwendung. Lieferengpässe = Versorgungslücken.",
-            solution: "KI-Prognose für Bedarf. Automatische Bestellung. Blockchain-Tracking für transparente Lieferkette und Fälschungsschutz.",
-            roi: "3h/Woche MFA-Zeit gespart = €6.000/Jahr. Keine verpassten Umsätze durch Engpässe.",
-            legal: "EU Falsified Medicines Directive konform. Blockchain DSGVO-konform. AVV mit allen Teilnehmern."
+        stats: {
+            before: "Chaos & Müll",
+            after: "Auto-Pilot",
+            saved: "3h/Woche"
+        },
+        details: {
+            problem: "Manuelle Inventur ist fehleranfällig. Teure Medikamente verfallen. Im Notfall fehlt wichtiges Material.",
+            solution: "Kamera-basierte Erfassung oder IoT-Waagen. KI prognostiziert Bedarf (z.B. Grippewelle) und schlägt Bestellungen vor.",
+            roi: [
+                "💰 10-20% weniger Materialkosten",
+                "🗑️ 50% weniger Abfall",
+                "📦 Immer lieferfähig"
+            ],
+            legal: [
+                "💊 Apotheken- und Arzneimittelrecht konform",
+                "📊 Lückenlose Chargen-Dokumentation",
+                "✅ Revisionssicher"
+            ]
         }
     }
 ];
@@ -1165,90 +1677,190 @@ export function UseCases() {
 
     return (
         <section className="py-24 bg-background">
-            <div className="container mx-auto px-4 md:px-6">
+            <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
-                        Konkrete Lösungen für Ihre Praxis
+                    <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-4">
+                        Die 4 KI-Lösungen, die Ihre Praxis braucht
                     </h2>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light">
+                        Wählen Sie alle 4 als Komplettpaket – oder starten Sie mit einer einzelnen Lösung.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     {useCases.map((useCase) => (
-                        <div
+                        <motion.div
                             key={useCase.id}
-                            className={cn(
-                                "bg-white rounded-3xl p-8 shadow-sm border border-gray-100 transition-all duration-300",
-                                expandedId === useCase.id ? "ring-2 ring-primary ring-opacity-50" : "hover:shadow-md"
-                            )}
+                            layout
+                            className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow"
                         >
-                            <div
-                                className="cursor-pointer"
-                                onClick={() => setExpandedId(expandedId === useCase.id ? null : useCase.id)}
-                            >
-                                <div className="flex justify-between items-start mb-4">
-                                    <div className="flex items-center gap-4">
-                                        <div className="text-primary font-serif font-bold text-xl">#{useCase.id}</div>
-                                        <div className="p-3 bg-sand/30 rounded-xl text-primary">
-                                            <useCase.icon className="h-6 w-6" />
-                                        </div>
+                            <div className="p-8">
+                                <div className="flex justify-between items-start mb-6">
+                                    <span className="text-4xl font-bold text-primary/20 font-serif">{useCase.number}</span>
+                                    <div className="p-3 bg-sand/30 rounded-full text-primary">
+                                        <useCase.icon className="w-6 h-6" />
                                     </div>
-                                    <ChevronDown
-                                        className={cn(
-                                            "h-6 w-6 text-gray-400 transition-transform duration-300",
-                                            expandedId === useCase.id && "rotate-180"
-                                        )}
-                                    />
                                 </div>
 
-                                <h3 className="text-xl font-bold mb-3 text-text-primary">{useCase.title}</h3>
-                                <p className="text-gray-600 mb-4">{useCase.hook}</p>
-                            </div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4 font-serif">{useCase.title}</h3>
+                                <p className="text-gray-600 italic mb-8 leading-relaxed">
+                                    {useCase.hook}
+                                </p>
 
-                            <AnimatePresence>
-                                {expandedId === useCase.id && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: "auto", opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.3 }}
-                                        className="overflow-hidden"
-                                    >
-                                        <div className="pt-4 border-t border-gray-100 space-y-6">
-                                            <div>
-                                                <h4 className="font-bold text-primary mb-2">Problem</h4>
-                                                <p className="text-sm text-gray-600">{useCase.detail.problem}</p>
+                                {/* Before / After Visual */}
+                                <div className="bg-gray-50 rounded-2xl p-6 mb-8 flex items-center justify-between relative">
+                                    <div className="text-center">
+                                        <div className="text-red-500 font-bold text-lg mb-1">{useCase.stats.before}</div>
+                                        <div className="text-xs text-gray-400 uppercase tracking-wider">Vorher</div>
+                                    </div>
+
+                                    <div className="flex flex-col items-center px-4">
+                                        <ArrowRight className="w-6 h-6 text-gray-300 mb-1" />
+                                        <span className="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full whitespace-nowrap">
+                                            {useCase.stats.saved}
+                                        </span>
+                                    </div>
+
+                                    <div className="text-center">
+                                        <div className="text-green-600 font-bold text-lg mb-1">{useCase.stats.after}</div>
+                                        <div className="text-xs text-gray-400 uppercase tracking-wider">Nachher</div>
+                                    </div>
+                                </div>
+
+                                <Button
+                                    variant="ghost"
+                                    className="w-full flex items-center justify-between text-gray-900 hover:bg-gray-50 group"
+                                    onClick={() => setExpandedId(expandedId === useCase.id ? null : useCase.id)}
+                                >
+                                    <span className="font-medium">Details & ROI</span>
+                                    {expandedId === useCase.id ? (
+                                        <ChevronUp className="w-4 h-4 text-gray-400" />
+                                    ) : (
+                                        <ChevronDown className="w-4 h-4 text-gray-400 group-hover:text-primary transition-colors" />
+                                    )}
+                                </Button>
+
+                                <AnimatePresence>
+                                    {expandedId === useCase.id && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            className="overflow-hidden"
+                                        >
+                                            <div className="pt-6 space-y-6 border-t border-gray-100 mt-4">
+                                                <div>
+                                                    <h4 className="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wider">Problem</h4>
+                                                    <p className="text-sm text-gray-600 leading-relaxed">{useCase.details.problem}</p>
+                                                </div>
+                                                <div>
+                                                    <h4 className="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wider">Lösung</h4>
+                                                    <p className="text-sm text-gray-600 leading-relaxed">{useCase.details.solution}</p>
+                                                </div>
+
+                                                <div className="bg-green-50 rounded-xl p-5 border border-green-100">
+                                                    <h4 className="font-bold text-green-800 mb-3 text-sm uppercase tracking-wider flex items-center gap-2">
+                                                        <CheckCircle2 className="w-4 h-4" /> ROI & Nutzen
+                                                    </h4>
+                                                    <ul className="space-y-2">
+                                                        {useCase.details.roi.map((item, idx) => (
+                                                            <li key={idx} className="text-sm text-green-700 font-medium">{item}</li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+
+                                                <div className="bg-sand/20 rounded-xl p-5 border border-sand/30">
+                                                    <h4 className="font-bold text-primary mb-3 text-sm uppercase tracking-wider flex items-center gap-2">
+                                                        <ShieldCheck className="w-4 h-4" /> Legal Engineering
+                                                    </h4>
+                                                    <ul className="space-y-2">
+                                                        {useCase.details.legal.map((item, idx) => (
+                                                            <li key={idx} className="text-sm text-gray-700">{item}</li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+
+                                                <Button className="w-full bg-black text-white hover:bg-gray-800 rounded-full">
+                                                    Beratung zu {useCase.title.split(" ")[1]} anfragen
+                                                </Button>
                                             </div>
-                                            <div>
-                                                <h4 className="font-bold text-primary mb-2">Lösung</h4>
-                                                <p className="text-sm text-gray-600">{useCase.detail.solution}</p>
-                                            </div>
-                                            <div className="bg-accent-green/10 p-4 rounded-xl border border-accent-green/20">
-                                                <h4 className="font-bold text-accent-green mb-1">ROI</h4>
-                                                <p className="text-sm text-gray-700 font-medium">{useCase.detail.roi}</p>
-                                            </div>
-                                            <div className="bg-sand/30 p-4 rounded-xl border border-sand">
-                                                <h4 className="font-bold text-primary mb-1">Rechtliche Absicherung</h4>
-                                                <p className="text-sm text-gray-700">{useCase.detail.legal}</p>
-                                            </div>
-                                            <Button variant="ghost" className="w-full justify-between group text-primary hover:text-primary-hover hover:bg-primary/5">
-                                                Beratung anfragen
-                                                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                            </Button>
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
         </section>
     );
 }
-```
+
+
+# File: src/components/ui/Accordion.tsx
+
+"use client"
+
+import * as React from "react"
+import * as AccordionPrimitive from "@radix-ui/react-accordion"
+import { ChevronDown } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+
+const Accordion = AccordionPrimitive.Root
+
+const AccordionItem = React.forwardRef<
+    React.ElementRef<typeof AccordionPrimitive.Item>,
+    React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
+>(({ className, ...props }, ref) => (
+    <AccordionPrimitive.Item
+        ref={ref}
+        className={cn("border-b", className)}
+        {...props}
+    />
+))
+AccordionItem.displayName = "AccordionItem"
+
+const AccordionTrigger = React.forwardRef<
+    React.ElementRef<typeof AccordionPrimitive.Trigger>,
+    React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+>(({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Header className="flex">
+        <AccordionPrimitive.Trigger
+            ref={ref}
+            className={cn(
+                "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+                className
+            )}
+            {...props}
+        >
+            {children}
+            <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+        </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+))
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
+
+const AccordionContent = React.forwardRef<
+    React.ElementRef<typeof AccordionPrimitive.Content>,
+    React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+>(({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Content
+        ref={ref}
+        className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+        {...props}
+    >
+        <div className={cn("pb-4 pt-0", className)}>{children}</div>
+    </AccordionPrimitive.Content>
+))
+
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+
 
 # File: src/components/ui/Badge.tsx
-```typescript
+
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
@@ -1276,10 +1888,10 @@ function Badge({ className, variant = "default", ...props }: BadgeProps) {
 }
 
 export { Badge };
-```
+
 
 # File: src/components/ui/Button.tsx
-```typescript
+
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
@@ -1319,10 +1931,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button";
 
 export { Button };
-```
+
 
 # File: src/components/ui/Card.tsx
-```typescript
+
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
@@ -1377,5 +1989,13 @@ const CardContent = React.forwardRef<
 CardContent.displayName = "CardContent";
 
 export { Card, CardHeader, CardTitle, CardContent };
-```
 
+
+# File: src/lib/utils.ts
+
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs));
+}
