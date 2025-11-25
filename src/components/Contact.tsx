@@ -8,11 +8,10 @@ export function Contact() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
-                        Starten Sie Ihre Transformation
+                        Kontakt
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Kein Verkaufsgespräch. Eine ehrliche Analyse Ihrer Möglichkeiten.
-                        Finden Sie heraus, wie viel Zeit Sie wirklich sparen können.
+                        Bei Fragen oder Interesse an einem Erstgespräch erreichen Sie mich hier.
                     </p>
                 </div>
 

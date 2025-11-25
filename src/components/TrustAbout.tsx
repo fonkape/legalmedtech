@@ -14,43 +14,34 @@ export function TrustAbout() {
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-8 leading-tight">
-                            Diplom-Jurist & <br />
-                            <span className="text-primary italic">AI Engineer</span>
+                            Über mich
                         </h2>
 
                         <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                             <p>
-                                "Als ich 2018 meine erste Kanzlei automatisierte, merkte ich:
-                                <strong className="text-gray-900 font-medium"> Anwälte und Ärzte haben das gleiche Problem.</strong>
-                                Zu viel Bürokratie, zu wenig Zeit für das Wesentliche."
+                                10 Jahre als Jurist haben mir gezeigt: KI-Projekte scheitern nicht an Technologie, sondern an rechtlichen Fragen. Heute beantworte ich beide: Code und Gesetz.
                             </p>
                             <p>
-                                Ich bin kein typischer Software-Entwickler. Ich habe Jura studiert (Uni Bonn) und danach Programmieren gelernt.
-                                Diese Kombination ist Ihr Vorteil: Ich verstehe nicht nur den Code, sondern auch das Gesetz (DSGVO, MDR, Fernbehandlungsgesetz).
-                            </p>
-                            <p>
-                                Meine Mission: Ich baue KI-Systeme, die nicht nur technisch funktionieren, sondern
-                                <strong className="text-gray-900 font-medium"> rechtssicher</strong> sind.
-                                Damit Sie ruhig schlafen können, während die KI Ihre Arbeit macht.
+                                Legal Engineering bedeutet: DSGVO-Konformität ist Teil der Software. MDR-Compliance ist Teil der Architektur. Keine nachträglichen Korrekturen. Keine Bußgeldrisiken.
                             </p>
                         </div>
 
                         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="flex items-center gap-3">
                                 <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                                <span className="text-gray-700 font-medium">7+ Jahre Legal Tech</span>
+                                <span className="text-gray-700 font-medium">Jurist (WWU Münster)</span>
                             </div>
                             <div className="flex items-center gap-3">
                                 <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                                <span className="text-gray-700 font-medium">Zertifizierter Datenschutz</span>
+                                <span className="text-gray-700 font-medium">AI Engineer</span>
                             </div>
                             <div className="flex items-center gap-3">
                                 <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                                <span className="text-gray-700 font-medium">Full-Stack Developer</span>
+                                <span className="text-gray-700 font-medium">10 Jahre Corporate Law & Compliance</span>
                             </div>
                             <div className="flex items-center gap-3">
                                 <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                                <span className="text-gray-700 font-medium">Spezialisierung: Medizin</span>
+                                <span className="text-gray-700 font-medium">Spezialisierung: Medizin (DSGVO Art. 9, MDR, AI Act)</span>
                             </div>
                         </div>
                     </div>

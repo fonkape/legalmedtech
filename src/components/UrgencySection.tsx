@@ -1,90 +1,60 @@
-import React from 'react';
-import { Calendar, ShieldAlert, ServerCrash, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { AlertTriangle, FileText, Shield } from "lucide-react";
 
 export function UrgencySection() {
-    // Calculate days until 2026-01-01
-    const today = new Date();
-    const target = new Date('2026-01-01');
-    const diffTime = Math.abs(target.getTime() - today.getTime());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
     return (
-        <section className="py-24 bg-sand/20">
+        <section className="py-24 bg-gray-900 text-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif font-medium text-gray-900 mb-4">
-                        Warum 2026 das Jahr der Entscheidung ist
+                    <h2 className="text-3xl font-serif font-medium text-white mb-6">
+                        Regulatorische Änderungen 2026
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Drei regulatorische Änderungen zwingen Arztpraxen zur Digitalisierung.
-                        Wer jetzt startet, ist vorbereitet. Wer wartet, riskiert Sanktionen.
+                    <p className="text-gray-400 max-w-2xl mx-auto text-lg font-light">
+                        Wichtige Fristen und Anforderungen für medizinische Einrichtungen.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-                    {/* Deadline 1: ePA */}
-                    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-red-200 transition-colors group">
-                        <div className="flex items-center justify-between mb-6">
-                            <div className="p-3 bg-red-50 rounded-full text-red-600 group-hover:bg-red-100 transition-colors">
-                                <Calendar className="w-6 h-6" />
-                            </div>
-                            <span className="text-xs font-bold uppercase tracking-wider text-red-600 bg-red-50 px-3 py-1 rounded-full">
-                                1. Januar 2026
-                            </span>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    {/* Card 1 */}
+                    <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                        <div className="flex items-center gap-3 mb-4">
+                            <FileText className="w-5 h-5 text-blue-400" />
+                            <h3 className="text-lg font-medium text-white">ePA für alle</h3>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">ePA-Befüllung wird Pflicht</h3>
-                        <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                            Ab 1.1.2026: Verpflichtende ePA-Einträge (§346 SGB V). Sanktion: 1% Honorarkürzung + halbe TI-Pauschale = bis €6.000/Jahr Verlust. KI kann ePA automatisch befüllen.
+                        <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                            Ab Januar 2026 müssen alle Praxen in der Lage sein, die elektronische Patientenakte zu befüllen. KI-gestützte Strukturierung hilft bei der Umsetzung.
                         </p>
-                        <div className="bg-gray-50 rounded-lg p-3 text-center">
-                            <span className="text-sm font-medium text-gray-900">Noch <span className="text-red-600 font-bold">{diffDays} Tage</span></span>
+                        <div className="text-xs font-mono text-blue-400 bg-blue-400/10 px-3 py-1 rounded inline-block">
+                            Deadline: 01.01.2026
                         </div>
                     </div>
 
-                    {/* Deadline 2: AI Act */}
-                    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-200 transition-colors group">
-                        <div className="flex items-center justify-between mb-6">
-                            <div className="p-3 bg-blue-50 rounded-full text-blue-600 group-hover:bg-blue-100 transition-colors">
-                                <ShieldAlert className="w-6 h-6" />
-                            </div>
-                            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                                2. August 2026
-                            </span>
+                    {/* Card 2 */}
+                    <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                        <div className="flex items-center gap-3 mb-4">
+                            <Shield className="w-5 h-5 text-purple-400" />
+                            <h3 className="text-lg font-medium text-white">EU AI Act</h3>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">EU AI Act tritt in Kraft</h3>
-                        <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                            Ab 2.8.2026: Alle medizinischen KI-Systeme brauchen Konformitätsbewertung. Ohne: Bußgeld bis €35 Mio. Wer jetzt startet, hat 18 Monate Vorlauf für MDR/AI Act-Compliance.
+                        <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                            Der AI Act tritt voll in Kraft. Medizinische KI-Systeme fallen unter Hochrisiko-Anforderungen. Bestands-Software muss geprüft werden.
                         </p>
+                        <div className="text-xs font-mono text-purple-400 bg-purple-400/10 px-3 py-1 rounded inline-block">
+                            Deadline: 02.08.2026
+                        </div>
                     </div>
 
-                    {/* Deadline 3: SAP IS-H */}
-                    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-orange-200 transition-colors group">
-                        <div className="flex items-center justify-between mb-6">
-                            <div className="p-3 bg-orange-50 rounded-full text-orange-600 group-hover:bg-orange-100 transition-colors">
-                                <ServerCrash className="w-6 h-6" />
-                            </div>
-                            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
-                                Ende 2027
-                            </span>
+                    {/* Card 3 */}
+                    <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                        <div className="flex items-center gap-3 mb-4">
+                            <AlertTriangle className="w-5 h-5 text-orange-400" />
+                            <h3 className="text-lg font-medium text-white">SAP IS-H Ende</h3>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">SAP IS-H Support endet</h3>
-                        <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                            Kliniken und MVZ mit SAP IS-H müssen migrieren. Engpässe bei Benannten Stellen erwartet. Wer 2026 nicht plant, findet 2027 keine Entwickler.
+                        <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                            Wartungsende für SAP IS-H. Viele Kliniken und MVZs müssen ihre IT-Landschaft neu ordnen. Eine Chance für moderne, modulare Architekturen.
                         </p>
+                        <div className="text-xs font-mono text-orange-400 bg-orange-400/10 px-3 py-1 rounded inline-block">
+                            Start Migration: Jetzt
+                        </div>
                     </div>
-                </div>
-
-                <div className="max-w-2xl mx-auto text-center">
-                    <div className="border-2 border-red-100 bg-red-50/50 rounded-xl p-6 mb-8">
-                        <p className="text-red-800 font-medium">
-                            Ärzte, die 2026 starten, haben einen Vorsprung. Ärzte, die warten, zahlen doppelt: Sanktionen + höhere Implementierungskosten.
-                        </p>
-                    </div>
-                    <Button size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-full px-8 py-6 text-sm font-medium transition-all hover:scale-105">
-                        Erstberatung: Bin ich vorbereitet?
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
                 </div>
             </div>
         </section>

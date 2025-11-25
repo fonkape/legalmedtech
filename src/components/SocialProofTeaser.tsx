@@ -1,62 +1,54 @@
-import React from 'react';
-import { Quote } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
-import { ArrowRight } from 'lucide-react';
+import { Clock, TrendingUp, Phone } from "lucide-react";
 
 export function SocialProofTeaser() {
     return (
-        <section className="py-24 bg-background relative overflow-hidden">
+        <section className="py-20 bg-white border-b border-gray-100">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif font-medium text-gray-900 mb-4">
-                        Das sagen Ärzte, die bereits KI nutzen
+                    <h2 className="text-3xl font-serif font-medium text-gray-900 mb-4">
+                        Was KI in Arztpraxen heute leistet
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-                    {/* Testimonial 1 */}
-                    <div className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow relative">
-                        <Quote className="w-10 h-10 text-sand absolute top-6 left-6 opacity-50" />
-                        <p className="text-gray-700 italic mb-6 relative z-10 pt-8">
-                            "Ich dokumentiere nicht mehr bis Mitternacht. Seit 3 Monaten mit KI: Feierabend um 18 Uhr. Jeden Tag."
-                        </p>
-                        <div className="border-t border-gray-100 pt-4">
-                            <p className="font-bold text-gray-900">Dr. Sandra Bahr</p>
-                            <p className="text-xs text-gray-500 uppercase tracking-wider">Zahnärztin, Praxis Hamburg</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    {/* Stat 1 */}
+                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="p-3 bg-white rounded-full shadow-sm">
+                                <TrendingUp className="w-5 h-5 text-primary" />
+                            </div>
+                            <span className="text-4xl font-serif font-medium text-gray-900">78%</span>
                         </div>
+                        <p className="text-gray-600 leading-relaxed">
+                            der Ärzte sehen KI als Chance, aber nur 15% nutzen sie – der Grund: <span className="font-medium text-gray-900">rechtliche Unsicherheit</span>.
+                        </p>
                     </div>
 
-                    {/* Testimonial 2 */}
-                    <div className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow relative">
-                        <Quote className="w-10 h-10 text-sand absolute top-6 left-6 opacity-50" />
-                        <p className="text-gray-700 italic mb-6 relative z-10 pt-8">
-                            "Unsere MFA ist nicht mehr im Dauerstress. Der KI-Empfang nimmt 60% aller Anrufe ab. Patienten sind zufriedener – keine Warteschleifen."
-                        </p>
-                        <div className="border-t border-gray-100 pt-4">
-                            <p className="font-bold text-gray-900">Dr. Michael Weber</p>
-                            <p className="text-xs text-gray-500 uppercase tracking-wider">Hausarzt, Gemeinschaftspraxis München</p>
+                    {/* Stat 2 */}
+                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="p-3 bg-white rounded-full shadow-sm">
+                                <Clock className="w-5 h-5 text-primary" />
+                            </div>
+                            <span className="text-4xl font-serif font-medium text-gray-900">90 sek</span>
                         </div>
+                        <p className="text-gray-600 leading-relaxed">
+                            statt 30 Minuten pro Arztbrief. KI reduziert die Dokumentationszeit drastisch und schafft Raum für Patienten.
+                        </p>
                     </div>
 
-                    {/* Testimonial 3 */}
-                    <div className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow relative">
-                        <Quote className="w-10 h-10 text-sand absolute top-6 left-6 opacity-50" />
-                        <p className="text-gray-700 italic mb-6 relative z-10 pt-8">
-                            "Ich hatte Angst vor DSGVO-Bußgeldern. Jetzt habe ich rechtssichere KI – on-premise, kein US-Cloud-Risiko. Beruhigend."
-                        </p>
-                        <div className="border-t border-gray-100 pt-4">
-                            <p className="font-bold text-gray-900">Dr. Lisa Hoffmann</p>
-                            <p className="text-xs text-gray-500 uppercase tracking-wider">Internistin, Privatklinik Berlin</p>
+                    {/* Stat 3 */}
+                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="p-3 bg-white rounded-full shadow-sm">
+                                <Phone className="w-5 h-5 text-primary" />
+                            </div>
+                            <span className="text-4xl font-serif font-medium text-gray-900">70%</span>
                         </div>
+                        <p className="text-gray-600 leading-relaxed">
+                            aller Praxisanrufe sind Routine und automatisierbar. Entlasten Sie Ihr Team von Terminvereinbarungen.
+                        </p>
                     </div>
-                </div>
-
-                <div className="text-center">
-                    <p className="text-gray-600 mb-6">Möchten Sie auch zu den Pionieren gehören?</p>
-                    <Button size="lg" className="bg-black text-white hover:bg-gray-800 rounded-full px-8 py-6 text-sm font-medium transition-all hover:scale-105">
-                        Erstberatung buchen
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
                 </div>
             </div>
         </section>
