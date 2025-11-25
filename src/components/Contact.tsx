@@ -51,7 +51,7 @@ export function Contact() {
                                 </div>
 
                                 <div className="flex items-center gap-2">
-                                    <input type="checkbox" id="privacy" required className="rounded border-gray-300 text-primary focus:ring-primary" />
+                                    <input type="checkbox" id="privacy" required className="rounded border-gray-300 accent-primary focus:ring-primary" />
                                     <label htmlFor="privacy" className="text-sm text-gray-600">
                                         Ich akzeptiere die Datenschutzerklärung
                                     </label>
