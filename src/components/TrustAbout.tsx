@@ -10,11 +10,11 @@ export function TrustAbout() {
                     <div className="order-2 lg:order-1">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm mb-8">
                             <User className="w-4 h-4 text-primary" />
-                            <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">Über mich</span>
+                            <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">Profil</span>
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-8 leading-tight">
-                            Über mich
+                            Recht und Code - aus einer Hand
                         </h2>
 
                         <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
