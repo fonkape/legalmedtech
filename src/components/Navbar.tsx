@@ -11,11 +11,11 @@ export function Navbar() {
                         {"{ dk }"}
                     </div>
                     <div className="h-8 w-px bg-gray-200"></div>
-                    <div className="flex flex-col justify-center leading-[1.2]">
-                        <span className="font-sans text-[15px] font-medium text-[#334155] normal-case">
+                    <div className="h-8 flex flex-col justify-between">
+                        <span className="font-sans text-[13.5px] font-medium text-[#334155] normal-case leading-none translate-y-[-1px]">
                             Daniel Kleiboldt
                         </span>
-                        <span className="font-sans text-[12px] font-normal text-[#64748b] uppercase tracking-[0.15em]">
+                        <span className="font-sans text-[11px] font-normal text-[#64748b] uppercase tracking-[0.12em] leading-none translate-y-[1px]">
                             BÜRO FÜR LEGAL ENGINEERING
                         </span>
                     </div>
