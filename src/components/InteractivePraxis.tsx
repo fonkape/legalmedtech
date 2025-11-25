@@ -78,7 +78,7 @@ export function InteractivePraxis() {
                         <img
                             src="/praxis-isometric-v6.png"
                             alt="Interaktive Praxis Übersicht"
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-contain mix-blend-multiply"
                         />
                     </div>
 

@@ -30,7 +30,7 @@ export function SocialProofTeaser() {
                             <div className="p-3 bg-white rounded-full shadow-sm">
                                 <Clock className="w-5 h-5 text-primary" />
                             </div>
-                            <span className="text-4xl font-serif font-medium text-gray-900">90 sek</span>
+                            <span className="text-4xl font-serif font-medium text-gray-900">90 Min</span>
                         </div>
                         <p className="text-gray-600 leading-relaxed">
                             <span className="font-medium text-gray-900">Ø 90 Minuten Zeitersparnis</span> pro Tag für das Praxisteam. KI reduziert die Dokumentationszeit drastisch und schafft Raum für Patienten.

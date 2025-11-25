@@ -1,4 +1,4 @@
-import { Phone, FileText, ShieldCheck, Database } from "lucide-react";
+import { Phone, FileText, ShieldCheck, Database, Tablet } from "lucide-react";
 
 export function UseCases() {
     return (
@@ -13,9 +13,11 @@ export function UseCases() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
+                    {/* Row 1: 3 Items (col-span-2 each) */}
+
                     {/* Use Case 1: Telefon-Assistent */}
-                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100">
+                    <div className="md:col-span-2 p-8 bg-gray-50 rounded-2xl border border-gray-100">
                         <div className="flex items-center gap-4 mb-6">
                             <div className="p-3 bg-white rounded-lg shadow-sm">
                                 <Phone className="w-6 h-6 text-primary" />
@@ -30,8 +32,24 @@ export function UseCases() {
                         </p>
                     </div>
 
-                    {/* Use Case 2: Arztbrief-Generator */}
-                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100">
+                    {/* Use Case 2: Digitale Patientenaufnahme (NEW) */}
+                    <div className="md:col-span-2 p-8 bg-gray-50 rounded-2xl border border-gray-100">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-3 bg-white rounded-lg shadow-sm">
+                                <Tablet className="w-6 h-6 text-primary" />
+                            </div>
+                            <h3 className="text-xl font-medium text-gray-900">Digitale Patientenaufnahme</h3>
+                        </div>
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                            Schluss mit Klemmbrett und Papierchaos. Patienten füllen Anamnese, Datenschutz und Aufklärungsbögen digital am Tablet aus – rechtssicher signiert vor dem Arztkontakt.
+                        </p>
+                        <p className="text-sm text-gray-500 border-t border-gray-200 pt-4 mt-4">
+                            <span className="font-medium text-gray-700">Effizienz:</span> Daten fließen strukturiert direkt ins PVS. Keine Abtippfehler, keine Wartezeit.
+                        </p>
+                    </div>
+
+                    {/* Use Case 3: Arztbrief-Generator */}
+                    <div className="md:col-span-2 p-8 bg-gray-50 rounded-2xl border border-gray-100">
                         <div className="flex items-center gap-4 mb-6">
                             <div className="p-3 bg-white rounded-lg shadow-sm">
                                 <FileText className="w-6 h-6 text-primary" />
@@ -39,15 +57,17 @@ export function UseCases() {
                             <h3 className="text-xl font-medium text-gray-900">Automatisierte Arztbriefe</h3>
                         </div>
                         <p className="text-gray-600 leading-relaxed mb-4">
-                            KI-Vorformulierung zur finalen ärztlichen Prüfung. Die KI strukturiert Ihre Notizen und Befunde automatisch in das korrekte Format. Reduziert die Dokumentationszeit von ca. 30 Minuten auf 90 Sekunden.
+                            KI-Vorformulierung zur finalen ärztlichen Prüfung.
                         </p>
                         <p className="text-sm text-gray-500 border-t border-gray-200 pt-4 mt-4">
                             <span className="font-medium text-gray-700">Compliance:</span> Berücksichtigung der MDR-Klassifizierung für klinische Entscheidungsunterstützung.
                         </p>
                     </div>
 
-                    {/* Use Case 3: DSGVO & Compliance */}
-                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100">
+                    {/* Row 2: 2 Items (col-span-3 each) */}
+
+                    {/* Use Case 4: DSGVO & Compliance */}
+                    <div className="md:col-span-3 p-8 bg-gray-50 rounded-2xl border border-gray-100">
                         <div className="flex items-center gap-4 mb-6">
                             <div className="p-3 bg-white rounded-lg shadow-sm">
                                 <ShieldCheck className="w-6 h-6 text-primary" />
@@ -62,8 +82,8 @@ export function UseCases() {
                         </p>
                     </div>
 
-                    {/* Use Case 4: PVS-Integration */}
-                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100">
+                    {/* Use Case 5: PVS-Integration */}
+                    <div className="md:col-span-3 p-8 bg-gray-50 rounded-2xl border border-gray-100">
                         <div className="flex items-center gap-4 mb-6">
                             <div className="p-3 bg-white rounded-lg shadow-sm">
                                 <Database className="w-6 h-6 text-primary" />
