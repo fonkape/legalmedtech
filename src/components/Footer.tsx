@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import { Send } from "lucide-react";
+import { Send, Heart } from "lucide-react";
 
 export function Footer() {
     return (
@@ -65,8 +65,8 @@ export function Footer() {
                 </div>
 
                 <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-sm text-gray-400">
-                        © 2025 Daniel Kleiboldt. Made with <span className="text-primary">❤️</span> in Germany.
+                    <p className="text-sm text-gray-400 flex items-center gap-1">
+                        © 2025 Daniel Kleiboldt. Made with <Heart className="w-4 h-4 text-primary fill-primary" /> in Germany.
                     </p>
                     <div className="flex gap-6">
                         {/* Trust Badges Mockup */}
