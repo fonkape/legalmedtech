@@ -12,10 +12,10 @@ export function Navbar() {
                     </div>
                     <div className="h-8 w-px bg-gray-200"></div>
                     <div className="flex flex-col justify-center">
-                        <span className="font-sans text-lg font-bold text-gray-900 leading-none mb-1">
+                        <span className="font-sans text-xl font-bold text-gray-900 leading-none mb-1">
                             Daniel Kleiboldt
                         </span>
-                        <span className="font-sans text-[11px] font-bold text-gray-400 uppercase tracking-[0.15em] leading-none">
+                        <span className="font-sans text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] leading-none">
                             BÜRO FÜR LEGAL ENGINEERING
                         </span>
                     </div>

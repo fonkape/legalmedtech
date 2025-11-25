@@ -59,7 +59,7 @@ export function InteractivePraxis() {
     const activeData = hotspots.find(h => h.id === activeHotspot);
 
     return (
-        <section className="py-32 bg-[#FDFBF7] overflow-hidden relative">
+        <section className="py-32 bg-transparent overflow-hidden relative">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-primary mb-6">

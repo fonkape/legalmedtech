@@ -19,10 +19,11 @@ export function SolutionOverview() {
 
                     {/* Step 1 */}
                     <div className="relative z-10 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                        <div className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-6 mx-auto shadow-sm text-primary">
+                        <div className="relative w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-6 mx-auto shadow-sm text-primary">
                             <MessageSquare className="w-5 h-5" />
+                            <div className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center border-2 border-white">1</div>
                         </div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">1. Workflow-Analyse</h3>
+                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">Workflow-Analyse</h3>
                         <p className="text-gray-600 text-center text-sm leading-relaxed">
                             Identifikation rechtlicher Risiken und ineffizienter Prozesse. Wir prüfen Ihre bestehende Infrastruktur und definieren klare Ziele.
                         </p>
@@ -30,10 +31,11 @@ export function SolutionOverview() {
 
                     {/* Step 2 */}
                     <div className="relative z-10 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                        <div className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-6 mx-auto shadow-sm text-primary">
+                        <div className="relative w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-6 mx-auto shadow-sm text-primary">
                             <Code2 className="w-5 h-5" />
+                            <div className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center border-2 border-white">2</div>
                         </div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">2. Legal Engineering & Setup</h3>
+                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">Legal Engineering & Setup</h3>
                         <p className="text-gray-600 text-center text-sm leading-relaxed">
                             Implementierung der KI nach "Privacy by Design"-Prinzipien. Installation auf deutschen Servern oder lokal in Ihrer Praxis.
                         </p>
@@ -41,10 +43,11 @@ export function SolutionOverview() {
 
                     {/* Step 3 */}
                     <div className="relative z-10 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                        <div className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-6 mx-auto shadow-sm text-primary">
+                        <div className="relative w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-6 mx-auto shadow-sm text-primary">
                             <Rocket className="w-5 h-5" />
+                            <div className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center border-2 border-white">3</div>
                         </div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">3. Audit & Übergabe</h3>
+                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">Audit & Übergabe</h3>
                         <p className="text-gray-600 text-center text-sm leading-relaxed">
                             Inbetriebnahme inklusive technischer Compliance-Dokumentation für Ihre Akten. Schulung Ihres Teams für den sicheren Umgang.
                         </p>

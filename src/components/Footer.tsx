@@ -14,7 +14,7 @@ export function Footer() {
                         </div>
                         <p className="text-sm text-gray-500 leading-relaxed mb-6">
                             Legal Engineering für die Gesundheitsbranche.
-                            Wir verbinden medizinische Exzellenz mit rechtssicherer KI-Technologie.
+                            Ich verbinde medizinische Exzellenz mit rechtssicherer KI-Technologie.
                         </p>
                         <div className="flex gap-4">
                             {/* Social Icons Mockup */}
@@ -30,7 +30,7 @@ export function Footer() {
                             <li><Link href="#" className="hover:text-primary transition-colors">KI-Empfang</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Arztbrief-Automation</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Compliance-Check</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Supply Chain</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Self-Check-In</Link></li>
                         </ul>
                     </div>
 
@@ -66,7 +66,7 @@ export function Footer() {
 
                 <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-gray-400">
-                        © 2025 Daniel Kleiboldt. Made with ❤️ in Germany.
+                        © 2025 Daniel Kleiboldt. Made with <span className="text-primary">❤️</span> in Germany.
                     </p>
                     <div className="flex gap-6">
                         {/* Trust Badges Mockup */}
