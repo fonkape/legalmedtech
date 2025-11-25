@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, Inter, JetBrains_Mono, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -17,6 +17,12 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Legal Engineering für Arztpraxen | Daniel Kleiboldt",
   description: "Mehr Zeit für Patienten: KI-Empfang, automatische Arztbriefe, Medikationsmanagement – rechtssicher durch Legal Engineering.",
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-        className={`${playfair.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased font-sans bg-background text-text-primary`}
+        className={`${playfair.variable} ${inter.variable} ${jetbrainsMono.variable} ${ibmPlexMono.variable} antialiased font-sans bg-background text-text-primary`}
       >
         {children}
       </body>
