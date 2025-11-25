@@ -22,9 +22,9 @@ export function SolutionOverview() {
                         <div className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-6 mx-auto shadow-sm text-primary">
                             <MessageSquare className="w-5 h-5" />
                         </div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">1. Analyse & Beratung</h3>
+                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">1. Workflow-Analyse</h3>
                         <p className="text-gray-600 text-center text-sm leading-relaxed">
-                            Wir prüfen Ihre bestehende Infrastruktur (PVS, Telefonie) und identifizieren Automatisierungspotenziale. Sie erhalten eine ehrliche Einschätzung zur Machbarkeit.
+                            Identifikation rechtlicher Risiken und ineffizienter Prozesse. Wir prüfen Ihre bestehende Infrastruktur und definieren klare Ziele.
                         </p>
                     </div>
 
@@ -33,9 +33,9 @@ export function SolutionOverview() {
                         <div className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-6 mx-auto shadow-sm text-primary">
                             <Code2 className="w-5 h-5" />
                         </div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">2. Implementierung</h3>
+                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">2. Legal Engineering & Setup</h3>
                         <p className="text-gray-600 text-center text-sm leading-relaxed">
-                            Installation der KI-Modelle – entweder auf deutschen Servern oder lokal in Ihrer Praxis. Anbindung an Ihr PVS über Standard-Schnittstellen (GDT/BDT/FHIR).
+                            Implementierung der KI nach "Privacy by Design"-Prinzipien. Installation auf deutschen Servern oder lokal in Ihrer Praxis.
                         </p>
                     </div>
 
@@ -44,9 +44,9 @@ export function SolutionOverview() {
                         <div className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-6 mx-auto shadow-sm text-primary">
                             <Rocket className="w-5 h-5" />
                         </div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">3. Schulung & Start</h3>
+                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">3. Audit & Übergabe</h3>
                         <p className="text-gray-600 text-center text-sm leading-relaxed">
-                            Wir schulen Ihr Team im Umgang mit dem System. Sie erhalten alle notwendigen Dokumente für Ihre DSGVO- und MDR-Compliance-Mappe.
+                            Inbetriebnahme inklusive technischer Compliance-Dokumentation für Ihre Akten. Schulung Ihres Teams für den sicheren Umgang.
                         </p>
                     </div>
                 </div>

@@ -21,7 +21,7 @@ export function FAQ() {
                             CGM und Medatixx bieten doch auch KI an – warum zu Ihnen kommen?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Die großen PVS-Anbieter haben oft Compliance-Lücken: US-Cloud-Anbindung (Cloud Act-Risiko), unklare MDR-Klassifizierung, fehlende AI Act-Vorbereitung. Ich baue DSGVO-konform von Anfang an – auf EU-Infrastruktur oder on-premise in Ihrer Praxis. Sie erhalten vollständige Dokumentation für MDR und AI Act. Kein Vendor-Lock-In: Quellcode geht in Escrow.
+                            Ich liefere keine Massenware, sondern "Legal Engineering": Ich übersetze rechtliche Vorgaben (DSGVO, AI Act) direkt in Ihren individuellen Praxis-Workflow. Bei großen Anbietern ist Compliance oft nur ein Standard-Häkchen – bei mir ist sie Teil der Systemarchitektur. Zudem erhalten Sie eine technische Dokumentation, die Audits standhält.
                         </AccordionContent>
                     </AccordionItem>
 
@@ -30,7 +30,7 @@ export function FAQ() {
                             Ist es nicht zu früh für KI? Sollte ich warten?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Die regulatorischen Deadlines sind bereits gesetzt: ePA-Befüllungspflicht ab Januar 2026, EU AI Act ab August 2026. Wer jetzt plant, hat ausreichend Vorlauf für eine saubere Implementierung. Wer kurzfristig reagieren muss, zahlt erfahrungsgemäß mehr – zeitlich und finanziell.
+                            Die regulatorischen Deadlines stehen: ePA-Pflicht ab Januar 2026, EU AI Act ab August 2026. Wer jetzt plant, handelt souverän. Wer kurzfristig reagieren muss, zahlt erfahrungsgemäß mehr – sowohl finanziell als auch durch Reibungsverluste im Praxisalltag.
                         </AccordionContent>
                     </AccordionItem>
 
@@ -39,7 +39,7 @@ export function FAQ() {
                             Was passiert, wenn Sie Ihr Geschäft aufgeben?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Alle Ihre Daten sind jederzeit in Standardformaten (HL7v2, FHIR) exportierbar. Der Quellcode liegt bei einem Rechtsanwalt als Treuhänder in Escrow. Im Exit-Fall können Sie einen anderen Entwickler beauftragen oder zu einem anderen Anbieter wechseln. Es gibt keine Vendor-Lock-In-Klauseln.
+                            Sie gehen kein Risiko ein. Ihr Quellcode wird bei einem Treuhänder (Escrow) hinterlegt. Alle Daten sind jederzeit in Standardformaten (HL7/FHIR) exportierbar. Es gibt keinen Vendor-Lock-In.
                         </AccordionContent>
                     </AccordionItem>
 
@@ -48,7 +48,7 @@ export function FAQ() {
                             Wie garantieren Sie DSGVO-Konformität?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Ich arbeite nach dem Prinzip "Privacy by Design". Daten werden pseudonymisiert, bevor sie die KI erreichen. Die Server stehen ausschließlich in Deutschland (ISO 27001 zertifiziert) oder on-premise in Ihrer Praxis. Sie erhalten eine vollständige Datenschutz-Folgenabschätzung (DSFA) für Ihre Unterlagen.
+                            Durch "Privacy by Design". Daten werden verarbeitet, bevor sie externe KI-Modelle erreichen. Ich bereite die technische Seite der Datenschutz-Folgenabschätzung (DSFA) so vor, dass die technischen und organisatorischen Maßnahmen (TOMs) lückenlos dokumentiert sind.
                         </AccordionContent>
                     </AccordionItem>
 
@@ -57,7 +57,7 @@ export function FAQ() {
                             Funktioniert das mit meinem PVS?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Ja. Die Systeme nutzen standardisierte Schnittstellen (GDT/BDT, FHIR, HL7), die mit allen gängigen PVS kompatibel sind – Tomedo, Medatixx, CGM, Duria und andere. Die KI arbeitet als Schicht über Ihrem bestehenden System, ohne in den Kern einzugreifen.
+                            Ja. Ich nutze ausschließlich offizielle Schnittstellen (GDT/BDT, FHIR, HL7). Die KI legt sich als intelligente Schicht über Ihr bestehendes System (z.B. Tomedo, Medatixx, CGM), ohne in den sensiblen Kern einzugreifen.
                         </AccordionContent>
                     </AccordionItem>
 
@@ -66,7 +66,7 @@ export function FAQ() {
                             Was kostet eine Implementierung?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Das hängt vom Umfang ab. Ein einfacher KI-Empfang beginnt bei ca. €2.500 Setup plus monatlicher Wartung. Komplexere Integrationen liegen höher. Im Erstgespräch klären wir den Bedarf, danach erhalten Sie ein konkretes Angebot.
+                            Das hängt von Ihren Anforderungen ab. Da ich maßgeschneiderte, rechtssichere Infrastruktur entwickle und keine Standard-Software von der Stange verkaufe, kalkulieren wir den Aufwand individuell nach unserem Erstgespräch.
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>

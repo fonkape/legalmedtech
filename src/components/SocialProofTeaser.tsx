@@ -33,7 +33,7 @@ export function SocialProofTeaser() {
                             <span className="text-4xl font-serif font-medium text-gray-900">90 sek</span>
                         </div>
                         <p className="text-gray-600 leading-relaxed">
-                            statt 30 Minuten pro Arztbrief. KI reduziert die Dokumentationszeit drastisch und schafft Raum für Patienten.
+                            <span className="font-medium text-gray-900">Ø 90 Minuten Zeitersparnis</span> pro Tag für das Praxisteam. KI reduziert die Dokumentationszeit drastisch und schafft Raum für Patienten.
                         </p>
                     </div>
 

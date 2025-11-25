@@ -102,7 +102,7 @@ export function Contact() {
 
                             <Button variant="secondary" size="lg" className="w-full relative z-10 bg-white text-primary hover:bg-gray-100 font-bold">
                                 <Calendar className="mr-2 h-5 w-5" />
-                                Termin wählen
+                                Erstgespräch vereinbaren
                             </Button>
                         </div>
                     </div>

@@ -9,7 +9,7 @@ const articles = [
     {
         id: "ai-act",
         tag: "AI ACT",
-        date: "Nov 2025",
+        date: "Okt 2025",
         title: "Der AI Act kommt – was das für Ihre Dokumentationssoftware bedeutet.",
         preview: "Ab August 2026 gelten neue Regeln für KI in der Medizin. Was müssen Praxen wissen, und wann wird Software zum Hochrisiko-System?",
         content: (
@@ -91,7 +91,7 @@ export function Insights() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
                     {articles.map((article) => (
                         <div
                             key={article.id}
@@ -114,6 +114,18 @@ export function Insights() {
                             </div>
                         </div>
                     ))}
+
+                    {/* Coming Soon Card */}
+                    <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 opacity-70 flex flex-col justify-between">
+                        <div>
+                            <div className="flex items-center gap-3 mb-4 text-xs font-bold tracking-wider uppercase">
+                                <span className="text-gray-400 bg-gray-200 px-2 py-1 rounded">Coming Soon</span>
+                            </div>
+                            <h3 className="text-xl font-serif font-bold text-gray-400 mb-3">
+                                Haftungsfalle ePA: Was Praxisinhaber jetzt technisch wissen müssen
+                            </h3>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="text-center">

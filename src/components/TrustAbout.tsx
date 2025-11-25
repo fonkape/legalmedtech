@@ -19,10 +19,10 @@ export function TrustAbout() {
 
                         <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                             <p>
-                                10 Jahre als Jurist haben mir gezeigt: KI-Projekte scheitern nicht an Technologie, sondern an rechtlichen Fragen. Heute beantworte ich beide: Code und Gesetz.
+                                10 Jahre als Jurist haben mir gezeigt: Digitalisierung scheitert selten an der Technologie, sondern an der Angst vor Haftung und Datenschutzverstößen. Ich schließe diese Lücke.
                             </p>
                             <p>
-                                Legal Engineering bedeutet: DSGVO-Konformität ist Teil der Software. MDR-Compliance ist Teil der Architektur. Keine nachträglichen Korrekturen. Keine Bußgeldrisiken.
+                                Als Jurist und Software-Entwickler baue ich Systeme, die nicht nur funktionieren, sondern "compliant" konstruiert sind. Sie erhalten keine abstrakte Beratung, sondern rechtssichere Infrastruktur.
                             </p>
                         </div>
 
@@ -48,15 +48,15 @@ export function TrustAbout() {
 
                     {/* Image Column */}
                     <div className="order-1 lg:order-2 flex justify-center">
-                        <Card className="w-full max-w-md aspect-[3/4] overflow-hidden relative border-none shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <Card className="w-full max-w-md aspect-[3/4] overflow-hidden relative border-none shadow-xl">
                             <img
                                 src="/profile.jpg"
                                 alt="Daniel Kleiboldt"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover brightness-110"
                             />
                             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
                                 <p className="text-white font-serif text-xl">Daniel Kleiboldt</p>
-                                <p className="text-white/80 text-sm">Legal Engineer & Founder</p>
+                                <p className="text-white/80 text-sm">Jurist & Software Engineer</p>
                             </div>
                         </Card>
                     </div>

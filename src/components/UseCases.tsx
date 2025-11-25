@@ -39,7 +39,7 @@ export function UseCases() {
                             <h3 className="text-xl font-medium text-gray-900">Automatisierte Arztbriefe</h3>
                         </div>
                         <p className="text-gray-600 leading-relaxed mb-4">
-                            Erstellung von Arztbriefen in Sekunden statt Minuten. Die KI strukturiert Ihre Notizen und Befunde automatisch in das korrekte Format. Reduziert die Dokumentationszeit von ca. 30 Minuten auf 90 Sekunden.
+                            KI-Vorformulierung zur finalen ärztlichen Prüfung. Die KI strukturiert Ihre Notizen und Befunde automatisch in das korrekte Format. Reduziert die Dokumentationszeit von ca. 30 Minuten auf 90 Sekunden.
                         </p>
                         <p className="text-sm text-gray-500 border-t border-gray-200 pt-4 mt-4">
                             <span className="font-medium text-gray-700">Compliance:</span> Berücksichtigung der MDR-Klassifizierung für klinische Entscheidungsunterstützung.
