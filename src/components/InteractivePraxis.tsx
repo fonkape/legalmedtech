@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, Smartphone, Mic, Pill, Package, Shield, X } from "lucide-react";
+import { Phone, Smartphone, Mic, Shield, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 // Hotspot Data - Updated positions for new Isometric Image V6
@@ -13,11 +13,9 @@ const hotspots = [
         icon: Phone,
         position: { top: "50%", left: "25%" }, // Reception Desk (Left)
         modal: {
-            title: "Nie wieder Warteschleife",
-            problem: "Ihre MFA verbringt 4-6 Stunden täglich am Telefon. Patienten hängen 15 Minuten in der Warteschleife.",
-            solution: "Ein KI-Assistent beantwortet 60-70% aller Anrufe sofort: Terminbuchung, Rezeptanforderungen, Krankmeldungen.",
-            roi: "4h/Tag MFA-Entlastung = €17.000/Jahr gespart",
-            legal: "DSGVO Art. 9-konform durch Pseudonymisierung und EU-Cloud-Hosting."
+            title: "Automatisierte Anrufannahme",
+            text: "Ein KI-Assistent nimmt Anrufe entgegen und bearbeitet Routineanfragen: Terminbuchungen, Rezeptanforderungen, Krankmeldungen. Komplexe Anliegen werden an Ihr Team weitergeleitet.",
+            legal: "DSGVO-konforme Verarbeitung auf deutschen Servern. Keine Weitergabe an Dritte."
         }
     },
     {
@@ -26,11 +24,9 @@ const hotspots = [
         icon: Smartphone,
         position: { top: "70%", left: "50%" }, // Waiting Area (Center Bottom)
         modal: {
-            title: "Selbst-Check-In am Tablet",
-            problem: "Patienten stehen Schlange am Empfang. Versichertenkarte einstecken dauert. Stammdaten-Änderungen manuell.",
-            solution: "Patienten scannen Karte am Tablet, bestätigen Stammdaten. KI prüft Vollständigkeit, erstellt ePA-Einträge.",
-            roi: "10 Min./Patient gespart bei 40 Patienten/Tag = 6,6h/Tag",
-            legal: "ePA-Befüllung ab 1.1.2026 verpflichtend (§346 SGB V)."
+            title: "Digitaler Empfang",
+            text: "Patienten scannen ihre Versichertenkarte am Tablet, bestätigen Stammdaten und füllen Anamnesebögen aus. Die Daten fließen direkt in Ihr PVS.",
+            legal: "Einwilligungsmanagement integriert. Automatische Dokumentation für ePA-Befüllungspflichten ab 2026."
         }
     },
     {
@@ -39,11 +35,9 @@ const hotspots = [
         icon: Shield,
         position: { top: "55%", left: "80%" }, // Office (Right)
         modal: {
-            title: "Rechtssicherheit by Design",
-            problem: "Sie wollen ChatGPT nutzen, aber Datenschutzbeauftragte warnt vor US Cloud Act.",
-            solution: "Alle KI-Lösungen sind DSGVO Art. 9-konform: EU-Cloud, Pseudonymisierung, AVV, Audit-Logs.",
-            roi: "Bußgeldrisiko bis €20 Mio. vermieden",
-            legal: "Legal Engineering: Recht ist TEIL der Architektur."
+            title: "Privacy by Design",
+            text: "Alle KI-Lösungen laufen auf EU-Infrastruktur oder on-premise in Ihrer Praxis. Patientendaten werden pseudonymisiert, bevor sie die KI erreichen.",
+            legal: "Konform mit DSGVO Art. 9 (Gesundheitsdaten). Sie erhalten eine vollständige DSFA für Ihre Unterlagen."
         }
     },
     {
@@ -52,24 +46,9 @@ const hotspots = [
         icon: Mic,
         position: { top: "25%", left: "45%" }, // Treatment Room (Top Center)
         modal: {
-            title: "Sprechen statt Tippen",
-            problem: "Sie schreiben bis Mitternacht Arztbriefe. 30 Minuten pro Brief. 3 Stunden täglich reine Dokumentation.",
-            solution: "KI transkribiert Gespräch in Echtzeit. Strukturierter Arztbrief (Anamnese, Befund, Diagnose) fertig in 90 Sekunden.",
-            roi: "2h/Tag gespart = €50.000 Umsatzpotenzial",
-            legal: "MDR-konform als Dokumentations-Tool (kein Medizinprodukt)."
-        }
-    },
-    {
-        id: "lab",
-        label: "Smart Lager",
-        icon: Package,
-        position: { top: "30%", left: "65%" }, // Storage Room (Top Right)
-        modal: {
-            title: "Nie wieder leere Regale",
-            problem: "Impfstoffe nicht vorrätig = Termin verloren. MFA verbringt 3h/Woche mit Bestellungen.",
-            solution: "KI überwacht Lagerbestände, prognostiziert Bedarf, bestellt automatisch. Blockchain-Transparenz.",
-            roi: "3h/Woche gespart + keine verpassten Umsätze",
-            legal: "EU-Falsified Medicines Directive konform."
+            title: "Dokumentation per Sprache",
+            text: "Die KI transkribiert Ihr Gespräch in Echtzeit und strukturiert es automatisch in einen Arztbrief – Anamnese, Befund, Diagnose. Sie prüfen und signieren.",
+            legal: "Keine diagnostische Funktion, daher kein Medizinprodukt nach MDR. Vollständige Audit-Logs für Nachweispflichten."
         }
     }
 ];
@@ -157,18 +136,11 @@ export function InteractivePraxis() {
                                     </div>
                                     <div className="p-6 space-y-4">
                                         <div>
-                                            <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Problem</h4>
-                                            <p className="text-sm text-gray-600 leading-relaxed">{activeData.modal.problem}</p>
+                                            <p className="text-sm text-gray-600 leading-relaxed">{activeData.modal.text}</p>
                                         </div>
-                                        <div>
-                                            <h4 className="text-[10px] font-bold text-primary uppercase tracking-wider mb-1">Lösung</h4>
-                                            <p className="text-sm text-gray-900 font-medium leading-relaxed">{activeData.modal.solution}</p>
-                                        </div>
-                                        <div className="pt-4 border-t border-gray-50 flex gap-4">
-                                            <div>
-                                                <span className="block text-[10px] font-bold text-gray-400 uppercase">ROI</span>
-                                                <span className="text-xs font-bold text-green-600">{activeData.modal.roi}</span>
-                                            </div>
+                                        <div className="pt-4 border-t border-gray-50">
+                                            <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Rechtliche Absicherung</h4>
+                                            <p className="text-xs font-medium text-gray-900">{activeData.modal.legal}</p>
                                         </div>
                                     </div>
                                 </motion.div>

@@ -6,6 +6,7 @@ import { SolutionOverview } from "@/components/SolutionOverview";
 import { UseCases } from "@/components/UseCases";
 import { UrgencySection } from "@/components/UrgencySection";
 import { TrustAbout } from "@/components/TrustAbout";
+import { Insights } from "@/components/Insights";
 import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
@@ -32,6 +33,9 @@ export default function Home() {
         <TrustAbout />
       </div>
       <div id="insights">
+        <Insights />
+      </div>
+      <div id="faq">
         <FAQ />
       </div>
       <div id="contact">
