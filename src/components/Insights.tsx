@@ -64,27 +64,31 @@ const articles = [
         id: "ai-act",
         tag: "AI ACT",
         date: "Okt 2025",
-        title: "Der AI Act kommt – was das für Ihre Dokumentationssoftware bedeutet.",
+        title: "Ihr Software-Vertrag läuft bis 2026? Dann haben wir ein Thema.",
         preview: "Ab August 2026 gelten neue Regeln für KI in der Medizin. Was müssen Praxen wissen, und wann wird Software zum Hochrisiko-System?",
         content: (
             <>
-                <p className="mb-4">Am 2. August 2026 tritt der EU AI Act vollständig in Kraft. Für Arztpraxen klingt das weit weg – aber wenn Sie heute Software einsetzen, die bei Diagnosen oder Dokumentation unterstützt, sollten Sie genauer hinschauen.</p>
+                <p className="mb-4">2. August 2026. Das klingt nach ferner Zukunft. Für den Praxisalltag ist das eine Ewigkeit. Aber für Ihre IT-Strategie ist es morgen.</p>
+                <p className="mb-4">An diesem Stichtag greift der EU AI Act voll durch. Und wenn Sie heute Software einkaufen oder Lizenzverträge verlängern, die über dieses Datum hinauslaufen, sollten Sie jetzt genau hinschauen.</p>
+                <p className="mb-4">Denn viele Tools, die heute noch als "innovative Assistenzsysteme" verkauft werden, wachen 2026 in einer neuen Realität auf: Sie sind plötzlich regulierte Hochrisiko-Systeme.</p>
 
-                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was der AI Act regelt</h3>
-                <p className="mb-4">Der AI Act teilt KI-Systeme in Risikoklassen ein. Medizinische Anwendungen fallen fast immer unter "Hochrisiko" – das bedeutet: strengere Anforderungen an Transparenz, Dokumentation und menschliche Aufsicht.</p>
-                <p className="mb-4">Aber hier wird es interessant: Nicht jede Software, die in einer Praxis läuft, ist automatisch Hochrisiko-KI. Es kommt auf die Zweckbestimmung an.</p>
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was das Gesetz eigentlich will</h3>
+                <p className="mb-4">Der AI Act teilt KI nicht nach Intelligenz ein, sondern nach Risiko. Und Medizin ist – wenig überraschend – fast immer Hochrisiko. Das bedeutet für die Hersteller: Massive Anforderungen an Transparenz, Dokumentation und menschliche Aufsicht.</p>
+                <p className="mb-4">Aber hier liegt das Detail, das Ihnen kaum ein Vertriebler erzählt: Nicht jede KI in der Praxis ist automatisch betroffen. Es kommt nicht auf die Technik an. Es kommt auf den Zweck an.</p>
 
-                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Die entscheidende Frage: Was tut die Software?</h3>
-                <p className="mb-4">Ein Diktiersystem, das Ihre Worte in Text umwandelt, ist kein Hochrisiko-System. Ein System, das aus Ihren Notizen automatisch Diagnosevorschläge generiert, ist es möglicherweise schon.</p>
-                <p className="mb-4">Die Grenze verläuft dort, wo die KI anfängt, klinische Entscheidungen zu beeinflussen. Reine Dokumentation: unproblematisch. Entscheidungsunterstützung: Hochrisiko.</p>
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Die entscheidende Frage: Schreibt sie nur, oder denkt sie schon?</h3>
+                <p className="mb-4">Die Grenze ist dünn, aber juristisch messerscharf.</p>
+                <p className="mb-4">Ein Beispiel: Ein Diktiersystem, das Ihre gesprochenen Worte in Text umwandelt, ist ein Werkzeug. Es dokumentiert. Risiko: Niedrig. Ein System, das aus Ihren Notizen mitliest und automatisch Diagnosevorschläge oder Therapieoptionen generiert, ist eine Entscheidungshilfe. Risiko: Hoch.</p>
+                <p className="mb-4">Die Grenze verläuft genau dort, wo die Software aufhört, Sekretär zu sein, und anfängt, Assistenzarzt zu spielen. Sobald klinische Entscheidungen beeinflusst werden, greifen die strengen Regeln.</p>
 
-                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was das für bestehende Software bedeutet</h3>
-                <p className="mb-4">Wenn Sie bereits KI-gestützte Tools nutzen – etwa für Arztbriefe oder Spracherkennung – sollten Sie prüfen, wie der Anbieter die Zweckbestimmung definiert hat. Seriöse Anbieter werden bis 2026 ihre Dokumentation anpassen und Konformitätsnachweise liefern.</p>
-                <p className="mb-4">Wenn Ihr Anbieter auf Nachfrage nicht erklären kann, ob sein Produkt unter den AI Act fällt, ist das ein Warnsignal.</p>
-
-                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Die gute Nachricht</h3>
-                <p className="mb-4">Wer jetzt plant, hat 18 Monate Vorlauf. Das ist genug Zeit, um bestehende Systeme zu prüfen und bei Neuanschaffungen auf Anbieter zu setzen, die Compliance von Anfang an mitdenken.</p>
-                <p>Der AI Act ist keine Bedrohung, sondern eine Chance zur Professionalisierung. Praxen, die ihre digitalen Werkzeuge verstehen, werden langfristig besser aufgestellt sein.</p>
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was Sie jetzt tun müssen</h3>
+                <p className="mb-4">Wenn Sie gerade dabei sind, Ihre Praxis zu digitalisieren, stellen Sie Ihrem Anbieter eine simple Frage: "Wie ist die Zweckbestimmung Ihrer Software nach dem AI Act definiert?"</p>
+                <p className="mb-4">Es gibt zwei mögliche Reaktionen.</p>
+                <p className="mb-4">Die gute: Der Anbieter legt Ihnen eine Roadmap vor, wie er bis 2026 die Konformität sicherstellt. Die schlechte (und häufige): Betretenes Schweigen.</p>
+                <p className="mb-4 font-bold">Spoiler: Wenn Ihr Anbieter nicht weiß, ob sein Produkt in 18 Monaten noch legal betreibbar ist, sollten Sie keinen 24-Monats-Vertrag unterschreiben.</p>
+                <p className="mb-4">Der AI Act ist keine bürokratische Schikane, um Ärzte zu ärgern. Er ist eine Chance zur Professionalisierung. Er zwingt den Markt, die "Black Box" zu öffnen.</p>
+                <p className="mb-4">Wer jetzt plant, hat 18 Monate Vorsprung. Das ist genug Zeit, um die Spreu vom Weizen zu trennen. Nutzen Sie sie.</p>
+                <p className="text-sm text-gray-500 mt-8">#AIAct #Compliance #DigitalHealth #Medizinrecht #LegalEngineering</p>
             </>
         )
     },
@@ -92,28 +96,38 @@ const articles = [
         id: "haftung",
         tag: "HAFTUNG",
         date: "Nov 2025",
-        title: "Was passiert, wenn Ihre Praxis-KI einen Fehler macht?",
-        preview: "KI verspricht Effizienz. Aber wer haftet, wenn der Arztbrief einen falschen Befund enthält oder der Telefonassistent einen Notfall nicht erkennt?",
+        title: "Der Arztbrief lügt. Wer zahlt? (Spoiler: Nicht die KI.)",
+        preview: "Freitagnachmittag, 16:30 Uhr. Der Kopf raucht, das Wartezimmer leert sich endlich. Das neue KI-Tool hat den Arztbrief für Herrn Müller schon fertiggeschrieben. Ein kurzer Blick, digital signiert, raus damit. Feierabend.",
         content: (
             <>
-                <p className="mb-4">Stellen Sie sich vor: Ihr KI-Dokumentationssystem erstellt einen Arztbrief. Sie überfliegen ihn, signieren, schicken ihn raus. Zwei Wochen später stellt sich heraus: Ein Befund war falsch übertragen. Der Patient wurde falsch weiterbehandelt. Wer haftet?</p>
+                <p className="mb-4">Freitagnachmittag, 16:30 Uhr. Der Kopf raucht, das Wartezimmer leert sich endlich.</p>
+                <p className="mb-4">Das neue KI-Tool hat den Arztbrief für Herrn Müller schon fertiggeschrieben. Ein kurzer Blick, digital signiert, raus damit. Feierabend.</p>
+                <p className="mb-4">Zwei Wochen später liegt Post auf dem Tisch. Nicht von Herrn Müller, sondern von seinem Anwalt. Ein Befund wurde falsch übertragen, die Weiterbehandlung war fehlerhaft.</p>
+                <p className="mb-4">Und jetzt kommt der Punkt, an dem viele Ärzte denken: „Dafür haftet doch der Software-Hersteller, oder?“</p>
+                <p className="mb-4 font-bold">Spoiler: Nein. Tut er nicht.</p>
+                <p className="mb-4">Das ist der Moment, in dem aus einem digitalen Komfort-Feature ein existenzbedrohendes Risiko wird.</p>
 
-                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Die kurze Antwort: Sie.</h3>
-                <p className="mb-4">Das Landgericht Kiel hat im November 2024 klargestellt, was viele ahnten: Wer KI einsetzt, haftet für die Ergebnisse. Die Plausibilitätsprüfung ist nicht delegierbar – nicht an die Software, nicht an den Hersteller, nicht an die MFA.</p>
-                <p className="mb-4">Das klingt hart, ist aber konsequent. KI ist ein Werkzeug. Wie beim Skalpell gilt: Das Werkzeug schneidet, aber der Arzt trägt die Verantwortung.</p>
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Reden wir kurz über die Illusion der „intelligenten“ Verantwortung.</h3>
+                <p className="mb-4">Wir sind es gewohnt, dass Technologie funktioniert. Wenn das MRT kaputt ist, rufen wir den Techniker. Wenn die KI halluziniert (also Dinge erfindet), rufen wir niemanden – wir merken es oft gar nicht.</p>
+                <p className="mb-4">Das Landgericht Kiel hat im November 2024 das ausgesprochen, was Juristen schon lange predigen: Wer KI einsetzt, haftet für das Ergebnis. Ohne Wenn und Aber.</p>
+                <p className="mb-4">Das Urteil stellt klar: Die Plausibilitätsprüfung ist nicht delegierbar. Nicht an die Software. Nicht an den Hersteller. Und auch nicht an die MFA, die „nur mal schnell drüberschauen“ soll.</p>
+                <p className="mb-4">Das klingt hart. Ist es auch. Aber es ist konsequent.</p>
+                <p className="mb-4">KI ist im juristischen Sinne kein Kollege, den man um Rat fragt. Sie ist ein Werkzeug. Wie ein Skalpell. Wenn das Skalpell abrutscht, können Sie auch nicht sagen: „Der Stahl war schuld.“ Sie führen die Hand.</p>
 
-                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was das praktisch bedeutet</h3>
-                <p className="mb-4">Jeder KI-generierte Output muss geprüft werden, bevor er die Praxis verlässt. "Die KI hat das so geschrieben" ist keine Verteidigung. Im Gegenteil: Es zeigt, dass Sie ein Werkzeug genutzt haben, dessen Grenzen Sie nicht verstanden haben.</p>
-                <p className="mb-4">Das bedeutet nicht, dass KI zu riskant ist. Es bedeutet, dass der Workflow stimmen muss.</p>
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was heißt das für die Praxis?</h3>
+                <p className="mb-4">Das bedeutet nicht, dass Sie KI wieder abschaffen müssen (das wäre bei dem aktuellen Personalmangel auch Wahnsinn). Es bedeutet aber, dass sich Ihr Workflow ändern muss.</p>
+                <p className="mb-4">Der Satz „Die KI hat das so geschrieben“ ist vor Gericht keine Verteidigung. Er ist ein Schuldeingeständnis. Er beweist nämlich, dass Sie ein Werkzeug benutzt haben, dessen Grenzen Sie nicht verstanden haben.</p>
 
-                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Drei Prinzipien für rechtssicheren KI-Einsatz</h3>
-                <p className="mb-4"><strong>Erstens: Human Oversight.</strong> Jeder KI-Output braucht einen menschlichen Prüfschritt. Nicht pro forma, sondern inhaltlich. Arztbriefe lesen, bevor Sie signieren. Anrufe stichprobenartig kontrollieren.</p>
-                <p className="mb-4"><strong>Zweitens: Dokumentation.</strong> Wenn etwas schiefgeht, müssen Sie nachweisen können, dass Sie sorgfältig gearbeitet haben. Audit-Logs, Prüfprotokolle, Schulungsnachweise.</p>
-                <p className="mb-4"><strong>Drittens: Klare Haftungsverträge.</strong> Mit dem KI-Anbieter sollte vertraglich geregelt sein, wer für was haftet. Wenn der Anbieter jede Haftung ausschließt, ist Vorsicht geboten.</p>
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Hier sind die drei Dinge, die Sie tun müssen, damit Sie nachts ruhig schlafen können:</h3>
+                <p className="mb-4"><strong>1. Human Oversight (Der menschliche Veto-Knopf)</strong><br />Jeder, wirklich jeder Output einer KI braucht einen menschlichen Prüfschritt. Und zwar nicht pro forma („Häkchen setzen“), sondern inhaltlich. Sie müssen den Arztbrief lesen, bevor Sie ihn signieren. Klingt nach Arbeit? Ja. Aber es geht immer noch schneller, als ihn selbst zu tippen. Der Zeitgewinn liegt im Entwurf, nicht in der Endkontrolle.</p>
+                <p className="mb-4"><strong>2. Dokumentation ist Ihre Lebensversicherung</strong><br />Wenn etwas schiefgeht, müssen Sie beweisen können, dass Sie sorgfältig gearbeitet haben. Audit-Logs, Prüfprotokolle, Nachweise darüber, dass Sie und Ihr Team im Umgang mit den Grenzen der KI geschult wurden. Ohne Dokumentation ist es im Haftungsfall so, als hätten Sie nie geprüft.</p>
+                <p className="mb-4"><strong>3. Verträge lesen (Ja, wirklich)</strong><br />Schauen Sie in die AGB Ihres KI-Anbieters. Viele schließen jede Haftung für inhaltliche Fehler aus. Das ist branchenüblich, aber für Sie ein Warnsignal. Wenn der Anbieter keine Verantwortung übernimmt, müssen Ihre internen Sicherheitsnetze umso engmaschiger sein.</p>
 
-                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Der Unterschied zwischen Risiko und Gefahr</h3>
-                <p className="mb-4">KI in der Praxis ist ein kalkulierbares Risiko. Wenn Sie die Werkzeuge verstehen, die Workflows richtig aufsetzen und die Dokumentation ernst nehmen, reduzieren Sie Ihre Haftungsrisiken – nicht erhöhen sie.</p>
-                <p>Gefährlich wird es nur, wenn Sie KI blind vertrauen. Aber das gilt für jedes Werkzeug.</p>
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Das Fazit:</h3>
+                <p className="mb-4">KI in der Praxis ist ein kalkulierbares Risiko – keine unkontrollierbare Gefahr.</p>
+                <p className="mb-4">Gefährlich wird es nur, wenn man „Automatisierung“ mit „blindem Vertrauen“ verwechselt. Wer die KI als das behandelt, was sie ist – ein extrem leistungsfähiger, aber manchmal verwirrter Assistent –, der gewinnt Zeit. Wer sie als Orakel behandelt, verliert im Zweifel seine Zulassung.</p>
+                <p className="mb-4 font-bold">Nutzen Sie die Technologie. Aber behalten Sie die Verantwortung.</p>
+                <p className="text-sm text-gray-500 mt-8">#KI #Haftung #Arztpraxis #DigitalHealth #LegalEngineering</p>
             </>
         )
     }
