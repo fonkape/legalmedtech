@@ -243,6 +243,12 @@ export function Footer() {
 
                                     <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">5. Tools und Dienste</h3>
 
+                                    <h4 className="font-bold text-gray-900 mt-4 mb-2">Webanalyse durch Vercel Web Analytics</h4>
+                                    <p>Wir nutzen auf unserer Website das Analysetool "Vercel Web Analytics" des Anbieters Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.</p>
+                                    <p>Vercel Web Analytics ermöglicht es uns, die Nutzung unserer Website zu analysieren (z. B. Besucherzahlen, Absprungraten, Herkunftsländer), um unser Angebot technisch und inhaltlich zu optimieren. Die Erfassung erfolgt dabei ohne den Einsatz von Cookies. Die IP-Adresse der Besucher wird unmittelbar nach der Erhebung anonymisiert und nicht dauerhaft gespeichert. Es werden keine persönlichen Profile erstellt ("Privacy-First-Ansatz").</p>
+                                    <p>Rechtsgrundlage: Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an der Analyse und Optimierung unseres Online-Angebotes gemäß Art. 6 Abs. 1 lit. f DSGVO. Da keine Cookies gesetzt werden und keine personenbezogenen Daten dauerhaft gespeichert werden, ist keine gesonderte Einwilligung (Consent) erforderlich.</p>
+                                    <p>Datenübermittlung: Soweit Daten in die USA übertragen werden, stützt sich Vercel auf die Standardvertragsklauseln der EU-Kommission. Weitere Informationen zum Datenschutz bei Vercel finden Sie hier: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://vercel.com/legal/privacy-policy</a></p>
+
                                     <h4 className="font-bold text-gray-900 mt-4 mb-2">Terminvereinbarung via Calendly</h4>
                                     <p>Auf unserer Website haben Sie die Möglichkeit, Termine für ein Erstgespräch ("Potenzial-Analyse") zu vereinbaren. Wir nutzen hierfür den Dienst Calendly des Anbieters Calendly LLC, 271 17th St NW, 10th Floor, Atlanta, Georgia 30363, USA.</p>
                                     <p>Zum Zweck der Terminvereinbarung und Durchführung geben Sie die abgefragten Daten und den Wunschtermin in die Eingabemaske ein. Diese Daten werden bei Calendly gespeichert. Calendly versendet anschließend eine Bestätigung an Ihre E-Mail-Adresse.</p>

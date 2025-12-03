@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { Playfair_Display, Inter, JetBrains_Mono, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         className={`${playfair.variable} ${inter.variable} ${jetbrainsMono.variable} ${ibmPlexMono.variable} antialiased font-sans bg-background text-text-primary`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
