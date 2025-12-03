@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, Smartphone, Mic, Shield, X } from "lucide-react";
+import { Phone, Smartphone, Mic, Shield, X, Stethoscope } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 // Hotspot Data - Updated positions for new Isometric Image V6
@@ -62,11 +62,15 @@ export function InteractivePraxis() {
         <section className="py-32 bg-transparent overflow-hidden relative">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="text-center mb-20">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full shadow-sm mb-8">
+                        <Stethoscope className="w-4 h-4 text-primary" />
+                        <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">USE CASES</span>
+                    </div>
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-primary mb-6">
-                        Legal Engineering in der Praxis
+                        Wo KI Ihre Praxis entlastet.
                     </h2>
                     <p className="text-lg text-gray-500 max-w-2xl mx-auto font-light">
-                        Ihre Praxis ist ein komplexes Ökosystem. Entdecken Sie, wie wir jeden Bereich optimieren – rechtssicher und effizient.
+                        Ich integriere Automatisierung nicht wahllos, sondern genau dort, wo Ihre Prozesse klemmen. Jeder Raum hat seine eigenen Regeln.
                     </p>
                 </div>
 

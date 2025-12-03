@@ -23,14 +23,14 @@ export function Navbar() {
 
                 {/* Center: Navigation Links */}
                 <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-                    <Link href="#solutions" className="text-sm font-medium text-gray-600 hover:text-primary transition-colors">
-                        Lösung
-                    </Link>
-                    <Link href="#use-cases" className="text-sm font-medium text-gray-600 hover:text-primary transition-colors">
-                        Use Cases
-                    </Link>
                     <Link href="#about" className="text-sm font-medium text-gray-600 hover:text-primary transition-colors">
-                        Profil
+                        Über mich
+                    </Link>
+                    <Link href="#methodik" className="text-sm font-medium text-gray-600 hover:text-primary transition-colors">
+                        Methodik
+                    </Link>
+                    <Link href="#angebot" className="text-sm font-medium text-gray-600 hover:text-primary transition-colors">
+                        Angebot
                     </Link>
                     <Link href="#insights" className="text-sm font-medium text-gray-600 hover:text-primary transition-colors">
                         Insights

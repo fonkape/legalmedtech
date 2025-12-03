@@ -1,72 +1,83 @@
 "use client";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/Accordion";
+import { MessageCircle } from "lucide-react";
 
 export function FAQ() {
     return (
         <section className="py-24 bg-background">
             <div className="container mx-auto px-4 max-w-3xl">
                 <div className="text-center mb-16">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full shadow-sm mb-8">
+                        <MessageCircle className="w-4 h-4 text-primary" />
+                        <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">KLARTEXT</span>
+                    </div>
                     <h2 className="text-4xl font-serif font-medium text-gray-900 mb-4">
-                        Häufige Fragen
+                        Antworten auf Ihre Fragen.
                     </h2>
-                    <p className="text-gray-600">
-                        Alles, was Sie vor dem Start wissen müssen.
-                    </p>
                 </div>
 
                 <Accordion type="single" collapsible className="w-full space-y-4">
                     <AccordionItem value="item-1" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
                         <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline text-left">
-                            CGM und Medatixx bieten doch auch KI an – warum zu Ihnen kommen?
+                            Muss ich technisches Wissen mitbringen?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Ich liefere keine Massenware, sondern "Legal Engineering": Ich übersetze rechtliche Vorgaben (DSGVO, AI Act) direkt in Ihren individuellen Praxis-Workflow. Bei großen Anbietern ist Compliance oft nur ein Standard-Häkchen – bei mir ist sie Teil der Systemarchitektur. Zudem erhalten Sie eine technische Dokumentation, die Audits standhält.
+                            Nein. Das ist mein Job. Sie erklären mir Ihre medizinischen Abläufe und Probleme. Ich übersetze das in technische Anforderungen und juristische Vorgaben. Sie müssen nicht programmieren können, Sie müssen nur wissen, was Sie verbessern wollen.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-2" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
                         <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline text-left">
-                            Ist es nicht zu früh für KI? Sollte ich warten?
+                            Lohnt sich der Aufwand für eine einzelne Hausarztpraxis?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Die regulatorischen Deadlines stehen: ePA-Pflicht ab Januar 2026, EU AI Act ab August 2026. Wer jetzt plant, handelt souverän. Wer kurzfristig reagieren muss, zahlt erfahrungsgemäß mehr – sowohl finanziell als auch durch Reibungsverluste im Praxisalltag.
+                            Absolut. Ein rechtssicherer KI-Telefonassistent kann Ihrem Team täglich 60 bis 90 Minuten Telefonzeit abnehmen. Die Investition in eine saubere Planung amortisiert sich meist innerhalb weniger Monate durch entlastetes Personal und zufriedenere Patienten.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-3" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
                         <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline text-left">
-                            Was passiert, wenn Sie Ihr Geschäft aufgeben?
+                            Bauen Sie die Software selbst?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Sie gehen kein Risiko ein. Ihr Quellcode wird bei einem Treuhänder (Escrow) hinterlegt. Alle Daten sind jederzeit in Standardformaten (HL7/FHIR) exportierbar. Es gibt keinen Vendor-Lock-In.
+                            Ich arbeite nach dem Architekten-Prinzip. Ich verantworte die Konzeption, die Rechtssicherheit und die Architektur. Für die reine Programmierung (Coding) arbeite ich bei Bedarf mit spezialisierten Entwicklern zusammen. Sie haben aber immer nur mich als verantwortlichen Ansprechpartner.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-4" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
                         <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline text-left">
-                            Wie garantieren Sie DSGVO-Konformität?
+                            Warum kann ich nicht einfach ChatGPT nutzen?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Durch "Privacy by Design". Daten werden verarbeitet, bevor sie externe KI-Modelle erreichen. Ich bereite die technische Seite der Datenschutz-Folgenabschätzung (DSFA) so vor, dass die technischen und organisatorischen Maßnahmen (TOMs) lückenlos dokumentiert sind.
+                            In der Standard-Version ist das datenschutzrechtlich hochriskant (Server in den USA, Nutzung Ihrer Daten zum Training). Ich zeige Ihnen Wege, wie Sie moderne KI-Modelle nutzen können, die technisch "gekapselt" sind, sodass keine Patientendaten abfließen.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-5" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
                         <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline text-left">
-                            Funktioniert das mit meinem PVS?
+                            Was genau regelt der AI Act für Arztpraxen?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Ja. Ich nutze ausschließlich offizielle Schnittstellen (GDT/BDT, FHIR, HL7). Die KI legt sich als intelligente Schicht über Ihr bestehendes System (z.B. Tomedo, Medatixx, CGM), ohne in den sensiblen Kern einzugreifen.
+                            Der AI Act klassifiziert KI-Systeme nach Risiko. Vieles, was in Arztpraxen zum Einsatz kommt, fällt in die Hochrisiko-Kategorie – etwa Software, die bei Diagnosen unterstützt oder Patientendaten verarbeitet. Das bedeutet: Dokumentationspflichten, menschliche Aufsicht, Transparenz gegenüber Patienten. Die gute Nachricht: Wer heute sauber plant, erfüllt die Anforderungen fast nebenbei. Wer erst 2026 aufwacht, hat ein Problem.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-6" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
                         <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline text-left">
-                            Was kostet eine Implementierung?
+                            Wann ist eine KI ein Medizinprodukt?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-6">
-                            Das hängt von Ihren Anforderungen ab. Da ich maßgeschneiderte, rechtssichere Infrastruktur entwickle und keine Standard-Software von der Stange verkaufe, kalkulieren wir den Aufwand individuell nach unserem Erstgespräch.
+                            Sobald Software dazu dient, Krankheiten zu diagnostizieren, zu behandeln oder zu überwachen, kann sie unter die Medizinprodukteverordnung (MDR) fallen – auch wenn sie "nur" Empfehlungen ausspricht. Ein KI-Telefonassistent, der Termine vergibt, ist kein Medizinprodukt. Eine KI, die aus Symptomen eine Triage-Empfehlung ableitet, möglicherweise schon. Die Abgrenzung ist nicht trivial, aber entscheidend: Medizinprodukte brauchen eine CE-Kennzeichnung und müssen ein Konformitätsbewertungsverfahren durchlaufen.
+                        </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="item-7" className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm">
+                        <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline text-left">
+                            Darf meine MFA die KI-Dokumentation freigeben?
+                        </AccordionTrigger>
+                        <AccordionContent className="text-gray-600 leading-relaxed pb-6">
+                            Das kommt auf die Dokumentation an. Reine Verwaltungsdaten (Termine, Stammdaten) sind unproblematisch. Bei medizinischer Dokumentation – also allem, was in die Patientenakte fließt – bleibt die ärztliche Verantwortung bestehen. Die MFA kann vorarbeiten, aber die Freigabe medizinischer Inhalte sollte durch den Arzt erfolgen. Das ist keine KI-Frage, sondern Berufsrecht. Die KI ändert daran nichts – sie macht es nur sichtbarer.
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>

@@ -3,26 +3,28 @@ import { Card } from "@/components/ui/Card";
 
 export function TrustAbout() {
     return (
-        <section className="py-24 bg-sand/20">
+        <section id="about" className="py-24 bg-sand/20">
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="flex justify-center mb-16">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm">
+                        <User className="w-4 h-4 text-primary" />
+                        <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">Über mich</span>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                     {/* Text Column */}
                     <div className="order-2 lg:order-1">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm mb-8">
-                            <User className="w-4 h-4 text-primary" />
-                            <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">Profil</span>
-                        </div>
-
                         <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-8 leading-tight">
-                            Recht und Code - aus einer Hand
+                            Jurist. Entwickler. Architekt.
                         </h2>
 
                         <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                             <p>
-                                10 Jahre als Jurist haben mir gezeigt: Digitalisierung scheitert selten an der Technologie, sondern an der Angst vor Haftung und Datenschutzverstößen. Ich schließe diese Lücke.
+                                Ich bin Daniel Kleiboldt. 10 Jahre war ich Konzernjurist – Compliance, Vertragsrecht, die Schnittstelle zwischen "geht nicht" und "muss aber". Ich habe gesehen, wie gute Ideen an Rechtsabteilungen sterben. Und wie schlechte Ideen durchgewunken werden, weil niemand die richtigen Fragen stellt.
                             </p>
                             <p>
-                                Als Jurist und Software-Entwickler baue ich Systeme, die nicht nur funktionieren, sondern "compliant" konstruiert sind. Sie erhalten keine abstrakte Beratung, sondern rechtssichere Infrastruktur.
+                                Heute baue ich selbst mit. Ich absolviere gerade eine intensive Ausbildung im AI Engineering – nicht um Entwickler zu werden, sondern um beide Seiten zu verstehen. Mein Ziel: KI-Lösungen, die von Anfang an rechtssicher gebaut sind. Nicht nachträglich geflickt.
                             </p>
                         </div>
 
@@ -33,7 +35,7 @@ export function TrustAbout() {
                             </div>
                             <div className="flex items-center gap-3">
                                 <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                                <span className="text-gray-700 font-medium">AI Engineer</span>
+                                <span className="text-gray-700 font-medium">AI Engineer (in training)</span>
                             </div>
                             <div className="flex items-center gap-3">
                                 <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -50,7 +52,7 @@ export function TrustAbout() {
                     <div className="order-1 lg:order-2 flex justify-center">
                         <Card className="w-full max-w-md aspect-[3/4] overflow-hidden relative border-none shadow-xl">
                             <img
-                                src="/profile.jpg"
+                                src="/profile2.jpg"
                                 alt="Daniel Kleiboldt"
                                 className="w-full h-full object-cover brightness-110"
                             />

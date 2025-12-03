@@ -2,14 +2,18 @@ import { MessageSquare, Code2, Rocket } from "lucide-react";
 
 export function SolutionOverview() {
     return (
-        <section className="py-24 bg-gray-50">
+        <section id="methodik" className="py-24 bg-gray-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm mb-8">
+                        <Code2 className="w-4 h-4 text-primary" />
+                        <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">METHODIK</span>
+                    </div>
                     <h2 className="text-3xl font-serif font-medium text-gray-900 mb-4">
-                        So läuft ein Projekt ab
+                        Erst die Compliance. Dann der Code.
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Transparent, planbar und ohne versteckte Kosten.
+                        Die meisten scheitern, weil sie Software kaufen, bevor das rechtliche Fundament steht. Ich drehe den Prozess um. Wir bauen zuerst den juristischen Bauplan.
                     </p>
                 </div>
 
@@ -23,9 +27,9 @@ export function SolutionOverview() {
                             <MessageSquare className="w-5 h-5" />
                             <div className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center border-2 border-white">1</div>
                         </div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">Workflow-Analyse</h3>
+                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">Technische Leitplanken</h3>
                         <p className="text-gray-600 text-center text-sm leading-relaxed">
-                            Identifikation rechtlicher Risiken und ineffizienter Prozesse. Wir prüfen Ihre bestehende Infrastruktur und definieren klare Ziele.
+                            Wir definieren technisch, welche Daten wo fließen dürfen. Wir bauen "Guardrails", die verhindern, dass sensible Patientendaten ungewollt das sichere Netz verlassen.
                         </p>
                     </div>
 
@@ -35,9 +39,9 @@ export function SolutionOverview() {
                             <Code2 className="w-5 h-5" />
                             <div className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center border-2 border-white">2</div>
                         </div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">Legal Engineering & Setup</h3>
+                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">Rechtliche Kapselung</h3>
                         <p className="text-gray-600 text-center text-sm leading-relaxed">
-                            Implementierung der KI nach "Privacy by Design"-Prinzipien. Installation auf deutschen Servern oder lokal in Ihrer Praxis.
+                            Wir "verpacken" moderne KI-Modelle in ein juristisches Korsett. So wird leistungsstarke KI nutzbar, ohne gegen die ärztliche Schweigepflicht (§ 203 StGB) zu verstoßen.
                         </p>
                     </div>
 
@@ -47,9 +51,9 @@ export function SolutionOverview() {
                             <Rocket className="w-5 h-5" />
                             <div className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center border-2 border-white">3</div>
                         </div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">Audit & Übergabe</h3>
+                        <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">Bauleitung & Abnahme</h3>
                         <p className="text-gray-600 text-center text-sm leading-relaxed">
-                            Inbetriebnahme inklusive technischer Compliance-Dokumentation für Ihre Akten. Schulung Ihres Teams für den sicheren Umgang.
+                            Erst wenn der Plan steht, wird gebaut. Ich steuere die Entwickler oder Ihr IT-Systemhaus und überwache, dass der Code exakt den Datenschutzvorgaben entspricht.
                         </p>
                     </div>
                 </div>

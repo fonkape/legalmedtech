@@ -17,7 +17,7 @@ export function Hero() {
 
                 {/* Tagline */}
                 <p className="text-xl md:text-2xl text-gray-600 font-light mb-16 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-100">
-                    Ich baue KI-Systeme für Arztpraxen. <span className="text-gray-900 font-normal">Rechtssicher.</span>
+                    KI-Systeme – vom juristischen Bauplan <br />bis zur technischen Umsetzung.
                 </p>
 
                 {/* Credentials */}

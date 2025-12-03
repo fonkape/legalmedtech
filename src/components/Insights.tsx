@@ -2,10 +2,64 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, ExternalLink } from "lucide-react";
+import { X, ArrowRight, ExternalLink, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 const articles = [
+    {
+        id: "fachkraftemangel",
+        tag: "Fachkräftemangel",
+        date: "DEZ 2025",
+        title: "Die Arzthelferin kündigt. Schon wieder. Kann KI helfen? (Kommt drauf an.)",
+        preview: "Montagmorgen, 8:02 Uhr. Das Telefon klingelt. Niemand nimmt ab, weil die eine MFA, die heute da ist, gerade einem Patienten erklärt, dass seine Überweisung abgelaufen ist.",
+        content: (
+            <>
+                <p className="mb-4">Montagmorgen, 8:02 Uhr. Das Telefon klingelt. Niemand nimmt ab, weil die eine MFA, die heute da ist, gerade einem Patienten erklärt, dass seine Überweisung abgelaufen ist. Im Wartezimmer wächst die Schlange. Um 8:15 Uhr ist der Tag bereits verloren.</p>
+                <p className="mb-4">Diese Szene kennt jeder, der schon mal in einer deutschen Arztpraxis war – auf beiden Seiten des Tresens.</p>
+                <p className="mb-4">Und jetzt kommt der Punkt, an dem normalerweise jemand sagt: „KI kann das lösen!" Spoiler: Kann sie nicht. Zumindest nicht so, wie es die LinkedIn-Posts der Tech-Bros versprechen.</p>
+                <p className="mb-4">Aber – und das ist der interessante Teil – sie kann etwas anderes tun. Etwas, das tatsächlich hilft. Wenn man es richtig macht. Was selten passiert.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Reden wir kurz über den Elefanten im Wartezimmer: Fachkräftemangel.</h3>
+                <p className="mb-4">Jede dritte Arztpraxis findet keine MFAs mehr. In manchen Regionen ist es jede zweite. Das liegt nicht daran, dass der Beruf so unattraktiv wäre – okay, doch, auch daran – sondern an einer simplen demografischen Rechnung: mehr Patienten, weniger Arbeitskräfte, keine Besserung in Sicht.</p>
+                <p className="mb-4">Die Standardlösung heißt: „Wir müssen attraktiver werden, besser bezahlen, mehr ausbilden." Stimmt alles. Wird aber auch nicht reichen.</p>
+                <p className="mb-4">Denn das Problem ist nicht nur die Zahl der Leute. Es ist das, womit sie ihre Zeit verbringen.</p>
+                <p className="mb-4">Eine MFA in einer durchschnittlichen Praxis verbringt – je nach Studie – 40 bis 60 Prozent ihrer Arbeitszeit mit Dingen, die nichts mit Patienten zu tun haben. Telefon. Formulare. Überweisungen suchen. Befunde einscannen. Termine jonglieren. Der ganze administrative Wahnsinn, der zwischen „Patient kommt rein" und „Patient geht raus" passiert.</p>
+                <p className="mb-4">Das ist die unsichtbare Zeitfresser-Maschine. Und genau hier wird KI interessant.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Ich rede nicht von Science-Fiction. Ich rede von Technologie, die jetzt existiert und im Einsatz ist:</h3>
+                <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li><strong>Telefonassistenz:</strong> Eine KI nimmt Anrufe an, versteht natürliche Sprache, beantwortet die ewig gleichen Fragen (Öffnungszeiten, Rezeptbestellung, „Hat der Doktor noch einen Termin frei?") und leitet nur die komplizierten Fälle an einen Menschen weiter. Ergebnis: 60 bis 80 Prozent weniger Unterbrechungen für die MFA. Das klingt nach Marketing-Versprechen, ist aber nachvollziehbar, wenn man sich anschaut, wie repetitiv die meisten Praxis-Anrufe sind.</li>
+                    <li><strong>Digitale Patientenaufnahme:</strong> Der Patient füllt den Anamnesebogen vor dem Termin auf dem Handy aus. Die KI strukturiert die Angaben, erkennt Muster, bereitet eine Zusammenfassung vor. Keine Klemmbrett-Zettel mehr, die jemand entziffern und abtippen muss. Klingt banal, spart aber 10 bis 15 Minuten pro Neupatient – und die Daten sind lesbar.</li>
+                    <li><strong>Dokumentationsunterstützung:</strong> Die KI hört beim Arzt-Patienten-Gespräch zu, erstellt automatisch eine strukturierte Dokumentation, schlägt ICD-Codes vor. Der Arzt prüft, korrigiert, bestätigt. Statt nach Feierabend noch eine Stunde Diktate abzutippen.</li>
+                </ul>
+                <p className="mb-4">Klingt gut, oder? Ist es auch. Theoretisch.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Und jetzt der Teil, den einem keiner erzählt:</h3>
+                <p className="mb-4">Hier wird es juristisch – aber bleiben Sie dran, das ist der wichtige Teil.</p>
+                <p className="mb-4">Gesundheitsdaten sind keine normalen Daten. Sie fallen unter Artikel 9 DSGVO, „besondere Kategorien personenbezogener Daten". Die Verarbeitung ist grundsätzlich verboten. Mit Ausnahmen, ja – aber diese Ausnahmen sind eng. Sehr eng.</p>
+                <p className="mb-4">Und seit August 2024 gilt der EU AI Act. KI im Gesundheitsbereich gilt als Hochrisiko-Kategorie. Dokumentationspflichten, Konformitätsbewertungen, menschliche Aufsicht. Das volle Programm.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was heißt das praktisch?</h3>
+                <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li><strong>Einwilligung ist nicht „Häkchen setzen".</strong> Der Patient muss verstehen, was passiert. Dass eine KI zuhört. Dass seine Daten verarbeitet werden. Von wem, wo, wie lange. „Ich hab die AGB akzeptiert" reicht nicht.</li>
+                    <li><strong>Serverstandort ist kein Technik-Detail.</strong> Viele KI-Tools laufen über amerikanische Cloud-Dienste. Nach dem Schrems-II-Urteil ist Datentransfer in die USA ein juristisches Minenfeld. Fragen Sie mal Ihren KI-Anbieter, wo genau die Daten verarbeitet werden. Die Antwort ist oft: betretenes Schweigen.</li>
+                    <li><strong>Black-Box-KI ist ein Haftungsproblem.</strong> Wenn die KI etwas dokumentiert oder empfiehlt, müssen Sie erklären können, wie sie zu diesem Ergebnis kam. „Der Algorithmus hat das gesagt" ist keine Dokumentation, die vor der Ärztekammer oder im Haftungsfall Bestand hat.</li>
+                </ul>
+                <p className="mb-4">Die meisten KI-Lösungen, die gerade auf den Markt drängen, sind technisch brilliant und rechtlich ein Himmelfahrtskommando. Nicht, weil KI schlecht ist. Sondern weil die Entwickler das Produkt gebaut haben – und dann erst gefragt haben, ob es legal ist.</p>
+                <p className="mb-4">Das ist kein Vorwurf. So funktioniert Tech-Entwicklung oft. Erst bauen, dann fragen.</p>
+                <p className="mb-4">Im Gesundheitsbereich ist das nur leider keine Option. Hier kann „erst bauen, dann fragen" bedeuten: Bußgeld vom Landesdatenschutzbeauftragten. Oder ein Patient, der klagt. Oder eine Ärztekammer, die Fragen stellt.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Aber – und das ist wichtig – KI in der Arztpraxis kann funktionieren.</h3>
+                <p className="mb-4">Rechtssicher, sinnvoll, ohne Albträume.</p>
+                <p className="mb-4">Das funktioniert allerdings nur, wenn man aufhört, es als reines Tech-Projekt zu behandeln. Wenn Compliance nicht nachträglich draufgeklebt wird, sondern von Anfang an mitgedacht. Privacy by Design statt Privacy by Panik.</p>
+                <p className="mb-4">Das bedeutet: Bevor Sie investieren, klären Sie, wo die Daten liegen. Wie die Einwilligung eingeholt wird. Was passiert, wenn die KI Unsinn macht. Wer haftet.</p>
+                <p className="mb-4">Das klingt nach Aufwand. Ist es auch. Aber es ist deutlich weniger Aufwand als der Brief vom Anwalt, nachdem Sie schon 50.000 Euro in eine Lösung investiert haben, die Sie nicht nutzen dürfen.</p>
+                <p className="mb-4">Wenn Sie eine Praxis gründen, umbauen oder erweitern – jetzt ist der Moment, das von Anfang an richtig zu machen. Greenfield-Projekte sind selten. Nutzen Sie die Chance.</p>
+                <p className="mb-4">Und wenn Sie eine KI-Lösung für den Gesundheitsbereich anbieten: Sprechen Sie mit jemandem, der beide Seiten versteht. Bevor Ihre Kunden es tun müssen.</p>
+                <p className="text-sm text-gray-500 mt-8">#KI #Gesundheitswesen #DSGVO #Fachkräftemangel #LegalEngineering</p>
+            </>
+        )
+    },
     {
         id: "ai-act",
         tag: "AI ACT",
@@ -80,22 +134,26 @@ export function Insights() {
     }
 
     return (
-        <section className="py-24 bg-gray-50 border-t border-gray-100">
+        <section id="insights" className="py-24 bg-gray-50 border-t border-gray-100">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm mb-8">
+                        <Lightbulb className="w-4 h-4 text-primary" />
+                        <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">INSIGHTS</span>
+                    </div>
                     <h2 className="text-3xl font-serif font-medium text-gray-900 mb-4">
-                        Insights
+                        Klartext zu Recht & Technik.
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Gedanken zu KI, Recht und dem Alltag in der Arztpraxis.
+                        Gedanken zu KI, DSGVO und dem Alltag in der Arztpraxis.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+                <div className="flex overflow-x-auto gap-8 pb-8 -mx-4 px-4 scrollbar-hide snap-x snap-mandatory">
                     {articles.map((article) => (
                         <div
                             key={article.id}
-                            className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow cursor-pointer group"
+                            className="w-[350px] flex-none bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow cursor-pointer group snap-center"
                             onClick={() => setActiveArticle(article.id)}
                         >
                             <div className="flex items-center gap-3 mb-4 text-xs font-bold tracking-wider uppercase">
@@ -106,7 +164,7 @@ export function Insights() {
                             <h3 className="text-xl font-serif font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                                 {article.title}
                             </h3>
-                            <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                            <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-4">
                                 {article.preview}
                             </p>
                             <div className="flex items-center text-sm font-bold text-gray-900 group-hover:translate-x-1 transition-transform">
@@ -116,7 +174,7 @@ export function Insights() {
                     ))}
 
                     {/* Coming Soon Card */}
-                    <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 opacity-70 flex flex-col justify-between">
+                    <div className="w-[350px] flex-none bg-gray-50 p-8 rounded-2xl border border-gray-100 opacity-70 flex flex-col justify-between snap-center">
                         <div>
                             <div className="flex items-center gap-3 mb-4 text-xs font-bold tracking-wider uppercase">
                                 <span className="text-gray-400 bg-gray-200 px-2 py-1 rounded">Coming Soon</span>
@@ -128,8 +186,8 @@ export function Insights() {
                     </div>
                 </div>
 
-                <div className="text-center">
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-gray-500 hover:text-primary transition-colors">
+                <div className="text-center mt-8">
+                    <a href="https://www.linkedin.com/in/daniel-kleiboldt-306a75123/recent-activity/all/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-gray-500 hover:text-primary transition-colors">
                         Alle Artikel auf LinkedIn <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
                 </div>

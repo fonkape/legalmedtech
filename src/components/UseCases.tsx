@@ -2,100 +2,71 @@ import { Phone, FileText, ShieldCheck, Database, Tablet } from "lucide-react";
 
 export function UseCases() {
     return (
-        <section className="py-24 bg-white">
+        <section id="angebot" className="py-24 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full shadow-sm mb-8">
+                        <ShieldCheck className="w-4 h-4 text-primary" />
+                        <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">ZUSAMMENARBEIT</span>
+                    </div>
                     <h2 className="text-3xl font-serif font-medium text-gray-900 mb-4">
-                        Was ich anbiete
+                        Klarheit statt Software-Abo.
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Maßgeschneiderte KI-Lösungen für medizinische Prozesse.
+                        Sie buchen keine abstrakte Software, sondern ein Ergebnis. Wählen Sie den Einstieg, der zu Ihrem Status Quo passt.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
-                    {/* Row 1: 3 Items (col-span-2 each) */}
-
-                    {/* Use Case 1: Telefon-Assistent */}
-                    <div className="md:col-span-2 p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="p-3 bg-white rounded-lg shadow-sm">
-                                <Phone className="w-6 h-6 text-primary" />
-                            </div>
-                            <h3 className="text-xl font-medium text-gray-900">KI-Telefonassistenz</h3>
-                        </div>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                            Automatische Annahme und Vorqualifizierung von Patientenanrufen. Das System erkennt Anliegen (Rezept, Termin, Notfall) und entlastet Ihr Team um bis zu 70% bei Routineanfragen.
-                        </p>
-                        <p className="text-sm text-gray-500 border-t border-gray-200 pt-4 mt-4">
-                            <span className="font-medium text-gray-700">Rechtssicherheit:</span> DSGVO-konforme Verarbeitung auf deutschen Servern. Kein Mithören durch Dritte.
-                        </p>
-                    </div>
-
-                    {/* Use Case 2: Digitale Patientenaufnahme (NEW) */}
-                    <div className="md:col-span-2 p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="p-3 bg-white rounded-lg shadow-sm">
-                                <Tablet className="w-6 h-6 text-primary" />
-                            </div>
-                            <h3 className="text-xl font-medium text-gray-900">Digitale Patientenaufnahme</h3>
-                        </div>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                            Schluss mit Klemmbrett und Papierchaos. Patienten füllen Anamnese, Datenschutz und Aufklärungsbögen digital am Tablet aus – rechtssicher signiert vor dem Arztkontakt.
-                        </p>
-                        <p className="text-sm text-gray-500 border-t border-gray-200 pt-4 mt-4">
-                            <span className="font-medium text-gray-700">Effizienz:</span> Daten fließen strukturiert direkt ins PVS. Keine Abtippfehler, keine Wartezeit.
-                        </p>
-                    </div>
-
-                    {/* Use Case 3: Arztbrief-Generator */}
-                    <div className="md:col-span-2 p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="p-3 bg-white rounded-lg shadow-sm">
-                                <FileText className="w-6 h-6 text-primary" />
-                            </div>
-                            <h3 className="text-xl font-medium text-gray-900">Automatisierte Arztbriefe</h3>
-                        </div>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                            KI-Vorformulierung zur finalen ärztlichen Prüfung.
-                        </p>
-                        <p className="text-sm text-gray-500 border-t border-gray-200 pt-4 mt-4">
-                            <span className="font-medium text-gray-700">Compliance:</span> Berücksichtigung der MDR-Klassifizierung für klinische Entscheidungsunterstützung.
-                        </p>
-                    </div>
-
-                    {/* Row 2: 2 Items (col-span-3 each) */}
-
-                    {/* Use Case 4: DSGVO & Compliance */}
-                    <div className="md:col-span-3 p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="p-3 bg-white rounded-lg shadow-sm">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    {/* Package 1: Der Compliance-Check */}
+                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col h-full">
+                        <div className="mb-6">
+                            <div className="p-3 bg-white rounded-lg shadow-sm inline-block mb-4">
                                 <ShieldCheck className="w-6 h-6 text-primary" />
                             </div>
-                            <h3 className="text-xl font-medium text-gray-900">Datenschutz & Compliance</h3>
+                            <h3 className="text-xl font-medium text-gray-900 mb-2">Der Compliance-Check</h3>
+                            <p className="text-sm text-gray-500 font-medium">Für wen? Praxen, die schon Tools nutzen (Doctolib, Aaron, ChatGPT etc.).</p>
                         </div>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                            Implementierung nach "Privacy by Design". Wir nutzen ausschließlich EU-Infrastruktur oder On-Premise-Lösungen, um Konflikte mit dem US Cloud Act zu vermeiden.
+                        <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
+                            Ich auditiere Ihre bestehenden Einstellungen und Datenflüsse. Ich finde Sicherheitslücken und schließe sie, bevor der Landesdatenschützer fragt.
                         </p>
-                        <p className="text-sm text-gray-500 border-t border-gray-200 pt-4 mt-4">
-                            <span className="font-medium text-gray-700">Standard:</span> Volle Konformität mit DSGVO Art. 9 (Gesundheitsdaten) und AVV-Anforderungen.
-                        </p>
+                        <div className="pt-6 border-t border-gray-200 mt-auto">
+                            <p className="text-sm text-gray-700 font-bold">Ergebnis: <span className="font-normal text-gray-600">Rechtssicherheit für den Bestand.</span></p>
+                        </div>
                     </div>
 
-                    {/* Use Case 5: PVS-Integration */}
-                    <div className="md:col-span-3 p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="p-3 bg-white rounded-lg shadow-sm">
+                    {/* Package 2: Die Digital-Roadmap */}
+                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col h-full">
+                        <div className="mb-6">
+                            <div className="p-3 bg-white rounded-lg shadow-sm inline-block mb-4">
+                                <FileText className="w-6 h-6 text-primary" />
+                            </div>
+                            <h3 className="text-xl font-medium text-gray-900 mb-2">Die Digital-Roadmap</h3>
+                            <p className="text-sm text-gray-500 font-medium">Für wen? Praxen, die automatisieren wollen, aber nicht wissen, wie.</p>
+                        </div>
+                        <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
+                            Analyse Ihrer Abläufe (Telefon, Empfang, Backoffice). Erstellung eines juristischen Lastenhefts: Welche Tools dürfen Sie nutzen? Wie müssen sie konfiguriert sein?
+                        </p>
+                        <div className="pt-6 border-t border-gray-200 mt-auto">
+                            <p className="text-sm text-gray-700 font-bold">Ergebnis: <span className="font-normal text-gray-600">Ein fertiger Bauplan für Ihre Digitalisierung.</span></p>
+                        </div>
+                    </div>
+
+                    {/* Package 3: Begleitete Umsetzung */}
+                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col h-full">
+                        <div className="mb-6">
+                            <div className="p-3 bg-white rounded-lg shadow-sm inline-block mb-4">
                                 <Database className="w-6 h-6 text-primary" />
                             </div>
-                            <h3 className="text-xl font-medium text-gray-900">Nahtlose Integration</h3>
+                            <h3 className="text-xl font-medium text-gray-900 mb-2">Begleitete Umsetzung</h3>
+                            <p className="text-sm text-gray-500 font-medium">Für wen? Praxen, die eine Komplettlösung wollen.</p>
                         </div>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                            Keine Insellösungen. Die KI-Module werden direkt an Ihr bestehendes Praxisverwaltungssystem (z.B. Tomedo, Medatixx, CGM) angebunden.
+                        <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
+                            Ich übernehme die Projektleitung. Ich koordiniere externe Entwickler oder Ihr Systemhaus, überwache die "Privacy by Design"-Standards im Code und schule Ihr Team.
                         </p>
-                        <p className="text-sm text-gray-500 border-t border-gray-200 pt-4 mt-4">
-                            <span className="font-medium text-gray-700">Technik:</span> Nutzung standardisierter Schnittstellen (GDT/BDT, FHIR, HL7) für maximale Kompatibilität.
-                        </p>
+                        <div className="pt-6 border-t border-gray-200 mt-auto">
+                            <p className="text-sm text-gray-700 font-bold">Ergebnis: <span className="font-normal text-gray-600">Schlüsselfertige Integration ohne Haftungsrisiko.</span></p>
+                        </div>
                     </div>
                 </div>
             </div>

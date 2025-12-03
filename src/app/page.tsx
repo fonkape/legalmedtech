@@ -6,6 +6,7 @@ import { SolutionOverview } from "@/components/SolutionOverview";
 import { UseCases } from "@/components/UseCases";
 import { UrgencySection } from "@/components/UrgencySection";
 import { TrustAbout } from "@/components/TrustAbout";
+import { StatusQuo } from "@/components/StatusQuo";
 import { Insights } from "@/components/Insights";
 import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
@@ -18,20 +19,20 @@ export default function Home() {
 
       <Navbar />
       <Hero />
-      <div id="interactive-praxis">
-        <InteractivePraxis />
+      <div id="about">
+        <TrustAbout />
       </div>
-      <SocialProofTeaser />
+      <StatusQuo />
       <div id="solutions">
         <SolutionOverview />
+      </div>
+      <div id="interactive-praxis">
+        <InteractivePraxis />
       </div>
       <div id="use-cases">
         <UseCases />
       </div>
       <UrgencySection />
-      <div id="about">
-        <TrustAbout />
-      </div>
       <div id="insights">
         <Insights />
       </div>

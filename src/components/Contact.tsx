@@ -1,40 +1,46 @@
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
-import { Calendar, Check, Send, ShieldCheck } from "lucide-react";
+import { Calendar, Check, Send, ShieldCheck, ArrowRight } from "lucide-react";
 
 export function Contact() {
     return (
         <section id="contact" className="py-24 bg-background">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-16">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full shadow-sm mb-8">
+                        <ArrowRight className="w-4 h-4 text-primary" />
+                        <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">NÄCHSTE SCHRITTE</span>
+                    </div>
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
-                        Kontakt
+                        Lassen Sie uns konkret werden.
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Bei Fragen oder Interesse an einem Erstgespräch erreichen Sie mich hier.
+                        Sie müssen noch keine fertige Lösung im Kopf haben. Erzählen Sie mir einfach, was Sie im Praxisalltag am meisten Zeit kostet. Im kostenlosen Erstgespräch (15 Min) schauen wir gemeinsam, was rechtlich möglich und technisch sinnvoll ist.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
                     {/* Contact Form */}
-                    <Card className="border-none shadow-lg">
+                    <Card className="border-none shadow-lg order-2 lg:order-1">
                         <CardContent className="p-8">
-                            <form className="space-y-6">
+                            <form className="space-y-6" action="mailto:daniel.kleiboldt@gmail.com" method="post" encType="text/plain">
                                 <div className="space-y-2">
                                     <label htmlFor="name" className="text-sm font-medium text-gray-700">Ihr Name *</label>
                                     <input
                                         type="text"
                                         id="name"
+                                        name="name"
                                         required
                                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
                                         placeholder="Dr. Max Mustermann"
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label htmlFor="email" className="text-sm font-medium text-gray-700">E-Mail *</label>
+                                    <label htmlFor="email" className="text-sm font-medium text-gray-700">Ihre E-Mail *</label>
                                     <input
                                         type="email"
                                         id="email"
+                                        name="email"
                                         required
                                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
                                         placeholder="praxis@beispiel.de"
@@ -44,9 +50,10 @@ export function Contact() {
                                     <label htmlFor="message" className="text-sm font-medium text-gray-700">Ihre Nachricht</label>
                                     <textarea
                                         id="message"
+                                        name="message"
                                         rows={4}
                                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none"
-                                        placeholder="Worum geht es? Welches Problem möchten Sie lösen?"
+                                        placeholder="Wobei wünschen Sie sich konkrete Entlastung? (z.B. Telefon, Empfang, Dokumentation)"
                                     />
                                 </div>
 
@@ -70,13 +77,13 @@ export function Contact() {
                     </Card>
 
                     {/* Calendly / Direct Booking */}
-                    <div className="flex flex-col justify-center">
-                        <div className="bg-primary rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
+                    <div className="flex flex-col justify-center order-1 lg:order-2">
+                        <div className="bg-[#2D2D2D] rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
 
-                            <h3 className="text-2xl font-serif font-bold mb-4 relative z-10">Oder direkt Termin buchen</h3>
+                            <h3 className="text-2xl font-serif font-bold mb-4 relative z-10">Kostenlose Potenzial-Analyse</h3>
                             <p className="text-white/90 mb-8 relative z-10">
-                                15 Minuten Erstberatung via Zoom – kostenlos & unverbindlich. Finden Sie direkt einen passenden Slot.
+                                15 Minuten via Google Meet oder Telefon. Wir prüfen, ob und wie KI Ihre Praxis entlasten kann – rechtssicher.
                             </p>
 
                             <div className="space-y-4 mb-8 relative z-10">
@@ -84,26 +91,28 @@ export function Contact() {
                                     <div className="p-1 bg-white/20 rounded-full">
                                         <Check className="h-4 w-4" />
                                     </div>
-                                    <span>Video-Call oder Telefon</span>
+                                    <span>Analyse Ihres Status Quo (Analog vs. Digital)</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="p-1 bg-white/20 rounded-full">
                                         <Check className="h-4 w-4" />
                                     </div>
-                                    <span>Keine Vorbereitung nötig</span>
+                                    <span>Erste rechtliche Einschätzung</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="p-1 bg-white/20 rounded-full">
                                         <Check className="h-4 w-4" />
                                     </div>
-                                    <span>Unverbindlich & kostenfrei</span>
+                                    <span>Kein Verkaufsgespräch</span>
                                 </div>
                             </div>
 
-                            <Button variant="secondary" size="lg" className="w-full relative z-10 bg-white text-primary hover:bg-gray-100 font-bold">
-                                <Calendar className="mr-2 h-5 w-5" />
-                                Erstgespräch vereinbaren
-                            </Button>
+                            <a href="https://calendly.com/daniel-kleiboldt/potenzialanalyse" target="_blank" rel="noopener noreferrer" className="block w-full">
+                                <Button variant="secondary" size="lg" className="w-full relative z-10 bg-white text-[#2D2D2D] hover:bg-gray-100 font-bold">
+                                    <Calendar className="mr-2 h-5 w-5" />
+                                    Termin direkt buchen
+                                </Button>
+                            </a>
                         </div>
                     </div>
                 </div>
