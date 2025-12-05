@@ -61,38 +61,6 @@ const articles = [
         )
     },
     {
-        id: "ai-act",
-        tag: "AI ACT",
-        date: "Okt 2025",
-        title: "Ihr Software-Vertrag läuft bis 2026? Dann haben wir ein Thema.",
-        preview: "Ab August 2026 gelten neue Regeln für KI in der Medizin. Was müssen Praxen wissen, und wann wird Software zum Hochrisiko-System?",
-        content: (
-            <>
-                <p className="mb-4">2. August 2026. Das klingt nach ferner Zukunft. Für den Praxisalltag ist das eine Ewigkeit. Aber für Ihre IT-Strategie ist es morgen.</p>
-                <p className="mb-4">An diesem Stichtag greift der EU AI Act voll durch. Und wenn Sie heute Software einkaufen oder Lizenzverträge verlängern, die über dieses Datum hinauslaufen, sollten Sie jetzt genau hinschauen.</p>
-                <p className="mb-4">Denn viele Tools, die heute noch als "innovative Assistenzsysteme" verkauft werden, wachen 2026 in einer neuen Realität auf: Sie sind plötzlich regulierte Hochrisiko-Systeme.</p>
-
-                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was das Gesetz eigentlich will</h3>
-                <p className="mb-4">Der AI Act teilt KI nicht nach Intelligenz ein, sondern nach Risiko. Und Medizin ist – wenig überraschend – fast immer Hochrisiko. Das bedeutet für die Hersteller: Massive Anforderungen an Transparenz, Dokumentation und menschliche Aufsicht.</p>
-                <p className="mb-4">Aber hier liegt das Detail, das Ihnen kaum ein Vertriebler erzählt: Nicht jede KI in der Praxis ist automatisch betroffen. Es kommt nicht auf die Technik an. Es kommt auf den Zweck an.</p>
-
-                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Die entscheidende Frage: Schreibt sie nur, oder denkt sie schon?</h3>
-                <p className="mb-4">Die Grenze ist dünn, aber juristisch messerscharf.</p>
-                <p className="mb-4">Ein Beispiel: Ein Diktiersystem, das Ihre gesprochenen Worte in Text umwandelt, ist ein Werkzeug. Es dokumentiert. Risiko: Niedrig. Ein System, das aus Ihren Notizen mitliest und automatisch Diagnosevorschläge oder Therapieoptionen generiert, ist eine Entscheidungshilfe. Risiko: Hoch.</p>
-                <p className="mb-4">Die Grenze verläuft genau dort, wo die Software aufhört, Sekretär zu sein, und anfängt, Assistenzarzt zu spielen. Sobald klinische Entscheidungen beeinflusst werden, greifen die strengen Regeln.</p>
-
-                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was Sie jetzt tun müssen</h3>
-                <p className="mb-4">Wenn Sie gerade dabei sind, Ihre Praxis zu digitalisieren, stellen Sie Ihrem Anbieter eine simple Frage: "Wie ist die Zweckbestimmung Ihrer Software nach dem AI Act definiert?"</p>
-                <p className="mb-4">Es gibt zwei mögliche Reaktionen.</p>
-                <p className="mb-4">Die gute: Der Anbieter legt Ihnen eine Roadmap vor, wie er bis 2026 die Konformität sicherstellt. Die schlechte (und häufige): Betretenes Schweigen.</p>
-                <p className="mb-4 font-bold">Spoiler: Wenn Ihr Anbieter nicht weiß, ob sein Produkt in 18 Monaten noch legal betreibbar ist, sollten Sie keinen 24-Monats-Vertrag unterschreiben.</p>
-                <p className="mb-4">Der AI Act ist keine bürokratische Schikane, um Ärzte zu ärgern. Er ist eine Chance zur Professionalisierung. Er zwingt den Markt, die "Black Box" zu öffnen.</p>
-                <p className="mb-4">Wer jetzt plant, hat 18 Monate Vorsprung. Das ist genug Zeit, um die Spreu vom Weizen zu trennen. Nutzen Sie sie.</p>
-                <p className="text-sm text-gray-500 mt-8">#AIAct #Compliance #DigitalHealth #Medizinrecht #LegalEngineering</p>
-            </>
-        )
-    },
-    {
         id: "haftung",
         tag: "HAFTUNG",
         date: "Nov 2025",
@@ -128,6 +96,38 @@ const articles = [
                 <p className="mb-4">Gefährlich wird es nur, wenn man „Automatisierung“ mit „blindem Vertrauen“ verwechselt. Wer die KI als das behandelt, was sie ist – ein extrem leistungsfähiger, aber manchmal verwirrter Assistent –, der gewinnt Zeit. Wer sie als Orakel behandelt, verliert im Zweifel seine Zulassung.</p>
                 <p className="mb-4 font-bold">Nutzen Sie die Technologie. Aber behalten Sie die Verantwortung.</p>
                 <p className="text-sm text-gray-500 mt-8">#KI #Haftung #Arztpraxis #DigitalHealth #LegalEngineering</p>
+            </>
+        )
+    },
+    {
+        id: "ai-act",
+        tag: "AI ACT",
+        date: "Okt 2025",
+        title: "Ihr Software-Vertrag läuft bis 2026? Dann haben wir ein Thema.",
+        preview: "Ab August 2026 gelten neue Regeln für KI in der Medizin. Was müssen Praxen wissen, und wann wird Software zum Hochrisiko-System?",
+        content: (
+            <>
+                <p className="mb-4">2. August 2026. Das klingt nach ferner Zukunft. Für den Praxisalltag ist das eine Ewigkeit. Aber für Ihre IT-Strategie ist es morgen.</p>
+                <p className="mb-4">An diesem Stichtag greift der EU AI Act voll durch. Und wenn Sie heute Software einkaufen oder Lizenzverträge verlängern, die über dieses Datum hinauslaufen, sollten Sie jetzt genau hinschauen.</p>
+                <p className="mb-4">Denn viele Tools, die heute noch als "innovative Assistenzsysteme" verkauft werden, wachen 2026 in einer neuen Realität auf: Sie sind plötzlich regulierte Hochrisiko-Systeme.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was das Gesetz eigentlich will</h3>
+                <p className="mb-4">Der AI Act teilt KI nicht nach Intelligenz ein, sondern nach Risiko. Und Medizin ist – wenig überraschend – fast immer Hochrisiko. Das bedeutet für die Hersteller: Massive Anforderungen an Transparenz, Dokumentation und menschliche Aufsicht.</p>
+                <p className="mb-4">Aber hier liegt das Detail, das Ihnen kaum ein Vertriebler erzählt: Nicht jede KI in der Praxis ist automatisch betroffen. Es kommt nicht auf die Technik an. Es kommt auf den Zweck an.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Die entscheidende Frage: Schreibt sie nur, oder denkt sie schon?</h3>
+                <p className="mb-4">Die Grenze ist dünn, aber juristisch messerscharf.</p>
+                <p className="mb-4">Ein Beispiel: Ein Diktiersystem, das Ihre gesprochenen Worte in Text umwandelt, ist ein Werkzeug. Es dokumentiert. Risiko: Niedrig. Ein System, das aus Ihren Notizen mitliest und automatisch Diagnosevorschläge oder Therapieoptionen generiert, ist eine Entscheidungshilfe. Risiko: Hoch.</p>
+                <p className="mb-4">Die Grenze verläuft genau dort, wo die Software aufhört, Sekretär zu sein, und anfängt, Assistenzarzt zu spielen. Sobald klinische Entscheidungen beeinflusst werden, greifen die strengen Regeln.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was Sie jetzt tun müssen</h3>
+                <p className="mb-4">Wenn Sie gerade dabei sind, Ihre Praxis zu digitalisieren, stellen Sie Ihrem Anbieter eine simple Frage: "Wie ist die Zweckbestimmung Ihrer Software nach dem AI Act definiert?"</p>
+                <p className="mb-4">Es gibt zwei mögliche Reaktionen.</p>
+                <p className="mb-4">Die gute: Der Anbieter legt Ihnen eine Roadmap vor, wie er bis 2026 die Konformität sicherstellt. Die schlechte (und häufige): Betretenes Schweigen.</p>
+                <p className="mb-4 font-bold">Spoiler: Wenn Ihr Anbieter nicht weiß, ob sein Produkt in 18 Monaten noch legal betreibbar ist, sollten Sie keinen 24-Monats-Vertrag unterschreiben.</p>
+                <p className="mb-4">Der AI Act ist keine bürokratische Schikane, um Ärzte zu ärgern. Er ist eine Chance zur Professionalisierung. Er zwingt den Markt, die "Black Box" zu öffnen.</p>
+                <p className="mb-4">Wer jetzt plant, hat 18 Monate Vorsprung. Das ist genug Zeit, um die Spreu vom Weizen zu trennen. Nutzen Sie sie.</p>
+                <p className="text-sm text-gray-500 mt-8">#AIAct #Compliance #DigitalHealth #Medizinrecht #LegalEngineering</p>
             </>
         )
     }
