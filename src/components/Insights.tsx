@@ -7,6 +7,115 @@ import { Button } from "@/components/ui/Button";
 
 const articles = [
     {
+        id: "due-diligence",
+        tag: "Due Dilligence",
+        date: "JAN 2026",
+        title: "Ihr KI-Anbieter weiß nicht, ob sein Produkt legal ist. (Und Sie haften trotzdem.)",
+        preview: "Dienstagvormittag. Verkaufsgespräch. Ein junger Mann in Sneakers und Hoodie sitzt Ihnen gegenüber. Sein Laptop glänzt mit Stickern von Tech-Konferenzen, die Sie nicht kennen.",
+        content: (
+            <>
+                <p className="mb-4">Dienstagvormittag. Verkaufsgespräch. Ein junger Mann in Sneakers und Hoodie sitzt Ihnen gegenüber. Sein Laptop glänzt mit Stickern von Tech-Konferenzen, die Sie nicht kennen.</p>
+                <p className="mb-4">Er zeigt Ihnen eine Demo. Eine KI, die Ihre Anrufe annimmt, Termine vergibt, Rezeptbestellungen entgegennimmt. Alles automatisch. Die Stimme klingt erstaunlich menschlich. Die MFA neben Ihnen sagt: "Das wäre ein Traum."</p>
+                <p className="mb-4">Sie fragen: "Wo genau liegen die Patientendaten während der Verarbeitung?"</p>
+                <p className="mb-4">Der junge Mann blinzelt. "Äh... in der Cloud?"</p>
+                <p className="mb-4">"Welche Cloud? Wo steht der Server?"</p>
+                <p className="mb-4">"Das muss ich nachschauen. Aber keine Sorge, wir sind voll DSGVO-konform."</p>
+                <p className="mb-4">Sie nicken höflich. Das Gespräch geht weiter. Zwei Wochen später unterschreiben Sie einen Zweijahresvertrag für €24.000.</p>
+                <p className="mb-4">Drei Monate später sitzt ein Brief vom Landesdatenschutzbeauftragten auf Ihrem Schreibtisch. Die gute Nachricht: Das KI-Tool funktioniert technisch einwandfrei. Die schlechte: Sie dürfen es nicht benutzen.</p>
+                <p className="mb-4">Das ist keine Dystopie. Das ist Alltag.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Die unbequeme Wahrheit über KI-Anbieter im Gesundheitswesen</h3>
+                <p className="mb-4">Hier ist, was Ihnen niemand beim Verkaufsgespräch erzählt:</p>
+                <p className="mb-4">Die meisten KI-Anbieter, die gerade auf den Healthcare-Markt drängen, sind technisch brillant. Ihre Software funktioniert. Ihre Demos beeindrucken. Ihre Versprechen klingen verlockend.</p>
+                <p className="mb-4">Aber viele von ihnen haben ihre juristische Hausaufgaben nicht gemacht.</p>
+                <p className="mb-4">Nicht aus Bosheit. Sondern weil sie aus einer Welt kommen, in der "DSGVO-konform" ein Buzzword auf der Landing Page ist. Kein Konzept. Keine Architektur-Entscheidung. Kein Design-Prinzip.</p>
+                <p className="mb-4">In anderen Branchen mag das funktionieren. In Healthcare nicht.</p>
+                <p className="mb-4">Und hier kommt der Punkt, an dem es unangenehm wird: Wenn etwas schiefgeht, haften nicht die. Sie haften Sie.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Warum "DSGVO-konform" auf der Website nichts bedeutet</h3>
+                <p className="mb-4">Sie kennen das vom Autokauf. Verkäufer verspricht: "Unfallfrei, Originalzustand, TÜV-frisch." Dann schauen Sie in die Papiere. Oder lassen es jemanden anschauen, der sich auskennt. Und plötzlich stellt sich heraus: Wurde mal seitlich touchiert, Motor läuft unrund, TÜV läuft in zwei Monaten ab.</p>
+                <p className="mb-4">Bei Software ist es dasselbe. Nur dass niemand unter die Motorhaube schaut.</p>
+                <p className="mb-4">"DSGVO-konform" ist das neue "klimaneutral". Jeder schreibt es auf die Website. Die wenigsten können erklären, was das konkret bedeutet. Und noch weniger können es beweisen.</p>
+                <p className="mb-4">Hier ist, was in vielen Fällen dahintersteckt:</p>
+                <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li>Ein Anwalt hat die Datenschutzerklärung geschrieben. (Gut.)</li>
+                    <li>Niemand hat geprüft, ob die tatsächliche Software macht, was die Datenschutzerklärung verspricht. (Weniger gut.)</li>
+                    <li>Der Server steht irgendwo. Keiner weiß genau wo. Aber "Cloud" klingt modern. (Katastrophe.)</li>
+                </ul>
+                <p className="mb-4">Das Problem ist nicht, dass die Anbieter böse sind. Das Problem ist, dass sie nicht aus Healthcare kommen.</p>
+                <p className="mb-4">In der normalen Tech-Welt ist Datenschutz ein Compliance-Thema. Etwas, das man abhakt, bevor man launcht. In Healthcare ist es Betriebsgrundlage.</p>
+                <p className="mb-4">Und das bedeutet: Sie müssen die Fragen stellen, die der Anbieter nicht von sich aus beantwortet. Weil er sie entweder nicht kennt. Oder nicht beantworten kann.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Die vier Fragen, die Ihr Anbieter beantworten können muss (und oft nicht kann)</h3>
+                <p className="mb-4">Wenn Sie das nächste Mal in einem KI-Verkaufsgespräch sitzen, stellen Sie diese vier Fragen. In dieser Reihenfolge. Und beobachten Sie die Reaktion.</p>
+
+                <h4 className="font-bold text-gray-900 mt-4 mb-2">Frage 1: "Wo genau liegen meine Patientendaten während der Verarbeitung?"</h4>
+                <p className="mb-4">Die Antwort "in der Cloud" ist keine Antwort. Das ist wie "irgendwo in Europa".</p>
+                <p className="mb-4">Was Sie wissen müssen:</p>
+                <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li>Steht der Server in der EU? (Wenn nicht: rote Flagge.)</li>
+                    <li>Welcher Anbieter hostet? AWS, Google Cloud, Microsoft Azure? (Legitim, aber dann brauchen Sie Details.)</li>
+                    <li>Werden Daten in Drittländer übertragen? (USA ist kompliziert. Andere Länder ohne Angemessenheitsbeschluss: vergessen Sie es.)</li>
+                </ul>
+                <p className="mb-4">Die richtige Antwort klingt so: "Wir nutzen Server in Frankfurt, gehostet bei diesem konkreten Anbieter, Daten verlassen nie die EU. Hier ist unser Datenschutzkonzept."</p>
+                <p className="mb-4">Die falsche Antwort klingt so: "Das muss ich nachschauen. Aber keine Sorge, ist alles sicher."</p>
+                <p className="mb-4">Wenn Ihr Anbieter nicht in 30 Sekunden erklären kann, wo Ihre Patientendaten landen, ist das Gespräch vorbei. Höflich verabschieden, Tür zu.</p>
+
+                <h4 className="font-bold text-gray-900 mt-4 mb-2">Frage 2: "Wer haftet, wenn Ihre KI einen Fehler macht?"</h4>
+                <p className="mb-4">Die unbequeme Wahrheit: Sie. Nicht der Anbieter.</p>
+                <p className="mb-4">Das hat das Landgericht Kiel 2024 sehr klar gesagt: Wer ein Werkzeug nutzt, haftet für das Ergebnis. Die KI ist ein Werkzeug. Wenn das Skalpell abrutscht, können Sie auch nicht den Hersteller verklagen. Aber – und das ist wichtig – Ihr Anbieter muss Ihnen die Möglichkeit geben, die KI zu kontrollieren.</p>
+                <p className="mb-4">Das bedeutet konkret:</p>
+                <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li>Kann ich jeden Output der KI prüfen, bevor er rausgeht? (Wenn nicht: rote Flagge.)</li>
+                    <li>Gibt es eine "Auto-Send"-Funktion? (Wenn ja: noch größere rote Flagge.)</li>
+                    <li>Kann ich nachvollziehen, was die KI gemacht hat? (Audit-Logs, Versionierung, Dokumentation.)</li>
+                </ul>
+                <p className="mb-4">Die richtige Antwort klingt so: "Alle KI-Outputs müssen von einem Menschen freigegeben werden. Wir loggen jeden Schritt. Hier ist unser Konzept für Human Oversight."</p>
+                <p className="mb-4">Die falsche Antwort klingt so: "Unsere KI ist sehr zuverlässig, da passiert nichts."</p>
+                <p className="mb-4">Spoiler: Doch, passiert. Und wenn es passiert, stehen Sie vor Gericht. Nicht der Typ im Hoodie.</p>
+
+                <h4 className="font-bold text-gray-900 mt-4 mb-2">Frage 3: "Haben Sie ein Datenschutzkonzept nach EU AI Act?"</h4>
+                <p className="mb-4">Seit August 2024 gilt der AI Act. KI im Gesundheitsbereich ist Hochrisiko-Kategorie. Das bedeutet: Dokumentationspflichten, Konformitätsbewertungen, menschliche Aufsicht. Ab dem 2. August 2026 wird das voll durchgesetzt.</p>
+                <p className="mb-4">Wenn Ihr Anbieter jetzt sagt: "Machen wir bis dahin", übersetzen Sie das mental mit: "Haben wir noch nicht." Und fragen Sie sich: Will ich meine Praxis auf ein Versprechen bauen?</p>
+                <p className="mb-4">Die richtige Antwort klingt so: "Wir haben ein AI-Act-Compliance-Konzept. Unsere Zweckbestimmung ist die Unterstützung der medizinischen Dokumentation ohne Diagnosevorschläge. Unsere Risikoklasse ist Hochrisiko nach Anhang III. Hier sind die Unterlagen."</p>
+                <p className="mb-4">Die falsche Antwort klingt so: "Wir sind voll compliant." (Ohne Details. Ohne Unterlagen. Nur Buzzwords.)</p>
+                <p className="mb-4">Noch eine Variante der falschen Antwort: "Der AI Act betrifft uns nicht." (Spoiler: Doch. Tut er.)</p>
+
+                <h4 className="font-bold text-gray-900 mt-4 mb-2">Frage 4: "Wie dokumentiere ich, dass ich die KI-Outputs geprüft habe?"</h4>
+                <p className="mb-4">Das ist die Frage, die kaum jemand stellt. Aber sie ist die wichtigste. Denn im Haftungsfall reicht es nicht zu sagen: "Ich hab's geprüft." Sie müssen es beweisen.</p>
+                <p className="mb-4">Das bedeutet:</p>
+                <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li>Gibt es Logs, die zeigen, wann ich welches Dokument freigegeben habe?</li>
+                    <li>Kann ich nachweisen, dass mein Team im Umgang mit der KI geschult wurde?</li>
+                    <li>Kann ich dokumentieren, dass ich die Grenzen der KI kenne?</li>
+                </ul>
+                <p className="mb-4">Die richtige Antwort klingt so: "Jede Freigabe wird geloggt. Wir bieten Schulungen an. Hier ist unsere Dokumentationsvorlage für Ihre Praxis."</p>
+                <p className="mb-4">Die falsche Antwort klingt so: "Müssen Sie nicht dokumentieren, ist ja nur ein Tool."</p>
+                <p className="mb-4">Falsch. Müssen Sie. Und wenn der Anbieter das nicht weiß, weiß er auch sonst nicht viel.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was die Antworten über Ihren Anbieter verraten</h3>
+                <p className="mb-4">Hier ist die Wahrheit: Die meisten KI-Anbieter sind keine Betrüger. Sie sind Optimisten. Sie glauben fest daran, dass ihr Produkt brillant ist. Und oft stimmt das sogar. Technisch.</p>
+                <p className="mb-4">Aber viele von ihnen haben nie in einer Arztpraxis gearbeitet. Sie wissen nicht, was passiert, wenn der Datenschutzbeauftragte anruft. Sie haben noch nie einen Haftungsfall erlebt. Sie denken, Compliance ist ein Häkchen auf der To-Do-Liste. Bis es das nicht mehr ist. Und dann stehen nicht die vor Gericht. Sondern Sie.</p>
+                <p className="mb-4">Deshalb: Stellen Sie die vier Fragen oben. Nicht, weil Sie misstrauisch sein müssen. Sondern weil Sie Ihre Praxis schützen müssen. Ein guter Anbieter wird Ihnen dankbar sein für die Fragen. Weil er weiß, dass Sie verstanden haben, worum es geht. Ein schlechter Anbieter wird ausweichen. Oder mit Buzzwords antworten.</p>
+                <p className="mb-4">Ihre Aufgabe ist es nicht, das Produkt zu verstehen. Ihre Aufgabe ist es zu verstehen, ob Sie es nutzen dürfen. Und ob Sie im Ernstfall beweisen können, dass Sie sorgfältig gehandelt haben.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Der eigentliche Produktivitätsgewinn</h3>
+                <p className="mb-4">Hier ist die Ironie: Die KI, die wirklich Zeit spart, ist nicht die mit der beeindruckendsten Demo. Es ist die, bei der Sie nachts ruhig schlafen können. Weil Sie wissen: Die Daten liegen richtig. Die Haftung ist geklärt. Die Dokumentation steht. Wenn etwas schiefgeht – und irgendwann geht immer etwas schief –, können Sie beweisen, dass Sie alles richtig gemacht haben.</p>
+                <p className="mb-4">Das ist der wahre Produktivitätsgewinn. Nicht zwei Stunden mehr am Tag. Sondern null Stunden vor Gericht. KI in der Praxis ist keine Frage von "ob". Es ist eine Frage von "wie". Und "wie" beginnt mit den richtigen Fragen.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Was Sie jetzt tun können</h3>
+                <p className="mb-4"><strong>Wenn Sie gerade KI evaluieren:</strong> Drucken Sie sich die vier Fragen aus. Nehmen Sie sie mit ins nächste Verkaufsgespräch. Stellen Sie sie. Alle vier. Und beobachten Sie, was passiert.</p>
+                <p className="mb-4"><strong>Wenn Sie schon KI nutzen:</strong> Stellen Sie die Fragen Ihrem Anbieter. Jetzt. Nicht morgen. Nicht nächsten Monat. Jetzt. Wenn er sie nicht beantworten kann, haben Sie ein Problem. Aber besser, Sie wissen es jetzt als in zwei Jahren, wenn der Brief vom Anwalt kommt.</p>
+                <p className="mb-4"><strong>Wenn Sie unsicher sind:</strong> Lassen Sie es jemanden anschauen, der beide Seiten versteht. Technik und Recht. Produktivität und Compliance. Begeisterung und Vorsicht. Das kostet ein paar Stunden Beratung. Das ist deutlich günstiger als ein Bußgeld. Oder ein Haftungsfall. Oder ein Produkt, das Sie nach zwei Jahren nicht mehr nutzen dürfen.</p>
+
+                <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Das Fazit</h3>
+                <p className="mb-4">KI ist keine Magie. Sie ist Werkzeug. Und wie bei jedem Werkzeug gilt: Wer es nutzt, muss wissen, was es kann. Und was es nicht kann. Und wer haftet, wenn es schiefgeht. Ihr Anbieter verkauft Ihnen das Werkzeug. Aber die Verantwortung verkauft er nicht mit. Die behalten Sie. Also stellen Sie die Fragen. Bevor Sie unterschreiben.</p>
+
+                <p className="text-sm text-gray-500 mt-8">#LegalEngineering #KI #Arztpraxis #DSGVO #Compliance</p>
+            </>
+        )
+    },
+    {
         id: "fachkraftemangel",
         tag: "Fachkräftemangel",
         date: "DEZ 2025",
