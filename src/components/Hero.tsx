@@ -1,4 +1,6 @@
 import { ArrowDown } from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 
 export function Hero() {
     return (
@@ -6,25 +8,43 @@ export function Hero() {
             <div className="container max-w-5xl mx-auto text-center relative z-10 flex flex-col items-center h-full justify-center pt-20">
 
                 {/* Headline */}
-                <h1 className="font-serif font-medium tracking-tighter text-gray-900 mb-10 leading-[1.1] animate-fade-in-up">
+                <h1 className="font-serif font-medium tracking-tighter text-gray-900 mb-8 leading-[1.1] animate-fade-in-up">
                     <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] mb-4 text-gray-800">
-                        Legal Engineering für die
+                        Legal Engineering für
                     </span>
                     <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] italic text-[#B85450]">
-                        medizinische Praxis.
+                        Healthcare-KI-Compliance
                     </span>
                 </h1>
 
-                {/* Tagline */}
-                <p className="text-xl md:text-2xl text-gray-600 font-light mb-16 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-100">
-                    KI-Systeme – vom juristischen Bauplan <br />bis zur technischen Umsetzung.
-                </p>
+                {/* Tagline / Subheadline */}
+                <div className="max-w-3xl mx-auto mb-10 animate-fade-in-up delay-100">
+                    <p className="text-xl md:text-2xl text-gray-900 font-medium mb-4 leading-relaxed">
+                        Doctolib für Termine. <br className="hidden md:block" />
+                        Legal Engineering für Rechtssicherheit.
+                    </p>
+                    <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+                        Wenn Standard-Software Ihre Compliance-Fragen nicht beantwortet, kombiniere ich juristische Expertise mit AI Engineering – vom Datenschutzkonzept bis zum Code.
+                    </p>
+                </div>
 
                 {/* Credentials */}
-                <div className="inline-flex items-center gap-3 border-t border-gray-200 pt-8 animate-fade-in-up delay-200">
-                    <span className="text-sm font-bold text-gray-900 tracking-widest uppercase">Daniel Kleiboldt</span>
-                    <span className="text-gray-300">|</span>
-                    <span className="text-sm font-medium text-gray-500 tracking-wide uppercase">Jurist & AI Engineer</span>
+                <p className="text-sm font-medium text-gray-500 tracking-wide uppercase mb-12 animate-fade-in-up delay-200">
+                    Diplom-Jurist (WWU Münster) • AI Engineer • Spezialisiert auf EU AI Act, MDR, DSGVO
+                </p>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row items-center gap-4 animate-fade-in-up delay-300">
+                    <Link href="#contact">
+                        <Button size="lg" variant="primary" className="shadow-lg">
+                            Compliance-Quickcheck buchen
+                        </Button>
+                    </Link>
+                    <Link href="#insights">
+                        <Button size="lg" variant="outline">
+                            Artikel lesen
+                        </Button>
+                    </Link>
                 </div>
 
             </div>
