@@ -1,12 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { InteractivePraxis } from "@/components/InteractivePraxis";
-import { SocialProofTeaser } from "@/components/SocialProofTeaser";
-import { SolutionOverview } from "@/components/SolutionOverview";
+import { ComplianceGap } from "@/components/ComplianceGap";
 import { UseCases } from "@/components/UseCases";
-import { UrgencySection } from "@/components/UrgencySection";
 import { TrustAbout } from "@/components/TrustAbout";
-import { StatusQuo } from "@/components/StatusQuo";
 import { Insights } from "@/components/Insights";
 import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
@@ -19,20 +15,13 @@ export default function Home() {
 
       <Navbar />
       <Hero />
+      <ComplianceGap />
       <div id="about">
         <TrustAbout />
       </div>
-      <StatusQuo />
-      <div id="solutions">
-        <SolutionOverview />
-      </div>
-      <div id="interactive-praxis">
-        <InteractivePraxis />
-      </div>
-      <div id="use-cases">
+      <div id="angebot">
         <UseCases />
       </div>
-      <UrgencySection />
       <div id="insights">
         <Insights />
       </div>
