@@ -35,7 +35,7 @@
   --precision-border: #D1D5DB;
   --precision-radius: 0px;
   --precision-shadow: none;
-  --precision-padding: 8rem;
+  --precision-padding: 140px;
 }
 
 .theme-legacy {
@@ -71,6 +71,12 @@ body {
   color: var(--foreground);
   font-family: var(--font-body);
   transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.5;
+}
+
+.theme-precision body {
+  line-height: 1.65;
+  font-weight: 400;
 }
 
 h1,
@@ -82,7 +88,9 @@ h6 {
   font-family: var(--font-heading);
 }
 
-.theme-precision h2 {
+.theme-precision h1,
+.theme-precision h2,
+.theme-precision h3 {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
@@ -108,4 +116,11 @@ h6 {
 
 .transition-theme {
   transition: all 0.3s ease;
+}
+
+.tech-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }

@@ -31,7 +31,7 @@ export function Hero() {
                     </div>
 
                     {/* Credentials */}
-                    <p className="text-sm font-medium tracking-wide uppercase mb-12 theme-legacy:text-gray-500 theme-precision:text-primary">
+                    <p className="mb-12 transition-theme theme-legacy:text-sm theme-legacy:font-medium theme-legacy:tracking-wide theme-legacy:uppercase theme-legacy:text-gray-500 theme-precision:tech-label theme-precision:text-primary">
                         Diplom-Jurist (WWU Münster) • AI Engineer • Spezialisiert auf EU AI Act, MDR, DSGVO
                     </p>
 

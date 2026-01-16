@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function UseCases() {
     return (
-        <section id="angebot" className="py-[var(--section-padding)] transition-theme theme-legacy:bg-white theme-precision:section-white">
+        <section id="angebot" className="py-[var(--section-padding)] transition-theme theme-legacy:bg-white theme-precision:section-onyx">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-custom shadow-sm mb-8 theme-precision:bg-white theme-precision:border-primary theme-precision:border theme-precision:text-primary transition-theme">

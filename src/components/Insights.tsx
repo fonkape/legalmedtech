@@ -279,9 +279,9 @@ export function Insights() {
                             className="w-[380px] flex-none bg-card p-8 rounded-custom border border-border-subtle hover:border-primary transition-theme cursor-pointer group snap-center"
                             onClick={() => setActiveArticle(article.id)}
                         >
-                            <div className="flex items-center gap-3 mb-6 text-xs font-bold tracking-wider uppercase">
+                            <div className="flex items-center gap-3 mb-6 transition-theme theme-precision:tech-label">
                                 <span className="text-primary">{article.tag}</span>
-                                <span className="text-gray-400">•</span>
+                                <span className="text-gray-400 theme-precision:hidden">•</span>
                                 <span className="text-gray-400">{article.date}</span>
                             </div>
                             <h3 className="text-2xl font-serif font-bold text-foreground mb-4 group-hover:text-primary transition-colors leading-tight">
@@ -299,7 +299,7 @@ export function Insights() {
                     {/* Coming Soon Card */}
                     <div className="w-[380px] flex-none bg-black/20 p-8 rounded-custom border border-border-subtle opacity-50 flex flex-col justify-between snap-center">
                         <div>
-                            <div className="flex items-center gap-3 mb-4 text-xs font-bold tracking-wider uppercase">
+                            <div className="flex items-center gap-3 mb-4 transition-theme theme-precision:tech-label">
                                 <span className="text-gray-400 bg-gray-200/10 px-2 py-1 rounded">Coming Soon</span>
                             </div>
                             <h3 className="text-2xl font-serif font-bold text-gray-500 mb-3 leading-tight">
@@ -341,7 +341,7 @@ export function Insights() {
 
                                 {/* Scrollable Content */}
                                 <div className="flex-1 overflow-y-auto p-8 md:p-16 pt-8">
-                                    <div className="flex items-center gap-3 mb-8 text-xs font-bold tracking-wider uppercase">
+                                    <div className="flex items-center gap-3 mb-8 transition-theme theme-precision:tech-label">
                                         <span className="text-primary border border-primary px-3 py-1 rounded-custom">{activeData.tag}</span>
                                         <span className="opacity-40">{activeData.date}</span>
                                     </div>
