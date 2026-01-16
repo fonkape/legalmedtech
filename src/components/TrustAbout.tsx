@@ -16,34 +16,46 @@ export function TrustAbout() {
                     {/* Text Column */}
                     <div className="order-2 lg:order-1">
                         <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-8 leading-tight">
-                            Jurist. Entwickler. Architekt.
+                            Jurist. Engineer. Architekt.
                         </h2>
 
                         <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                             <p>
-                                Ich bin Daniel Kleiboldt. 10 Jahre war ich Konzernjurist – Compliance, Vertragsrecht, die Schnittstelle zwischen "geht nicht" und "muss aber". Ich habe gesehen, wie gute Ideen an Rechtsabteilungen sterben. Und wie schlechte Ideen durchgewunken werden, weil niemand die richtigen Fragen stellt.
+                                Ich bin Daniel Kleiboldt. 10 Jahre lang habe ich als Konzernjurist an der Schnittstelle zwischen Regulatorik und Business gearbeitet – von komplexem Vertragsrecht bis hin zur Konzern-Compliance. Ich habe erlebt, wie Innovationen in Rechtsabteilungen scheitern, weil das technische Verständnis fehlte, und wie riskante Lösungen durchgewunken wurden, weil niemand die richtigen Fragen stellte.
                             </p>
                             <p>
-                                Heute baue ich selbst mit. Ich absolviere gerade eine intensive Ausbildung im AI Engineering – nicht um Entwickler zu werden, sondern um beide Seiten zu verstehen. Mein Ziel: KI-Lösungen, die von Anfang an rechtssicher gebaut sind. Nicht nachträglich geflickt.
+                                Heute baue ich die Brücke selbst. Als angehender AI Engineer verbinde ich tiefes juristisches Fachwissen mit technischer Umsetzungskompetenz. Mein Ziel: Healthcare-KI, die nicht nachträglich 'geflickt' wird, sondern von der ersten Codezeile an rechtssicher konzipiert ist – Privacy by Design statt Privacy by Panik.
                             </p>
                         </div>
 
-                        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="flex items-center gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                                <span className="text-gray-700 font-medium">Jurist (WWU Münster)</span>
+                        <div className="mt-10 space-y-4">
+                            <div className="flex items-start gap-3">
+                                <CheckCircle2 className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                                <div>
+                                    <span className="text-gray-900 font-bold block">Jurist (WWU Münster):</span>
+                                    <span className="text-gray-700">Diplom-Jurist mit Fokus auf Wirtschaftsrecht.</span>
+                                </div>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                                <span className="text-gray-700 font-medium">AI Engineer (in training)</span>
+                            <div className="flex items-start gap-3">
+                                <CheckCircle2 className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                                <div>
+                                    <span className="text-gray-900 font-bold block">10 Jahre Corporate Law:</span>
+                                    <span className="text-gray-700">Tiefenexpertise in Compliance & Vertragsgestaltung.</span>
+                                </div>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                                <span className="text-gray-700 font-medium">10 Jahre Corporate Law & Compliance</span>
+                            <div className="flex items-start gap-3">
+                                <CheckCircle2 className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                                <div>
+                                    <span className="text-gray-900 font-bold block">AI Engineer (in training):</span>
+                                    <span className="text-gray-700">Fokus auf LLM-Architekturen und technische Kapselung.</span>
+                                </div>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                                <span className="text-gray-700 font-medium">Spezialisierung: Medizin (DSGVO Art. 9, MDR, AI Act)</span>
+                            <div className="flex items-start gap-3">
+                                <CheckCircle2 className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                                <div>
+                                    <span className="text-gray-900 font-bold block">Spezialisierung Healthcare:</span>
+                                    <span className="text-gray-700">Experte für DSGVO Art. 9, MDR und den EU AI Act.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
