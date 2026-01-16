@@ -29,7 +29,7 @@ export function Footer() {
                             {"{ dk }"}
                         </div>
                         <p className="text-sm text-gray-500 leading-relaxed mb-6">
-                            Vom juristischen Bauplan bis zur technischen Umsetzung. Ich helfe der Gesundheitsbranche, digitale Entlastung zu schaffen – ohne Datenschutz-Risiko.
+                            Vom juristischen Bauplan bis zur technischen Umsetzung. Ich unterstütze MVZs und Kliniken dabei, Healthcare-KI rechtssicher zu implementieren – ohne Haftungsrisiko durch technische Kapselung.
                         </p>
                         <div className="flex gap-4">
                             <a href="https://www.linkedin.com/in/daniel-kleiboldt-306a75123/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors cursor-pointer">
@@ -41,12 +41,12 @@ export function Footer() {
                     {/* Links Column */}
                     <div>
                         <h4 className="font-bold text-gray-900 mb-6">
-                            <Link href="#use-cases" className="hover:text-primary transition-colors">Angebot</Link>
+                            <Link href="#angebot" className="hover:text-primary transition-colors">Angebot</Link>
                         </h4>
                         <ul className="space-y-4 text-sm text-gray-600">
-                            <li><Link href="#use-cases" className="hover:text-primary transition-colors">Compliance-Check</Link></li>
-                            <li><Link href="#use-cases" className="hover:text-primary transition-colors">Digital-Roadmap</Link></li>
-                            <li><Link href="#use-cases" className="hover:text-primary transition-colors">Begleitete Umsetzung</Link></li>
+                            <li><Link href="#angebot" className="hover:text-primary transition-colors">KI-Compliance-Audit</Link></li>
+                            <li><Link href="#angebot" className="hover:text-primary transition-colors">Sovereign AI Roadmap</Link></li>
+                            <li><Link href="#angebot" className="hover:text-primary transition-colors">Technical Engineering</Link></li>
                         </ul>
                     </div>
 
@@ -71,7 +71,7 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold text-gray-900 mb-6">Kontakt & Vernetzen</h4>
                         <p className="text-sm text-gray-500 mb-6">
-                            Keine Lust auf Formulare? Schreiben Sie mir direkt auf LinkedIn oder buchen Sie einen Slot.
+                            Keine Lust auf Formulare? Vernetzen Sie sich direkt auf LinkedIn oder sichern Sie sich sofort einen Slot für den 15-minütigen Compliance-Quickcheck.
                         </p>
                         <div className="flex flex-col gap-3">
                             <a href="https://www.linkedin.com/in/daniel-kleiboldt-306a75123/" target="_blank" rel="noopener noreferrer">
@@ -81,7 +81,7 @@ export function Footer() {
                             </a>
                             <a href="https://calendly.com/daniel-kleiboldt/potenzialanalyse" target="_blank" rel="noopener noreferrer">
                                 <Button size="sm" className="w-full justify-start bg-primary text-white hover:bg-primary/90">
-                                    <Send className="w-4 h-4 mr-2" /> Termin buchen
+                                    <Send className="w-4 h-4 mr-2" /> Quickcheck buchen
                                 </Button>
                             </a>
                         </div>
