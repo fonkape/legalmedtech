@@ -12,10 +12,10 @@ export function Contact() {
                         <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">NÄCHSTE SCHRITTE</span>
                     </div>
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
-                        Lassen Sie uns konkret werden.
+                        Der erste Schritt: Klarheit statt Haftungsrisiko.
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Sie müssen noch keine fertige Lösung im Kopf haben. Erzählen Sie mir einfach, was Sie im Praxisalltag am meisten Zeit kostet. Im kostenlosen Erstgespräch (15 Min) schauen wir gemeinsam, was rechtlich möglich und technisch sinnvoll ist.
+                        Sie müssen keine fertige IT-Strategie haben. Erzählen Sie mir, welche KI-Systeme Sie planen oder bereits nutzen. Im kostenlosen 15-minütigen Erstgespräch klären wir, wo Ihre regulatorischen Fallstricke liegen und wie wir diese technisch lösen.
                     </p>
                 </div>
 
@@ -53,7 +53,7 @@ export function Contact() {
                                         name="message"
                                         rows={4}
                                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none"
-                                        placeholder="Wobei wünschen Sie sich konkrete Entlastung? (z.B. Telefon, Empfang, Dokumentation)"
+                                        placeholder="Welche KI-Tools nutzen Sie? (z.B. Doctolib-Assistent, Telefon-KI, LLMs)"
                                     />
                                 </div>
 
@@ -81,9 +81,9 @@ export function Contact() {
                         <div className="bg-[#2D2D2D] rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
 
-                            <h3 className="text-2xl font-serif font-bold mb-4 relative z-10">Kostenlose Potenzial-Analyse</h3>
+                            <h3 className="text-2xl font-serif font-bold mb-4 relative z-10">Kostenlose Compliance-Erstprüfung</h3>
                             <p className="text-white/90 mb-8 relative z-10">
-                                15 Minuten via Google Meet oder Telefon. Wir prüfen, ob und wie KI Ihre Praxis entlasten kann – rechtssicher.
+                                15 Minuten via Google Meet oder Telefon. Wir bewerten Ihren Status Quo im Hinblick auf den AI Act und die ärztliche Schweigepflicht.
                             </p>
 
                             <div className="space-y-4 mb-8 relative z-10">
@@ -91,19 +91,19 @@ export function Contact() {
                                     <div className="p-1 bg-white/20 rounded-full">
                                         <Check className="h-4 w-4" />
                                     </div>
-                                    <span>Analyse Ihres Status Quo (Analog vs. Digital)</span>
+                                    <span>Kurz-Check Ihrer KI-Landschaft</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="p-1 bg-white/20 rounded-full">
                                         <Check className="h-4 w-4" />
                                     </div>
-                                    <span>Erste rechtliche Einschätzung</span>
+                                    <span>Identifikation akuter Haftungsrisiken</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="p-1 bg-white/20 rounded-full">
                                         <Check className="h-4 w-4" />
                                     </div>
-                                    <span>Kein Verkaufsgespräch</span>
+                                    <span>Kein Marketing-Pitch – Fokus auf Rechtssicherheit</span>
                                 </div>
                             </div>
 
