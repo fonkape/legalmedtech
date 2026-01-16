@@ -257,60 +257,60 @@ export function Insights() {
     }
 
     return (
-        <section id="insights" className="py-24 bg-gray-50 border-t border-gray-100">
+        <section id="insights" className="py-[var(--section-padding)] transition-theme theme-legacy:bg-gray-50 theme-precision:section-onyx border-t border-border-subtle">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm mb-8">
+                <div className="text-center mb-16 theme-precision:text-left theme-precision:max-w-4xl">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-custom shadow-sm mb-8 transition-theme theme-precision:bg-[#121212] theme-precision:border-primary theme-precision:border theme-precision:text-primary">
                         <Lightbulb className="w-4 h-4 text-primary" />
-                        <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">INSIGHTS</span>
+                        <span className="text-sm font-bold tracking-wide uppercase">INSIGHTS</span>
                     </div>
-                    <h2 className="text-3xl font-serif font-medium text-gray-900 mb-4">
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-4">
                         Klartext zu Recht & Technik.
                     </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-text-primary/70 max-w-2xl text-lg">
                         Gedanken zu KI, DSGVO und dem Alltag in der Arztpraxis.
                     </p>
                 </div>
 
-                <div className="flex overflow-x-auto gap-8 pb-8 -mx-4 px-4 scrollbar-hide snap-x snap-mandatory">
+                <div className="flex overflow-x-auto gap-6 pb-8 -mx-4 px-4 scrollbar-hide snap-x snap-mandatory">
                     {articles.map((article) => (
                         <div
                             key={article.id}
-                            className="w-[350px] flex-none bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow cursor-pointer group snap-center"
+                            className="w-[380px] flex-none bg-card p-8 rounded-custom border border-border-subtle hover:border-primary transition-theme cursor-pointer group snap-center"
                             onClick={() => setActiveArticle(article.id)}
                         >
-                            <div className="flex items-center gap-3 mb-4 text-xs font-bold tracking-wider uppercase">
+                            <div className="flex items-center gap-3 mb-6 text-xs font-bold tracking-wider uppercase">
                                 <span className="text-primary">{article.tag}</span>
                                 <span className="text-gray-400">•</span>
                                 <span className="text-gray-400">{article.date}</span>
                             </div>
-                            <h3 className="text-xl font-serif font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                            <h3 className="text-2xl font-serif font-bold text-foreground mb-4 group-hover:text-primary transition-colors leading-tight">
                                 {article.title}
                             </h3>
-                            <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-4">
+                            <p className="text-text-primary/60 text-sm leading-relaxed mb-8 line-clamp-4">
                                 {article.preview}
                             </p>
-                            <div className="flex items-center text-sm font-bold text-gray-900 group-hover:translate-x-1 transition-transform">
-                                Artikel lesen <ArrowRight className="w-4 h-4 ml-2" />
+                            <div className="flex items-center text-sm font-bold text-foreground group-hover:translate-x-1 transition-transform">
+                                Artikel lesen <ArrowRight className="w-4 h-4 ml-2 text-primary" />
                             </div>
                         </div>
                     ))}
 
                     {/* Coming Soon Card */}
-                    <div className="w-[350px] flex-none bg-gray-50 p-8 rounded-2xl border border-gray-100 opacity-70 flex flex-col justify-between snap-center">
+                    <div className="w-[380px] flex-none bg-black/20 p-8 rounded-custom border border-border-subtle opacity-50 flex flex-col justify-between snap-center">
                         <div>
                             <div className="flex items-center gap-3 mb-4 text-xs font-bold tracking-wider uppercase">
-                                <span className="text-gray-400 bg-gray-200 px-2 py-1 rounded">Coming Soon</span>
+                                <span className="text-gray-400 bg-gray-200/10 px-2 py-1 rounded">Coming Soon</span>
                             </div>
-                            <h3 className="text-xl font-serif font-bold text-gray-400 mb-3">
+                            <h3 className="text-2xl font-serif font-bold text-gray-500 mb-3 leading-tight">
                                 Haftungsfalle ePA: Was Praxisinhaber jetzt technisch wissen müssen
                             </h3>
                         </div>
                     </div>
                 </div>
 
-                <div className="text-center mt-8">
-                    <a href="https://www.linkedin.com/in/daniel-kleiboldt-306a75123/recent-activity/all/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-gray-500 hover:text-primary transition-colors">
+                <div className="text-center mt-12 theme-precision:text-left">
+                    <a href="https://www.linkedin.com/in/daniel-kleiboldt-306a75123/recent-activity/all/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-foreground/50 hover:text-primary transition-colors">
                         Alle Artikel auf LinkedIn <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
                 </div>
@@ -322,35 +322,35 @@ export function Insights() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-white/90 backdrop-blur-sm"
+                            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/90 backdrop-blur-md"
                             onClick={() => setActiveArticle(null)}
                         >
                             <motion.div
-                                initial={{ opacity: 0, scale: 0.95 }}
+                                initial={{ opacity: 0, scale: 0.98 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.95 }}
+                                exit={{ opacity: 0, scale: 0.98 }}
                                 onClick={(e) => e.stopPropagation()}
-                                className="bg-white w-full max-w-2xl max-h-[85vh] rounded-2xl shadow-2xl border border-gray-100 flex flex-col relative"
+                                className="bg-card w-full max-w-3xl max-h-[90vh] rounded-custom shadow-2xl border border-border-subtle flex flex-col relative"
                             >
                                 {/* Header / Close Button */}
-                                <div className="flex-none p-4 flex justify-end border-b border-gray-50 bg-white rounded-t-2xl z-10">
-                                    <Button variant="ghost" size="sm" onClick={() => setActiveArticle(null)} className="rounded-full hover:bg-gray-100">
+                                <div className="flex-none p-4 flex justify-end border-b border-border-subtle z-10">
+                                    <Button variant="ghost" size="sm" onClick={() => setActiveArticle(null)} className="rounded-custom hover:bg-gray-100">
                                         <X className="w-5 h-5" />
                                     </Button>
                                 </div>
 
                                 {/* Scrollable Content */}
-                                <div className="flex-1 overflow-y-auto p-8 md:p-12 pt-4">
-                                    <div className="flex items-center gap-3 mb-6 text-xs font-bold tracking-wider uppercase">
-                                        <span className="text-primary bg-primary/5 px-2 py-1 rounded">{activeData.tag}</span>
-                                        <span className="text-gray-400">{activeData.date}</span>
+                                <div className="flex-1 overflow-y-auto p-8 md:p-16 pt-8">
+                                    <div className="flex items-center gap-3 mb-8 text-xs font-bold tracking-wider uppercase">
+                                        <span className="text-primary border border-primary px-3 py-1 rounded-custom">{activeData.tag}</span>
+                                        <span className="opacity-40">{activeData.date}</span>
                                     </div>
 
-                                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-8 leading-tight">
+                                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-12 leading-[1.1]">
                                         {activeData.title}
                                     </h2>
 
-                                    <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed">
+                                    <div className="prose prose-gray max-w-none text-foreground/80 leading-relaxed text-lg theme-precision:prose-invert">
                                         {activeData.content}
                                     </div>
                                 </div>

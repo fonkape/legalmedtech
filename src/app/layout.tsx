@@ -29,17 +29,21 @@ export const metadata: Metadata = {
   description: "Mehr Zeit für Patienten: KI-Empfang, automatische Arztbriefe, Medikationsmanagement – rechtssicher durch Legal Engineering.",
 };
 
+import { ThemeProvider } from "@/components/ThemeProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de">
+    <html lang="de" className="scroll-smooth">
       <body
-        className={`${playfair.variable} ${inter.variable} ${jetbrainsMono.variable} ${ibmPlexMono.variable} antialiased font-sans bg-background text-text-primary`}
+        className={`${playfair.variable} ${inter.variable} ${jetbrainsMono.variable} ${ibmPlexMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

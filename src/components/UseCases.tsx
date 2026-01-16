@@ -4,26 +4,26 @@ import Link from "next/link";
 
 export function UseCases() {
     return (
-        <section id="angebot" className="py-24 bg-white">
+        <section id="angebot" className="py-[var(--section-padding)] transition-theme theme-legacy:bg-white theme-precision:section-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full shadow-sm mb-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-custom shadow-sm mb-8 theme-precision:bg-white theme-precision:border-primary theme-precision:border theme-precision:text-primary transition-theme">
                         <ShieldCheck className="w-4 h-4 text-primary" />
-                        <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">LEISTUNGEN</span>
+                        <span className="text-sm font-bold tracking-wide uppercase">LEISTUNGEN</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-serif font-medium text-gray-900 mb-4">
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-4 leading-tight">
                         Rechtssicherheit durch Architektur. <br className="hidden md:block" /> Nicht durch Verträge.
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto bento-grid">
                     {/* Block 1: KI-Compliance-Audit & Roadmap */}
-                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col h-full hover:shadow-md transition-shadow">
+                    <div className="p-8 bg-card rounded-custom border border-border-subtle flex flex-col h-full transition-theme hover:border-primary">
                         <div className="mb-6">
-                            <div className="p-3 bg-white rounded-lg shadow-sm inline-block mb-4 text-primary">
+                            <div className="p-3 bg-white rounded-custom border border-border-subtle inline-block mb-4 text-primary theme-precision:bg-primary theme-precision:text-white transition-theme">
                                 <ShieldCheck className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">KI-Compliance-Audit & Roadmap</h3>
+                            <h3 className="text-xl font-bold text-foreground mb-4">KI-Compliance-Audit & Roadmap</h3>
                             <div className="space-y-4">
                                 <div>
                                     <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">Der Schmerz</p>
@@ -36,22 +36,22 @@ export function UseCases() {
                             </div>
                         </div>
                         <div className="mt-auto">
-                            <div className="pt-6 border-t border-gray-200 mb-6">
+                            <div className="pt-6 border-t border-border-subtle mb-6">
                                 <p className="text-sm text-gray-700 font-bold">Ergebnis: <span className="font-normal text-gray-600">Ein rechtssicherer technischer Bauplan für Ihre Praxis-IT 2026.</span></p>
                             </div>
                             <Link href="#contact">
-                                <Button className="w-full" variant="outline">Compliance prüfen</Button>
+                                <Button className="w-full" variant="outline" size="md">Compliance prüfen</Button>
                             </Link>
                         </div>
                     </div>
 
                     {/* Block 2: Sovereign AI: Lokale KI-Systeme */}
-                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col h-full hover:shadow-md transition-shadow">
+                    <div className="p-8 bg-card rounded-custom border border-border-subtle flex flex-col h-full transition-theme hover:border-primary">
                         <div className="mb-6">
-                            <div className="p-3 bg-white rounded-lg shadow-sm inline-block mb-4 text-primary">
+                            <div className="p-3 bg-white rounded-custom border border-border-subtle inline-block mb-4 text-primary theme-precision:bg-primary theme-precision:text-white transition-theme">
                                 <Cpu className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">Sovereign AI: Lokale KI-Systeme</h3>
+                            <h3 className="text-xl font-bold text-foreground mb-4">Sovereign AI: Lokale KI-Systeme</h3>
                             <div className="space-y-4">
                                 <div>
                                     <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">Der USP</p>
@@ -64,22 +64,22 @@ export function UseCases() {
                             </div>
                         </div>
                         <div className="mt-auto">
-                            <div className="pt-6 border-t border-gray-200 mb-6">
+                            <div className="pt-6 border-t border-border-subtle mb-6">
                                 <p className="text-sm text-gray-700 font-bold">Ergebnis: <span className="font-normal text-gray-600">Ein digitales „Fort Knox“ für Ihre Patientendaten.</span></p>
                             </div>
                             <Link href="#contact">
-                                <Button className="w-full">Souveränität anfragen</Button>
+                                <Button className="w-full" size="md">Souveränität anfragen</Button>
                             </Link>
                         </div>
                     </div>
 
                     {/* Block 3: Technical Compliance Engineering */}
-                    <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col h-full hover:shadow-md transition-shadow">
+                    <div className="p-8 bg-card rounded-custom border border-border-subtle flex flex-col h-full transition-theme hover:border-primary">
                         <div className="mb-6">
-                            <div className="p-3 bg-white rounded-lg shadow-sm inline-block mb-4 text-primary">
+                            <div className="p-3 bg-white rounded-custom border border-border-subtle inline-block mb-4 text-primary theme-precision:bg-primary theme-precision:text-white transition-theme">
                                 <Code2 className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">Technical Compliance Engineering</h3>
+                            <h3 className="text-xl font-bold text-foreground mb-4">Technical Compliance Engineering</h3>
                             <div className="space-y-4">
                                 <div>
                                     <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">Die Lösung</p>
@@ -92,11 +92,11 @@ export function UseCases() {
                             </div>
                         </div>
                         <div className="mt-auto">
-                            <div className="pt-6 border-t border-gray-200 mb-6">
+                            <div className="pt-6 border-t border-border-subtle mb-6">
                                 <p className="text-sm text-gray-700 font-bold">Ergebnis: <span className="font-normal text-gray-600">Implementierung von Rechtssicherheit ohne Reibungsverluste.</span></p>
                             </div>
                             <Link href="#contact">
-                                <Button className="w-full" variant="outline">Engineering buchen</Button>
+                                <Button className="w-full" variant="outline" size="md">Engineering buchen</Button>
                             </Link>
                         </div>
                     </div>

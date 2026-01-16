@@ -1,27 +1,111 @@
 @import "tailwindcss";
 
-@theme {
-  --color-primary: #B85450;
-  --color-primary-hover: #A0685A;
-  --color-background: #FAF8F5;
-  --color-sand: #E8DDD3;
-  --color-text-primary: #2C2C2C;
-  --color-accent-green: #7A9B76;
-  --color-accent-blue: #5B7C99;
-  
+:root {
+  /* Tailwind 4 Theme Variables */
+  --color-primary: var(--primary);
+  --color-background: var(--background);
+  --color-text-primary: var(--foreground);
+  --color-card: var(--card-bg);
+  --color-border-subtle: var(--border-color);
+
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
 
-  --radius-3xl: 1.5rem;
+  --radius-custom: var(--radius);
+
+  /* Legacy Theme (Original) */
+  --legacy-primary: #B85450;
+  --legacy-background: #FAF8F5;
+  --legacy-foreground: #2C2C2C;
+  --legacy-card: #FFFFFF;
+  --legacy-border: #E5E7EB;
+  --legacy-radius: 1.5rem;
+  --legacy-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --legacy-padding: 6rem;
+
+  /* Precision Theme (New) */
+  --precision-primary: #2D5BFF;
+  --precision-background: #F9F9F9;
+  --precision-foreground: #121212;
+  --precision-dark-bg: #121212;
+  --precision-dark-fg: #F9F9F9;
+  --precision-slate: #F1F5F9;
+  --precision-card: #FFFFFF;
+  --precision-border: #D1D5DB;
+  --precision-radius: 0px;
+  --precision-shadow: none;
+  --precision-padding: 8rem;
 }
 
-:root {
-  --background: #FAF8F5;
-  --foreground: #2C2C2C;
+.theme-legacy {
+  --primary: var(--legacy-primary);
+  --background: var(--legacy-background);
+  --foreground: var(--legacy-foreground);
+  --card-bg: var(--legacy-card);
+  --border-color: var(--legacy-border);
+  --radius: var(--legacy-radius);
+  --section-padding: var(--legacy-padding);
+  --section-shadow: var(--legacy-shadow);
+
+  --font-body: var(--font-sans);
+  --font-heading: var(--font-serif);
+}
+
+.theme-precision {
+  --primary: var(--precision-primary);
+  --background: var(--precision-background);
+  --foreground: var(--precision-foreground);
+  --card-bg: var(--precision-card);
+  --border-color: var(--precision-border);
+  --radius: var(--precision-radius);
+  --section-padding: var(--precision-padding);
+  --section-shadow: var(--precision-shadow);
+
+  --font-body: var(--font-sans);
+  --font-heading: var(--font-serif);
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+.theme-precision h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.theme-precision .section-onyx {
+  background-color: var(--precision-dark-bg);
+  color: var(--precision-dark-fg);
+  --border-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-precision .section-slate {
+  background-color: var(--precision-slate);
+}
+
+.theme-precision .section-white {
+  background-color: var(--precision-background);
+}
+
+.theme-precision .bento-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.transition-theme {
+  transition: all 0.3s ease;
 }
