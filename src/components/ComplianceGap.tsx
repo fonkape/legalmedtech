@@ -7,7 +7,7 @@ export function ComplianceGap() {
         <section id="methodik" className="py-[var(--section-padding)] transition-theme theme-legacy:bg-white theme-precision:section-slate">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="max-w-4xl mx-auto text-center mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-custom shadow-sm mb-8 border border-red-100 theme-precision:bg-white theme-precision:border-primary theme-precision:text-primary theme-precision:tech-label">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 transition-theme theme-legacy:bg-red-50 theme-legacy:border-red-100 theme-legacy:shadow-sm theme-legacy:rounded-custom border theme-precision:bg-white theme-precision:border-primary theme-precision:text-primary theme-precision:tech-label">
                         <ShieldAlert className="w-4 h-4 text-primary" />
                         <span className="tracking-wide uppercase">DIE COMPLIANCE-LÜCKE</span>
                     </div>
