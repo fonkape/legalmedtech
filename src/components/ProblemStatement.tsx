@@ -7,7 +7,7 @@ export function ProblemStatement() {
         <section className="py-24 bg-background relative">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         Der stille Burnout
                     </h2>
                     <Card className="border-none shadow-lg bg-background/50 hover:bg-white transition-colors duration-300">
@@ -31,7 +31,7 @@ export function ProblemStatement() {
                         Diese Probleme kosten Sie nicht nur Zeit – sondern auch Gesundheit, Patientenzufriedenheit und Umsatz.
                     </p>
                     <div className="flex flex-col items-center gap-6">
-                        <p className="text-primary font-serif italic text-lg">
+                        <p className="text-primary italic text-lg">
                             Aber es gibt eine Lösung. Und sie ist näher, als Sie denken.
                         </p>
                         <Button size="lg" className="group">

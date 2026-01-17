@@ -96,8 +96,8 @@ export function Footer() {
                             © 2025 Daniel Kleiboldt. Made in Germany.
                         </p>
                         <div className="flex gap-8">
-                            <span className="text-[10px] font-bold opacity-30 uppercase tracking-[0.2em]">DSGVO Konform</span>
-                            <span className="text-[10px] font-bold opacity-30 uppercase tracking-[0.2em]">SSL Secured</span>
+                            <span className="text-[10px] font-normal opacity-30 uppercase tracking-[0.2em] font-mono">DSGVO Konform</span>
+                            <span className="text-[10px] font-normal opacity-30 uppercase tracking-[0.2em] font-mono">SSL Secured</span>
                         </div>
                     </div>
 
@@ -137,7 +137,7 @@ export function Footer() {
                                 </Button>
                             </div>
                             <div className="flex-1 overflow-y-auto p-8 md:p-12 pt-8">
-                                <h2 className="text-4xl font-serif font-bold text-foreground mb-12">Impressum</h2>
+                                <h2 className="text-4xl font-bold text-foreground mb-12">Impressum</h2>
                                 <div className="prose prose-gray theme-precision:prose-invert max-w-none text-foreground/70 leading-relaxed text-sm">
                                     <h3 className="text-lg font-bold text-foreground mt-8 mb-4">Angaben gemäß § 5 TMG</h3>
                                     <p>Daniel Kleiboldt<br />Büro für Legal Engineering<br />Hülsbrockstraße 115<br />33334 Gütersloh</p>
@@ -179,7 +179,7 @@ export function Footer() {
                                 </Button>
                             </div>
                             <div className="flex-1 overflow-y-auto p-8 md:p-12 pt-8">
-                                <h2 className="text-4xl font-serif font-bold text-foreground mb-12">Datenschutz</h2>
+                                <h2 className="text-4xl font-bold text-foreground mb-12">Datenschutz</h2>
                                 <div className="prose prose-gray theme-precision:prose-invert max-w-none text-foreground/70 leading-relaxed text-sm">
                                     <h3 className="text-lg font-bold text-foreground mt-8 mb-4">1. Datenschutz auf einen Blick</h3>
                                     <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>

@@ -12,7 +12,7 @@ export function ComplianceGap() {
                         <span className="tracking-wide uppercase">DIE COMPLIANCE-LÜCKE</span>
                     </div>
 
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6 leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
                         Ihr KI-Anbieter verkauft Features. <br /> Ich verkaufe Rechtssicherheit.
                     </h2>
                 </div>
@@ -23,7 +23,7 @@ export function ComplianceGap() {
                         <div className="w-12 h-12 bg-white rounded-custom border border-border-subtle flex items-center justify-center mb-6 text-primary theme-precision:bg-primary theme-precision:text-white">
                             <AlertTriangle className="w-6 h-6" />
                         </div>
-                        <h3 className="text-xl font-bold text-foreground mb-4">Die Haftungs-Falle</h3>
+                        <h3 className="text-xl font-semibold text-foreground mb-4">Die Haftungs-Falle</h3>
                         <p className="text-gray-600 leading-relaxed text-sm">
                             Wenn die KI im Arztbrief halluziniert und Sie den Entwurf unbesehen signieren, haften Sie persönlich. Die Plausibilitätsprüfung ist nicht an Software delegierbar – das hat die Rechtsprechung (LG Kiel) bereits klargestellt. Ich sorge dafür, dass Ihre Prozesse diese Haftung technisch ausschließen.
                         </p>
@@ -34,7 +34,7 @@ export function ComplianceGap() {
                         <div className="w-12 h-12 bg-white rounded-custom border border-border-subtle flex items-center justify-center mb-6 text-primary theme-precision:bg-primary theme-precision:text-white">
                             <Clock className="w-6 h-6" />
                         </div>
-                        <h3 className="text-xl font-bold text-foreground mb-4">Die 2026-Deadline (EU AI Act)</h3>
+                        <h3 className="text-xl font-semibold text-foreground mb-4">Die 2026-Deadline (EU AI Act)</h3>
                         <p className="text-gray-600 leading-relaxed text-sm">
                             Ab August 2026 greift der EU AI Act voll durch. Viele heutige 'Assistenzsysteme' werden über Nacht zu regulierten Hochrisiko-Systemen. Wer heute ohne Konformitäts-Roadmap unterschreibt, investiert in ein rechtliches Auslaufmodell. Ich auditiere Ihre Verträge auf Zukunftssicherheit.
                         </p>
@@ -45,7 +45,7 @@ export function ComplianceGap() {
                         <div className="w-12 h-12 bg-white rounded-custom border border-border-subtle flex items-center justify-center mb-6 text-primary theme-precision:bg-primary theme-precision:text-white">
                             <ShieldOff className="w-6 h-6" />
                         </div>
-                        <h3 className="text-xl font-bold text-foreground mb-4">Die Schweigepflicht-Lücke</h3>
+                        <h3 className="text-xl font-semibold text-foreground mb-4">Die Schweigepflicht-Lücke</h3>
                         <p className="text-gray-600 leading-relaxed text-sm">
                             Ein US-Cloud-Modell ohne technische Kapselung ist ein massives Risiko für die ärztliche Schweigepflicht (§ 203 StGB). 'DSGVO-konform' auf einer Marketing-Seite ist kein Schutzschild vor der Kammer oder der Staatsanwaltschaft. Ich baue die technische Architektur für echtes Privacy-by-Design.
                         </p>

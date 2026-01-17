@@ -10,11 +10,11 @@ export function Hero() {
 
                 <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start max-w-3xl mx-auto lg:mx-0">
                     {/* Headline */}
-                    <h1 className="font-serif font-bold tracking-tight mb-8 leading-[1.1] transition-theme">
+                    <h1 className="font-bold tracking-tight mb-8 leading-[1.1] transition-theme">
                         <span className="block text-3xl sm:text-4xl md:text-5xl mb-4 theme-legacy:text-gray-800 theme-precision:text-white/60">
                             Legal Engineering für
                         </span>
-                        <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] theme-legacy:italic theme-legacy:text-[#B85450] theme-precision:text-white uppercase tracking-tighter">
+                        <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] theme-legacy:italic theme-legacy:text-[#2563EB] theme-precision:text-white uppercase tracking-tighter">
                             Healthcare-KI-Compliance
                         </span>
                     </h1>

@@ -1,26 +1,16 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { Playfair_Display, Instrument_Sans, Roboto_Mono, IBM_Plex_Mono } from "next/font/google";
+import { Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-serif",
-  subsets: ["latin"],
-});
-
-const instrumentSans = Instrument_Sans({
+const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const robotoMono = Roboto_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-});
-
 const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex-mono",
-  weight: ["400", "700"],
+  variable: "--font-mono",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -39,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="de" className="scroll-smooth">
       <body
-        className={`${playfair.variable} ${instrumentSans.variable} ${robotoMono.variable} ${ibmPlexMono.variable} antialiased`}
+        className={`${inter.variable} ${ibmPlexMono.variable} antialiased`}
       >
         <ThemeProvider>
           {children}

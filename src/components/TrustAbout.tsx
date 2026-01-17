@@ -15,7 +15,7 @@ export function TrustAbout() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     {/* Text Column */}
                     <div className="order-2 lg:order-1">
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-8 leading-tight transition-theme">
+                        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 leading-tight transition-theme">
                             Jurist. Engineer. Architekt.
                         </h2>
 
@@ -69,7 +69,7 @@ export function TrustAbout() {
                                 className="w-full h-full object-cover transition-all theme-precision:grayscale hover:grayscale-0 duration-700"
                             />
                             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-8 theme-precision:bg-primary/20 theme-precision:backdrop-blur-sm theme-precision:border-t theme-precision:border-white/20 transition-theme">
-                                <p className="text-white font-serif text-2xl font-bold">Daniel Kleiboldt</p>
+                                <p className="text-white text-2xl font-bold">Daniel Kleiboldt</p>
                                 <p className="text-white/80 text-sm tracking-widest uppercase mt-1">Legal Engineer</p>
                             </div>
                         </div>

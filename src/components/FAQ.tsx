@@ -12,14 +12,14 @@ export function FAQ() {
                         <MessageCircle className="w-4 h-4 text-primary" />
                         <span className="text-sm font-bold tracking-wide uppercase">KLARTEXT</span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
                         Antworten auf Ihre Fragen.
                     </h2>
                 </div>
 
                 <Accordion type="single" collapsible className="w-full space-y-0 border-t border-border-subtle transition-theme">
                     <AccordionItem value="item-1" className="border-b border-border-subtle px-0 transition-theme theme-legacy:px-6 theme-legacy:bg-white theme-legacy:rounded-2xl theme-legacy:shadow-sm theme-legacy:mb-4">
-                        <AccordionTrigger className="text-xl font-serif font-bold text-foreground hover:no-underline text-left py-6">
+                        <AccordionTrigger className="text-xl font-semibold text-foreground hover:no-underline text-left py-6">
                             Warum reicht "DSGVO-konform" auf der Anbieter-Website nicht aus?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-8 text-lg">
@@ -28,7 +28,7 @@ export function FAQ() {
                     </AccordionItem>
 
                     <AccordionItem value="item-2" className="border-b border-border-subtle px-0 transition-theme theme-legacy:px-6 theme-legacy:bg-white theme-legacy:rounded-2xl theme-legacy:shadow-sm theme-legacy:mb-4">
-                        <AccordionTrigger className="text-xl font-serif font-bold text-foreground hover:no-underline text-left py-6">
+                        <AccordionTrigger className="text-xl font-semibold text-foreground hover:no-underline text-left py-6">
                             Was ist das Risiko bei KI-Assistenten von großen Plattformen wie Doctolib?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-8 text-lg">
@@ -37,7 +37,7 @@ export function FAQ() {
                     </AccordionItem>
 
                     <AccordionItem value="item-3" className="border-b border-border-subtle px-0 transition-theme theme-legacy:px-6 theme-legacy:bg-white theme-legacy:rounded-2xl theme-legacy:shadow-sm theme-legacy:mb-4">
-                        <AccordionTrigger className="text-xl font-serif font-bold text-foreground hover:no-underline text-left py-6">
+                        <AccordionTrigger className="text-xl font-semibold text-foreground hover:no-underline text-left py-6">
                             Bieten Sie auch Lösungen ohne Cloud-Anbindung an?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-8 text-lg">
@@ -46,7 +46,7 @@ export function FAQ() {
                     </AccordionItem>
 
                     <AccordionItem value="item-4" className="border-b border-border-subtle px-0 transition-theme theme-legacy:px-6 theme-legacy:bg-white theme-legacy:rounded-2xl theme-legacy:shadow-sm theme-legacy:mb-4">
-                        <AccordionTrigger className="text-xl font-serif font-bold text-foreground hover:no-underline text-left py-6">
+                        <AccordionTrigger className="text-xl font-semibold text-foreground hover:no-underline text-left py-6">
                             Mein Vertrag läuft bis 2027 – warum muss ich jetzt wegen des AI Act handeln?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-8 text-lg">
@@ -55,7 +55,7 @@ export function FAQ() {
                     </AccordionItem>
 
                     <AccordionItem value="item-5" className="border-b border-border-subtle px-0 transition-theme theme-legacy:px-6 theme-legacy:bg-white theme-legacy:rounded-2xl theme-legacy:shadow-sm theme-legacy:mb-4">
-                        <AccordionTrigger className="text-xl font-serif font-bold text-foreground hover:no-underline text-left py-6">
+                        <AccordionTrigger className="text-xl font-semibold text-foreground hover:no-underline text-left py-6">
                             Was genau macht ein Legal Engineer anders als ein Anwalt?
                         </AccordionTrigger>
                         <AccordionContent className="text-gray-600 leading-relaxed pb-8 text-lg">

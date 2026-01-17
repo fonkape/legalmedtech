@@ -9,7 +9,7 @@ export function UrgencySection() {
                         <Shield className="w-4 h-4 text-primary" />
                         <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">SICHERHEIT</span>
                     </div>
-                    <h2 className="text-3xl font-serif font-medium text-white mb-6">
+                    <h2 className="text-3xl font-bold text-white mb-6">
                         Keine Kompromisse beim Patientenschutz.
                     </h2>
                 </div>

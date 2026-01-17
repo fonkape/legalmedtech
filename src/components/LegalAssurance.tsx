@@ -5,10 +5,10 @@ export function LegalAssurance() {
         <section className="py-24 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         Die 3 teuersten Fehler, die Ärzte mit KI machen
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto font-normal">
                         Ohne Legal Engineering drohen Bußgelder, Abrechnungsausschluss, Haftungsrisiken.
                         Ein einziger Fehler kann Ihre Praxis existenziell bedrohen. So schützen Sie sich.
                     </p>

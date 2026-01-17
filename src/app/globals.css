@@ -7,7 +7,6 @@
   --color-card: var(--card-bg);
   --color-border-subtle: var(--border-color);
 
-  --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
 
@@ -16,7 +15,8 @@
 
 :root {
   /* Legacy Theme (Original) */
-  --legacy-primary: #B85450;
+  --legacy-primary: #2563EB;
+  /* Updated to Blue */
   --legacy-background: #FAF8F5;
   --legacy-foreground: #2C2C2C;
   --legacy-card: #FFFFFF;
@@ -25,8 +25,9 @@
   --legacy-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --legacy-padding: 6rem;
 
-  /* Precision Theme (New) */
-  --precision-primary: #2D5BFF;
+  /* Precision Theme (New Professional System) */
+  --precision-primary: #2563EB;
+  /* Blue Accent */
   --precision-background: #F9F9F9;
   --precision-foreground: #121212;
   --precision-dark-bg: #121212;
@@ -50,7 +51,8 @@
   --section-shadow: var(--legacy-shadow);
 
   --font-body: var(--font-sans);
-  --font-heading: var(--font-serif);
+  --font-heading: var(--font-sans);
+  /* Inter for headings */
 }
 
 .theme-precision {
@@ -64,7 +66,8 @@
   --section-shadow: var(--precision-shadow);
 
   --font-body: var(--font-sans);
-  --font-heading: var(--font-serif);
+  --font-heading: var(--font-sans);
+  /* Inter for headings */
 }
 
 body {
@@ -73,11 +76,11 @@ body {
   font-family: var(--font-body);
   transition: background-color 0.3s ease, color 0.3s ease;
   line-height: 1.5;
+  font-weight: 400;
 }
 
 .theme-precision body {
   line-height: 1.65;
-  font-weight: 400;
 }
 
 h1,
@@ -89,17 +92,34 @@ h6 {
   font-family: var(--font-heading);
 }
 
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 600;
+}
+
 .theme-precision h1,
 .theme-precision h2,
 .theme-precision h3 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: var(--primary);
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
 }
 
 .theme-precision .section-onyx {
   background-color: var(--precision-dark-bg);
   color: var(--precision-dark-fg);
-  --border-color: rgba(255, 255, 255, 0.2);
+  --border-color: rgba(255, 255, 255, 0.1);
 }
 
 .theme-precision .section-slate {
@@ -122,6 +142,7 @@ h6 {
 .tech-label {
   font-family: var(--font-mono);
   font-size: 0.75rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }

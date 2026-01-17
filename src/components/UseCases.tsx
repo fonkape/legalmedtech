@@ -11,7 +11,7 @@ export function UseCases() {
                         <ShieldCheck className="w-4 h-4 text-primary" />
                         <span className="text-sm font-bold tracking-wide uppercase">LEISTUNGEN</span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-4 leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
                         Rechtssicherheit durch Architektur. <br className="hidden md:block" /> Nicht durch Verträge.
                     </h2>
                 </div>
@@ -23,7 +23,7 @@ export function UseCases() {
                             <div className="p-3 bg-white rounded-custom border border-border-subtle inline-block mb-4 text-primary theme-precision:bg-primary theme-precision:text-white transition-theme">
                                 <ShieldCheck className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-foreground mb-4">KI-Compliance-Audit & Roadmap</h3>
+                            <h3 className="text-xl font-semibold text-foreground mb-4">KI-Compliance-Audit & Roadmap</h3>
                             <div className="space-y-4">
                                 <div>
                                     <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">Der Schmerz</p>
@@ -51,7 +51,7 @@ export function UseCases() {
                             <div className="p-3 bg-white rounded-custom border border-border-subtle inline-block mb-4 text-primary theme-precision:bg-primary theme-precision:text-white transition-theme">
                                 <Cpu className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-foreground mb-4">Sovereign AI: Lokale KI-Systeme</h3>
+                            <h3 className="text-xl font-semibold text-foreground mb-4">Sovereign AI: Lokale KI-Systeme</h3>
                             <div className="space-y-4">
                                 <div>
                                     <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">Der USP</p>
@@ -79,7 +79,7 @@ export function UseCases() {
                             <div className="p-3 bg-white rounded-custom border border-border-subtle inline-block mb-4 text-primary theme-precision:bg-primary theme-precision:text-white transition-theme">
                                 <Code2 className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-foreground mb-4">Technical Compliance Engineering</h3>
+                            <h3 className="text-xl font-semibold text-foreground mb-4">Technical Compliance Engineering</h3>
                             <div className="space-y-4">
                                 <div>
                                     <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">Die Lösung</p>

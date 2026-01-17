@@ -9,7 +9,7 @@ export function SolutionOverview() {
                         <Code2 className="w-4 h-4 text-primary" />
                         <span className="text-sm font-bold text-gray-800 tracking-wide uppercase">METHODIK</span>
                     </div>
-                    <h2 className="text-3xl font-serif font-medium text-gray-900 mb-4">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
                         Erst die Compliance. Dann der Code.
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">

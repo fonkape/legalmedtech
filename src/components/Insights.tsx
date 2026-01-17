@@ -264,7 +264,7 @@ export function Insights() {
                         <Lightbulb className="w-4 h-4 text-primary" />
                         <span className="text-sm font-bold tracking-wide uppercase">INSIGHTS</span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-4">
+                    <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
                         Klartext zu Recht & Technik.
                     </h2>
                     <p className="text-text-primary/70 max-w-2xl text-lg">
@@ -284,7 +284,7 @@ export function Insights() {
                                 <span className="text-gray-400 theme-precision:hidden">•</span>
                                 <span className="text-gray-400">{article.date}</span>
                             </div>
-                            <h3 className="text-2xl font-serif font-bold text-foreground mb-4 group-hover:text-primary transition-colors leading-tight">
+                            <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors leading-tight">
                                 {article.title}
                             </h3>
                             <p className="text-text-primary/60 text-sm leading-relaxed mb-8 line-clamp-4">
@@ -302,7 +302,7 @@ export function Insights() {
                             <div className="flex items-center gap-3 mb-4 transition-theme theme-precision:tech-label">
                                 <span className="text-gray-400 bg-gray-200/10 px-2 py-1 rounded">Coming Soon</span>
                             </div>
-                            <h3 className="text-2xl font-serif font-bold text-gray-500 mb-3 leading-tight">
+                            <h3 className="text-2xl font-bold text-gray-500 mb-3 leading-tight">
                                 Haftungsfalle ePA: Was Praxisinhaber jetzt technisch wissen müssen
                             </h3>
                         </div>
@@ -346,7 +346,7 @@ export function Insights() {
                                         <span className="opacity-40">{activeData.date}</span>
                                     </div>
 
-                                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-12 leading-[1.1]">
+                                    <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-12 leading-[1.1]">
                                         {activeData.title}
                                     </h2>
 

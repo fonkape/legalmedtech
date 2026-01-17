@@ -11,7 +11,7 @@ export function Contact() {
                         <ArrowRight className="w-4 h-4 text-primary" />
                         <span className="text-sm font-bold tracking-wide uppercase">NÄCHSTE SCHRITTE</span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-4">
+                    <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
                         Der erste Schritt: Klarheit statt Haftungsrisiko.
                     </h2>
                     <p className="text-lg text-text-primary/70 max-w-2xl">
@@ -24,7 +24,7 @@ export function Contact() {
                     <div className="bg-card p-8 rounded-custom border border-border-subtle order-2 lg:order-1 transition-theme shadow-sm hover:border-primary">
                         <form className="space-y-6" action="mailto:daniel.kleiboldt@gmail.com" method="post" encType="text/plain">
                             <div className="space-y-2">
-                                <label htmlFor="name" className="text-sm font-bold text-foreground uppercase tracking-wider">Ihr Name *</label>
+                                <label htmlFor="name" className="text-sm font-medium text-foreground uppercase tracking-wider">Ihr Name *</label>
                                 <input
                                     type="text"
                                     id="name"
@@ -35,7 +35,7 @@ export function Contact() {
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-bold text-foreground uppercase tracking-wider">Ihre E-Mail *</label>
+                                <label htmlFor="email" className="text-sm font-medium text-foreground uppercase tracking-wider">Ihre E-Mail *</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -46,7 +46,7 @@ export function Contact() {
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="message" className="text-sm font-bold text-foreground uppercase tracking-wider">Ihre Nachricht</label>
+                                <label htmlFor="message" className="text-sm font-medium text-foreground uppercase tracking-wider">Ihre Nachricht</label>
                                 <textarea
                                     id="message"
                                     name="message"
@@ -77,7 +77,7 @@ export function Contact() {
                     {/* Calendly / Direct Booking */}
                     <div className="flex flex-col justify-stretch order-1 lg:order-2 h-full">
                         <div className="bg-[#121212] rounded-custom p-8 text-white border border-white/10 relative overflow-hidden flex flex-col h-full transition-theme hover:border-primary">
-                            <h3 className="text-3xl font-serif font-bold mb-6 relative z-10">Kostenlose Compliance-Erstprüfung</h3>
+                            <h3 className="text-3xl font-semibold mb-6 relative z-10">Kostenlose Compliance-Erstprüfung</h3>
                             <p className="text-white/70 text-lg mb-8 relative z-10 leading-relaxed">
                                 15 Minuten via Google Meet oder Telefon. Wir bewerten Ihren Status Quo im Hinblick auf den AI Act und die ärztliche Schweigepflicht.
                             </p>

@@ -132,7 +132,7 @@ export function InteractivePraxis() {
                                             <div className="p-2 bg-primary/5 rounded-lg text-primary">
                                                 <activeData.icon className="h-5 w-5" />
                                             </div>
-                                            <h3 className="text-lg font-serif font-bold text-gray-900">{activeData.modal.title}</h3>
+                                            <h3 className="text-lg font-semibold text-gray-900">{activeData.modal.title}</h3>
                                         </div>
                                         <Button variant="ghost" size="sm" onClick={() => setActiveHotspot(null)} className="h-8 w-8 p-0 rounded-full hover:bg-gray-100">
                                             <X className="h-4 w-4" />
