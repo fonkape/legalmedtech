@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-:root {
-  /* Tailwind 4 Theme Variables */
+@theme {
   --color-primary: var(--primary);
   --color-background: var(--background);
   --color-text-primary: var(--foreground);
@@ -13,7 +12,9 @@
   --font-mono: var(--font-mono);
 
   --radius-custom: var(--radius);
+}
 
+:root {
   /* Legacy Theme (Original) */
   --legacy-primary: #B85450;
   --legacy-background: #FAF8F5;
