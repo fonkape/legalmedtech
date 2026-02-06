@@ -53,6 +53,7 @@ export function Footer() {
                             <li><Link href="#angebot" className="text-[#4B5563] hover:text-[#2563EB] transition-colors">KI-Compliance-Audit</Link></li>
                             <li><Link href="#angebot" className="text-[#4B5563] hover:text-[#2563EB] transition-colors">Sovereign AI Roadmap</Link></li>
                             <li><Link href="#angebot" className="text-[#4B5563] hover:text-[#2563EB] transition-colors">Technical Engineering</Link></li>
+                            <li><Link href="/leistungen" className="text-[#4B5563] hover:text-[#2563EB] transition-colors flex items-center gap-1">Leistungsübersicht (PDF) <span className="text-xs opacity-60">↗</span></Link></li>
                         </ul>
                     </div>
 

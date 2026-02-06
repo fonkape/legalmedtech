@@ -77,42 +77,42 @@ export default function JsonLd() {
                 "mainEntity": [
                     {
                         "@type": "Question",
-                        "name": "Mein KI-Anbieter sagt, alles ist DSGVO-konform. Reicht das nicht?",
+                        "name": "Ist der Einsatz von ChatGPT in der Arztpraxis DSGVO-konform?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Nein. 'DSGVO-konform' auf einer Marketing-Seite ist eine Zusicherung des Herstellers – nicht Ihre Absicherung als Betreiber. Der Hersteller liefert Software, Sie setzen sie ein und haften. Sie müssen u.a. eine Datenschutz-Folgenabschätzung durchführen und Human Oversight technisch umsetzen."
+                            "text": "Die kostenlose Standard-Version von ChatGPT speichert Eingaben zum Training und hostet Daten in den USA. Die Eingabe von Patientendaten dort ist ein schwerer Datenschutzverstoß. Für eine rechtssichere Nutzung benötigen Sie: Eine explizite Einwilligung (oder Anonymisierung), einen AV-Vertrag mit OpenAI, und die Enterprise-Version mit 'Zero Data Retention'-Policy. Empfehlung: Setzen Sie auf lokale LLMs ('Sovereign AI'), die Ihre Praxis-IT nie verlassen."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Kann ich nicht einfach einen Anwalt fragen?",
+                        "name": "Wer haftet, wenn KI in der Praxis einen Fehler macht?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Ein Anwalt sagt Ihnen, ob etwas legal ist – nicht, wie Sie es technisch umsetzen. Ich bin Legal Engineer: Ich sage nicht nur 'was' rechtlich nötig ist, sondern auch 'wie' man es technisch implementiert."
+                            "text": "Immer der Arzt. Auch der EU AI Act ändert am Grundsatz des 'Human in the Loop' nichts. Sie haften für Behandlungsfehler (§ 630a BGB), auch wenn die KI den falschen Vorschlag gemacht hat. Der EU AI Act verschärft jedoch Ihre Überwachungspflicht (Human Oversight): Sie müssen verstehen, wie die KI zu ihrem Ergebnis kommt, Sie müssen in der Lage sein, die KI jederzeit zu überstimmen, und Sie müssen Ihre Kontrolle dokumentieren."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Was kostet mich das?",
+                        "name": "Welche Bußgelder drohen bei Nichteinhaltung des EU AI Act?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Quickcheck (Audit) ab 3.000 € (Festpreis). Sovereign AI Implementierung ab 15.000 € (Projekt). Retainer (laufende Beratung) ab 2.000 €/Monat. Zum Vergleich: Ein Datenschutzverstoß oder Haftungsfall ist meist deutlich teurer."
+                            "text": "Die Sanktionen gehen deutlich über die DSGVO hinaus: Bis 35 Mio. € (oder 7% Umsatz) für verbotene KI-Praktiken, bis 15 Mio. € (oder 3% Umsatz) für Verstöße gegen Hochrisiko-KI-Pflichten, bis 7,5 Mio. € (oder 1,5% Umsatz) für falsche Angaben. Für Ärzte besonders relevant: Der Einsatz von nicht-konformen Hochrisiko-Systemen (z.B. unzulässige Diagnosesoftware) fällt unter die 15 Mio. € Kategorie."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Warum sollte ich Ihnen vertrauen?",
+                        "name": "Muss ich als Arzt eine Schulungspflicht für KI erfüllen? (AI Literacy)",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "1. 10 Jahre Corporate Compliance Erfahrung. 2. Tiefes technisches Verständnis (Code & Architektur). 3. Unabhängige Beratung ohne Verkaufsdruck."
+                            "text": "Ja. Nach Art. 4 EU AI Act sind Betreiber verpflichtet, Maßnahmen zur 'KI-Kompetenz' (AI Literacy) sicherzustellen. Das bedeutet: Sie und Ihr Praxispersonal müssen die Funktionsweise und Grenzen der eingesetzten KI verstehen und Risiken (z.B. Halluzinationen, Bias) erkennen können. Ohne nachweisbare Schulung kann im Schadensfall ein Organisationsverschulden angenommen werden."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Ist das nicht alles übertrieben? Bisher ist doch nichts passiert.",
+                        "name": "Brauche ich eine Datenschutz-Folgenabschätzung (DSFA) für KI in meiner Praxis?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Der EU AI Act gilt seit August 2024. Wir sind in einer Übergangsphase ähnlich wie bei der DSGVO 2018. Wer sich jetzt vorbereitet, vermeidet später Hektik und Bußgelder."
+                            "text": "In den meisten Fällen: Ja. Nach Art. 35 DSGVO ist eine DSFA zwingend, wenn 'neue Technologien' mit einem voraussichtlich hohen Risiko für die Rechte Betroffener eingesetzt werden. KI in der Gesundheitsversorgung erfüllt diese Kriterien fast immer (Verarbeitung sensibler Gesundheitsdaten gem. Art. 9 DSGVO + automatisierte Analyse). Starten Sie kein KI-Projekt ohne schriftliche Risikoanalyse."
                         }
                     }
                 ]

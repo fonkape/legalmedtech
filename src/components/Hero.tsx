@@ -43,13 +43,18 @@ export function Hero() {
                                 Compliance-Quickcheck buchen
                             </Button>
                         </Link>
-                        <Link href="#insights">
+                        <Link href="/eu-ai-act-check">
                             <Button size="lg" variant="outline" className="theme-precision:border-white theme-precision:text-white theme-precision:hover:bg-white/10 group">
                                 <ArrowRight className="w-4 h-4 mr-2" />
-                                Artikel lesen
+                                EU AI Act Check
                             </Button>
                         </Link>
                     </div>
+
+                    {/* Quick Links */}
+                    <p className="mt-8 text-sm text-gray-500 theme-precision:text-white/50">
+                        Oder direkt zu: <Link href="#faq" className="underline hover:text-[#2563EB]">Häufige Fragen</Link> · <Link href="#angebot" className="underline hover:text-[#2563EB]">Angebot</Link>
+                    </p>
                 </div>
 
                 {/* Profile Image (Precision Design) */}

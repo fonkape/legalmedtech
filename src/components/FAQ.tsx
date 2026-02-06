@@ -52,7 +52,7 @@ export function FAQ() {
                                 </h3>
                                 <div className="text-base text-gray-700 leading-relaxed space-y-4">
                                     <p>
-                                        Immer der Arzt. Auch der EU AI Act ändert am Grundsatz des <strong>„Human in the Loop“</strong> nichts.
+                                        Immer der Arzt. Auch der <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-[#2563EB] underline hover:no-underline">EU AI Act</a> ändert am Grundsatz des <strong>„Human in the Loop"</strong> nichts.
                                     </p>
                                     <p>
                                         Sie haften für Behandlungsfehler (§ 630a BGB), auch wenn die KI den falschen Vorschlag gemacht hat. Der EU AI Act verschärft jedoch Ihre <strong>Überwachungspflicht (Human Oversight)</strong>:
@@ -111,7 +111,7 @@ export function FAQ() {
                                 </h3>
                                 <div className="text-base text-gray-700 leading-relaxed space-y-4">
                                     <p>
-                                        Ja. Nach <strong>Art. 4 EU AI Act</strong> sind Betreiber verpflichtet, Maßnahmen zur „KI-Kompetenz“ (AI Literacy) sicherzustellen.
+                                        Ja. Nach <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-[#2563EB] underline hover:no-underline"><strong>Art. 4 EU AI Act</strong></a> sind Betreiber verpflichtet, Maßnahmen zur „KI-Kompetenz“ (AI Literacy) sicherzustellen.
                                     </p>
                                     <p>
                                         Das bedeutet konkret:

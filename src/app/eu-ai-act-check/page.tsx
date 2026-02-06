@@ -9,17 +9,17 @@ export default function EuAiActPage() {
     const router = useRouter();
 
     return (
-        <div className="min-h-screen bg-gray-100/50 backdrop-blur-sm flex items-center justify-center p-4 md:p-8 font-sans relative">
+        <div className="min-h-screen bg-gray-100/50 backdrop-blur-sm py-8 px-4 md:px-8 font-sans relative">
 
             {/* Clickable Backdrop to go home */}
             <div
-                className="absolute inset-0 cursor-pointer"
+                className="fixed inset-0 cursor-pointer -z-10"
                 onClick={() => router.push('/')}
                 title="Zurück zur Startseite"
             />
 
             {/* Content Card */}
-            <main className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl border border-gray-200 z-10 flex flex-col animate-fade-in-up">
+            <main className="relative bg-white w-full max-w-4xl mx-auto rounded-3xl shadow-2xl border border-gray-200 z-10 flex flex-col animate-fade-in-up">
 
                 {/* Close Button */}
                 <div className="absolute top-6 right-6 z-20">
