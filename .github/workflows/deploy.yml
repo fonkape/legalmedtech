@@ -33,6 +33,6 @@ jobs:
           server: ${{ secrets.SFTP_HOST }}
           password: ${{ secrets.SFTP_PASSWORD }}
           local_path: './out/*'
-          remote_path: '/Website/'
+          remote_path: 'Website/'
           sftp_only: true
           port: 22
