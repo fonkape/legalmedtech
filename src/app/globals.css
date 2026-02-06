@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('/IBMPlexSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-primary: #2563EB;
+  --color-background: #F9F9F9;
+  --color-text-primary: #121212;
+  --color-card: #FFFFFF;
+  --color-border-subtle: #D1D5DB;
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-tech: 'JetBrains Mono', monospace;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-custom: 0px;
+}
+
+:root {
+  /* Global Variables for Arbitrary Values */
+  --section-padding: 140px;
+
+  /* Retain --primary, --background etc in :root if components access them directly via var() */
+  --primary: #2563EB;
+  --background: #F9F9F9;
+  --foreground: #121212;
+  --border-color: #D1D5DB;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  /* Maps to theme font because --font-body is custom prop? No, theme font usually creates class font-body. But here we use var. */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+p,
+a,
+input,
+button {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo,
+.brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--primary);
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Utilities */
+.section-onyx {
+  background-color: #121212;
+  color: #F9F9F9;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-slate {
+  background-color: #F1F5F9;
+}
+
+.section-white {
+  background-color: var(--background);
+}
+
+.bento-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.transition-theme {
+  transition: all 0.3s ease;
+}
+
+.tech-label,
+code,
+pre,
+.tag,
+.metadata,
+.label {
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
