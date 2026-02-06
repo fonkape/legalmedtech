@@ -26,14 +26,14 @@ export default function LeistungenPdfPage() {
                         <X className="w-6 h-6 text-gray-600" />
                     </Button>
                 </Link>
-                <Button
-                    variant="primary"
-                    size="sm"
-                    onClick={() => window.print()}
-                    className="bg-[#2563EB] text-white"
+                <a
+                    href="/Kleiboldt Legal Engineering Leistungen.pdf"
+                    download
+                    className="bg-[#2563EB] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#1d4ed8] transition-colors no-underline"
+                    style={{ color: 'white' }}
                 >
                     Als PDF speichern / Drucken
-                </Button>
+                </a>
             </div>
 
             {/* PDF Container */}
