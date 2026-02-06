@@ -1,7 +1,7 @@
 "use client";
 
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { HelpCircle, MessageSquare, Calculator, ShieldCheck, AlertTriangle } from "lucide-react";
+import { HelpCircle, MessageSquare, Calculator, ShieldCheck, ShieldAlert } from "lucide-react";
 
 export function FAQ() {
     return (
@@ -14,147 +14,137 @@ export function FAQ() {
                 </div>
 
                 <div className="max-w-4xl mx-auto space-y-6">
-                    {/* Item 1 */}
+                    {/* Item 1: ChatGPT & DSGVO */}
                     <div className="bg-[#F9FAFB] p-6 md:p-8 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-transparent transition-theme hover:border-border-subtle">
                         <div className="flex gap-4 items-start">
                             <HelpCircle className="w-6 h-6 md:w-8 md:h-8 text-[#2563EB] shrink-0 mt-0.5" />
                             <div>
                                 <h3 className="text-lg md:text-xl font-bold text-[#2563EB] mb-4">
-                                    Mein KI-Anbieter sagt, alles ist DSGVO-konform. Reicht das nicht?
+                                    Ist der Einsatz von ChatGPT in der Arztpraxis DSGVO-konform?
                                 </h3>
                                 <div className="text-base text-gray-700 leading-relaxed space-y-4">
                                     <p>
-                                        Nein. "DSGVO-konform" auf einer Marketing-Seite ist eine Zusicherung des Herstellers – nicht Ihre Absicherung als Betreiber.
+                                        <strong>Vorsicht:</strong> Die kostenlose Standard-Version von ChatGPT speichert Eingaben zum Training und hostet Daten in den USA. Die Eingabe von Patientendaten dort ist ein <span className="font-semibold">schwerer Datenschutzverstoß</span>.
                                     </p>
                                     <p>
-                                        Der Hersteller liefert Software. Sie setzen sie ein. Und Sie haften, wenn etwas schiefgeht.
+                                        Für eine rechtssichere Nutzung benötigen Sie:
                                     </p>
-                                    <p>
-                                        Beispiel: Doctolib hat C5-Testat und ISO-Zertifizierungen. Trotzdem müssen SIE als Praxis:
-                                    </p>
-                                    <ul className="list-disc pl-5 space-y-1">
-                                        <li>Datenschutz-Folgenabschätzung durchführen</li>
-                                        <li>Human Oversight technisch umsetzen</li>
-                                        <li>Patienteninformation rechtskonform gestalten</li>
+                                    <ul className="list-disc pl-5 space-y-1 bg-white/50 p-4 rounded-lg border border-gray-100">
+                                        <li>Eine explizite Einwilligung (oder Anonymisierung).</li>
+                                        <li>Einen AV-Vertrag (Auftragsverarbeitung) mit OpenAI.</li>
+                                        <li>Die Enterprise-Version mit &quot;Zero Data Retention&quot;-Policy.</li>
                                     </ul>
                                     <p>
-                                        Ich prüfe, was der Anbieter liefert – und was Sie selbst tun müssen.
+                                        <strong>Empfehlung:</strong> Setzen Sie auf lokale LLMs (&quot;Sovereign AI&quot;), die Ihre Praxis-IT nie verlassen.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Item 2 */}
+                    {/* Item 2: Haftung */}
                     <div className="bg-[#F9FAFB] p-6 md:p-8 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-transparent transition-theme hover:border-border-subtle">
                         <div className="flex gap-4 items-start">
-                            <MessageSquare className="w-6 h-6 md:w-8 md:h-8 text-[#2563EB] shrink-0 mt-0.5" />
+                            <ShieldAlert className="w-6 h-6 md:w-8 md:h-8 text-[#2563EB] shrink-0 mt-0.5" />
                             <div>
                                 <h3 className="text-lg md:text-xl font-bold text-[#2563EB] mb-4">
-                                    Kann ich nicht einfach einen Anwalt fragen?
+                                    Wer haftet, wenn KI in der Praxis einen Fehler macht?
                                 </h3>
                                 <div className="text-base text-gray-700 leading-relaxed space-y-4">
                                     <p>
-                                        Klar. Aber der sagt Ihnen, ob etwas legal ist – nicht, wie Sie es technisch umsetzen.
+                                        Immer der Arzt. Auch der EU AI Act ändert am Grundsatz des <strong>„Human in the Loop“</strong> nichts.
                                     </p>
                                     <p>
-                                        Klassisches Beispiel:
+                                        Sie haften für Behandlungsfehler (§ 630a BGB), auch wenn die KI den falschen Vorschlag gemacht hat. Der EU AI Act verschärft jedoch Ihre <strong>Überwachungspflicht (Human Oversight)</strong>:
                                     </p>
-                                    <ul className="list-none space-y-2">
-                                        <li>- Jurist: "Sie brauchen Human Oversight."</li>
-                                        <li>- Sie: "Okay... und wie bau ich das?"</li>
-                                        <li>- Jurist: "Keine Ahnung, fragen Sie Ihren IT-Dienstleister."</li>
-                                        <li>- IT-Dienstleister: "Keine Ahnung, fragen Sie einen Juristen."</li>
+                                    <ul className="list-disc pl-5 space-y-1">
+                                        <li>Sie müssen verstehen, wie die KI zu ihrem Ergebnis kommt.</li>
+                                        <li>Sie müssen in der Lage sein, die KI jederzeit zu überstimmen.</li>
+                                        <li>Dokumentieren Sie Ihre Kontrolle, um Organisationsverschulden auszuschließen.</li>
                                     </ul>
-                                    <p>
-                                        Ich bin beides. Ich sage nicht nur "was", sondern auch "wie".
-                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Item 3 */}
+                    {/* Item 3: Bußgelder AI Act */}
                     <div className="bg-[#F9FAFB] p-6 md:p-8 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-transparent transition-theme hover:border-border-subtle">
                         <div className="flex gap-4 items-start">
                             <Calculator className="w-6 h-6 md:w-8 md:h-8 text-[#2563EB] shrink-0 mt-0.5" />
                             <div>
                                 <h3 className="text-lg md:text-xl font-bold text-[#2563EB] mb-4">
-                                    Was kostet mich das?
+                                    Welche Bußgelder drohen bei Nichteinhaltung des EU AI Act?
                                 </h3>
                                 <div className="text-base text-gray-700 leading-relaxed space-y-4">
                                     <p>
-                                        Kommt drauf an, was Sie brauchen:
+                                        Die Sanktionen gehen deutlich über die DSGVO hinaus und können existenzbedrohend sein:
                                     </p>
-                                    <ul className="list-disc pl-5 space-y-2">
-                                        <li><strong>Quickcheck (Audit):</strong> Ab 3.000 € (Festpreis)</li>
-                                        <li><strong>Sovereign AI (Implementierung):</strong> Ab 15.000 € (Projekt)</li>
-                                        <li><strong>Retainer (laufende Beratung):</strong> Ab 2.000 €/Monat</li>
-                                    </ul>
+                                    <div className="grid grid-cols-1 gap-3 text-sm">
+                                        <div className="bg-white p-3 rounded border border-gray-200 flex justify-between">
+                                            <span>Verbotene KI-Praktiken</span>
+                                            <span className="font-bold">Bis 35 Mio. € (oder 7% Umsatz)</span>
+                                        </div>
+                                        <div className="bg-white p-3 rounded border border-gray-200 flex justify-between">
+                                            <span>Verstoß gegen Pflichten (Hochrisiko-KI)</span>
+                                            <span className="font-bold">Bis 15 Mio. € (oder 3% Umsatz)</span>
+                                        </div>
+                                        <div className="bg-white p-3 rounded border border-gray-200 flex justify-between">
+                                            <span>Falsche Angaben</span>
+                                            <span className="font-bold">Bis 7,5 Mio. € (oder 1,5% Umsatz)</span>
+                                        </div>
+                                    </div>
                                     <p>
-                                        Vergleich: Eine falsche Compliance-Entscheidung kostet Sie entweder:
-                                    </p>
-                                    <ul className="list-disc pl-5 space-y-1">
-                                        <li>50.000 € (Bußgeld Datenschutzbeauftragter)</li>
-                                        <li>100.000+ € (Haftungsfall)</li>
-                                        <li>Ihre Zulassung (Ärztekammer)</li>
-                                    </ul>
-                                    <p className="font-medium text-[#2563EB]">
-                                        Ich bin günstiger als jedes dieser Szenarien.
+                                        Für Ärzte besonders relevant: Der Einsatz von nicht-konformen Hochrisiko-Systemen (z.B. unzulässige Diagnosesoftware) fällt unter die 15 Mio. € Kategorie.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Item 4 */}
+                    {/* Item 4: Schulungspflicht */}
                     <div className="bg-[#F9FAFB] p-6 md:p-8 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-transparent transition-theme hover:border-border-subtle">
                         <div className="flex gap-4 items-start">
                             <ShieldCheck className="w-6 h-6 md:w-8 md:h-8 text-[#2563EB] shrink-0 mt-0.5" />
                             <div>
                                 <h3 className="text-lg md:text-xl font-bold text-[#2563EB] mb-4">
-                                    Warum sollte ich Ihnen vertrauen?
+                                    Muss ich als Arzt eine Schulungspflicht für KI erfüllen? (AI Literacy)
                                 </h3>
                                 <div className="text-base text-gray-700 leading-relaxed space-y-4">
                                     <p>
-                                        Gute Frage. Drei Gründe:
+                                        Ja. Nach <strong>Art. 4 EU AI Act</strong> sind Betreiber verpflichtet, Maßnahmen zur „KI-Kompetenz“ (AI Literacy) sicherzustellen.
                                     </p>
-                                    <ol className="list-decimal pl-5 space-y-2">
-                                        <li>Ich habe 10 Jahre Corporate Compliance gemacht. Ich weiß, wie Haftung funktioniert.</li>
-                                        <li>Ich verstehe KI technisch. Ich kann Code lesen und Architektur beurteilen.</li>
-                                        <li>Ich bin kein Verkäufer. Wenn Ihre Lösung rechtssicher ist, sage ich das. Wenn nicht, sage ich das auch.</li>
-                                    </ol>
-                                    <p className="italic text-gray-500">
-                                        Referenzen auf Anfrage.
+                                    <p>
+                                        Das bedeutet konkret:
+                                    </p>
+                                    <ul className="list-disc pl-5 space-y-1">
+                                        <li>Sie und Ihr Praxispersonal müssen die Funktionsweise und Grenzen der eingesetzten KI verstehen.</li>
+                                        <li>Sie müssen Risiken (z.B. Halluzinationen, Bias) erkennen können.</li>
+                                    </ul>
+                                    <p>
+                                        Ohne nachweisbare Schulung kann im Schadensfall ein Organisationsverschulden angenommen werden.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Item 5 */}
+                    {/* Item 5: DSFA */}
                     <div className="bg-[#F9FAFB] p-6 md:p-8 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-transparent transition-theme hover:border-border-subtle">
                         <div className="flex gap-4 items-start">
-                            <AlertTriangle className="w-6 h-6 md:w-8 md:h-8 text-[#2563EB] shrink-0 mt-0.5" />
+                            <MessageSquare className="w-6 h-6 md:w-8 md:h-8 text-[#2563EB] shrink-0 mt-0.5" />
                             <div>
                                 <h3 className="text-lg md:text-xl font-bold text-[#2563EB] mb-4">
-                                    Ist das nicht alles übertrieben? Bisher ist doch nichts passiert.
+                                    Brauche ich eine Datenschutz-Folgenabschätzung (DSFA) für KI in meiner Praxis?
                                 </h3>
                                 <div className="text-base text-gray-700 leading-relaxed space-y-4">
                                     <p>
-                                        Antwort: Noch nicht.
+                                        In den meisten Fällen: <strong>Ja.</strong>
                                     </p>
                                     <p>
-                                        Der EU AI Act gilt seit August 2024. Die Hochrisiko-Anforderungen greifen ab August 2026.
+                                        Nach Art. 35 DSGVO ist eine DSFA zwingend, wenn „neue Technologien“ mit einem voraussichtlich hohen Risiko für die Rechte Betroffener eingesetzt werden. KI in der Gesundheitsversorgung erfüllt diese Kriterien fast immer (Verarbeitung sensibler Gesundheitsdaten gem. Art. 9 DSGVO + automatisierte Analyse).
                                     </p>
                                     <p>
-                                        Wir sind in der Übergangsphase. Aktuell passiert wenig – aber das ändert sich.
-                                    </p>
-                                    <p>
-                                        Vergleich: DSGVO galt ab Mai 2018. Die ersten großen Bußgelder kamen 2019/2020. Wer vorher compliance war, hatte Ruhe. Der Rest zahlte.
-                                    </p>
-                                    <p className="font-bold">
-                                        Gleiches Muster beim AI Act.
+                                        Starten Sie kein KI-Projekt ohne schriftliche Risikoanalyse.
                                     </p>
                                 </div>
                             </div>

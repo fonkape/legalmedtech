@@ -13,17 +13,17 @@ export function Hero() {
                     {/* Headline */}
                     <h1 className="font-bold tracking-tight mb-8 leading-[1.1] transition-theme mx-0">
                         <span className="block text-3xl sm:text-4xl md:text-5xl mb-4 theme-legacy:text-gray-800 theme-precision:text-white/60">
-                            KI in der Arztpraxis?
+                            Rechtssichere KI in Klinik & Praxis
                         </span>
                         <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] theme-legacy:italic theme-legacy:text-[#2563EB] theme-precision:text-white uppercase tracking-tighter">
-                            Nur mit Human Oversight.
+                            Konform zum<br />EU AI Act.
                         </span>
                     </h1>
 
                     {/* Tagline / Subheadline */}
                     <div className="mb-10 transition-theme">
                         <p className="text-xl md:text-2xl font-medium mb-6 leading-relaxed theme-legacy:text-gray-900 theme-precision:text-white">
-                            Ihre Software kann alles. Aber wer haftet, wenn die KI halluziniert?
+                            Vermeiden Sie Haftung durch Human Oversight. Ich prüfe Ihre Compliance.
                         </p>
                         <p className="text-lg md:text-xl font-light leading-relaxed theme-legacy:text-gray-600 theme-precision:text-white/70">
                             Ich kombiniere juristische Expertise mit AI Engineering – damit Ihre Praxis-KI nicht nur effizient, sondern rechtssicher ist. Von Anfang an.

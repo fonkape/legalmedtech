@@ -90,6 +90,11 @@ export function Footer() {
                         <h4 className="font-bold text-foreground mb-8 uppercase tracking-widest text-xs">Rechtliches</h4>
                         <ul className="space-y-4 text-sm font-medium">
                             <li>
+                                <Link href="/eu-ai-act-check" className="!text-[#4B5563] hover:!text-[#2563EB] transition-colors uppercase tracking-wider">
+                                    EU AI Act Quick-Check
+                                </Link>
+                            </li>
+                            <li>
                                 <button onClick={() => setShowImpressum(true)} className="text-[#4B5563] hover:text-[#2563EB] transition-colors text-left uppercase tracking-wider">
                                     Impressum
                                 </button>
