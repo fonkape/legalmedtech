@@ -10,12 +10,12 @@ export function TrustAbout() {
                     {/* Text Column */}
                     <div className="order-2 lg:order-1 text-left">
                         <ScrollReveal as="h2" className="text-4xl md:text-6xl font-bold text-foreground mb-8 leading-[1.1] tracking-tight transition-theme mx-0">
-                            Jurist. AI Engineer. Architekt.
+                            Jurist. Software Engineer. Architekt.
                         </ScrollReveal>
 
                         <div className="space-y-6 text-lg theme-legacy:text-gray-600 theme-precision:text-white/70 leading-relaxed transition-theme">
                             <p>
-                                Ich bin Daniel Kleiboldt. 10 Jahre Konzernjurist, spezialisiert auf Compliance an der Schnittstelle zwischen Regulatorik und Business.
+                                Ich bin Daniel Kleiboldt. 10 Jahre Jurist in einem Konzern, spezialisiert auf Compliance an der Schnittstelle zwischen Regulatorik und Business.
                             </p>
                             <p>
                                 Ich habe erlebt, wie Innovationen in Rechtsabteilungen scheitern – nicht weil sie illegal waren, sondern weil niemand die richtigen Fragen stellte.
@@ -40,13 +40,13 @@ export function TrustAbout() {
                                 <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                                 <div>
                                     <span className="text-foreground font-bold block">10 Jahre Corporate Law:</span>
-                                    <span className="text-sm opacity-70">Vertragsgestaltung & Risk Management</span>
+                                    <span className="text-sm opacity-70">Change Management & Compliance</span>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4 p-4 border border-border-subtle rounded-custom transition-theme theme-precision:bg-white/5">
                                 <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                                 <div>
-                                    <span className="text-foreground font-bold block">AI Engineer:</span>
+                                    <span className="text-foreground font-bold block">Software Engineer:</span>
                                     <span className="text-sm opacity-70">Spezialisiert auf LLM-Architekturen & Privacy</span>
                                 </div>
                             </div>

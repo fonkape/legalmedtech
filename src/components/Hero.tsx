@@ -32,7 +32,7 @@ export function Hero() {
 
                     {/* Credentials */}
                     <p className="mb-12 transition-theme theme-legacy:text-sm theme-legacy:font-medium theme-legacy:tracking-wide theme-legacy:uppercase theme-legacy:text-gray-500 theme-precision:tech-label theme-precision:text-primary">
-                        Diplom-Jurist • AI Engineer • EU AI Act, MDR, DSGVO
+                        Diplom-Jurist • Software Engineer • EU AI Act, MDR, DSGVO
                     </p>
 
                     {/* CTA Buttons */}

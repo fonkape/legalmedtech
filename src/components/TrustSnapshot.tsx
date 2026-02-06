@@ -19,7 +19,7 @@ export function TrustSnapshot() {
                                     <span className="font-mono font-bold text-xs absolute -right-1 top-0">AI</span>
                                 </div>
                             </div>
-                            <h3 className="font-bold text-gray-900 mb-2">Diplom-Jurist & AI Engineer</h3>
+                            <h3 className="font-bold text-gray-900 mb-2">Diplom-Jurist & Software Engineer</h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
                                 10 Jahre Corporate Law + 8 Monate AI-Bootcamp bei Masterschool. Ich spreche beide Sprachen.
                             </p>
@@ -49,6 +49,6 @@ export function TrustSnapshot() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
