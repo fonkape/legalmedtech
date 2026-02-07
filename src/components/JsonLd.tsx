@@ -13,13 +13,52 @@ export default function JsonLd() {
                     "https://www.linkedin.com/in/daniel-kleiboldt-306a75123/",
                     "https://www.linkedin.com/in/daniel-kleiboldt/"
                 ],
-                "description": "Expert for Legal Engineering in Healthcare AI Compliance. Sovereign AI & Governance.",
-                "knowsAbout": ["Healthcare AI", "Legal Engineering", "Medical Device Regulation", "AI Governance", "EU AI Act", "DSGVO"]
+                "description": "Diplom-Jurist und Software Engineer spezialisiert auf rechtssichere KI-Integration im Gesundheitswesen. 10 Jahre Konzernerfahrung in Compliance und Change Management.",
+                "hasCredential": [
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "credentialCategory": "degree",
+                        "name": "Diplom-Jurist"
+                    }
+                ],
+                "hasOccupation": [
+                    {
+                        "@type": "Occupation",
+                        "name": "Legal Engineer",
+                        "occupationLocation": { "@type": "Country", "name": "Germany" }
+                    },
+                    {
+                        "@type": "Occupation",
+                        "name": "Software Engineer",
+                        "occupationLocation": { "@type": "Country", "name": "Germany" }
+                    }
+                ],
+                "knowsAbout": [
+                    "Healthcare AI",
+                    "Legal Engineering",
+                    "Medical Device Regulation (MDR)",
+                    "AI Governance",
+                    "EU AI Act",
+                    "DSGVO",
+                    "§ 203 StGB",
+                    "Software Engineering",
+                    "LLM Architecture",
+                    "Privacy by Design",
+                    "Compliance by Design",
+                    "Data Protection Impact Assessment (DSFA)",
+                    "Human Oversight",
+                    "AI Literacy",
+                    "Sovereign AI",
+                    "Open Source LLM",
+                    "HIPAA equivalent German regulations",
+                    "CE Marking for Medical Software"
+                ]
             },
             {
-                "@type": "ProfessionalService",
+                "@type": ["ProfessionalService", "LegalService"],
                 "@id": "https://kleiboldt.de/#organization",
                 "name": "Daniel Kleiboldt - Büro für Legal Engineering",
+                "alternateName": "Kleiboldt Legal Engineering",
                 "url": "https://kleiboldt.de",
                 "logo": "https://kleiboldt.de/logo-master.svg",
                 "image": "https://kleiboldt.de/profile_freigestellt.png",
@@ -38,35 +77,101 @@ export default function JsonLd() {
                 "telephone": "+49 5241 7082012",
                 "email": "mail@kleiboldt.de",
                 "priceRange": "$$$",
-                "description": "Rechtssichere Architektur für KI in der Medizin. Wir unterstützen Arztpraxen und Health-Tech bei der Umsetzung von EU AI Act, MDR und DSGVO.",
+                "description": "Rechtssichere Architektur für KI in der Medizin. Wir unterstützen Kliniken, Arztpraxen, MVZs und Health-Tech-Unternehmen bei der Umsetzung von EU AI Act, MDR und DSGVO. Compliance by Design statt nachträglichem Audit.",
+                "slogan": "Rechtssichere KI-Integration für Kliniken und Praxen",
                 "founder": { "@id": "https://kleiboldt.de/#person" },
-                "areaServed": "Germany",
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "Germany"
+                },
+                "audience": {
+                    "@type": "Audience",
+                    "audienceType": "Healthcare Professionals",
+                    "geographicArea": { "@type": "Country", "name": "Germany" }
+                },
+                "serviceType": [
+                    "Healthcare AI Compliance",
+                    "Legal Engineering",
+                    "EU AI Act Beratung",
+                    "MDR Compliance",
+                    "DSGVO Beratung",
+                    "KI-Compliance für Arztpraxen",
+                    "Sovereign AI Implementation"
+                ],
+                "knowsAbout": [
+                    "EU AI Act Betreiberpflichten",
+                    "Hochrisiko-KI im Gesundheitswesen",
+                    "Medical Device Regulation",
+                    "Datenschutz-Folgenabschätzung",
+                    "Human Oversight für KI",
+                    "AI Literacy Schulungen",
+                    "Privacy by Design",
+                    "Lokale LLM-Installation"
+                ],
                 "hasOfferCatalog": {
                     "@type": "OfferCatalog",
-                    "name": "Legal Engineering Services",
+                    "name": "Legal Engineering Services für Healthcare AI",
                     "itemListElement": [
                         {
                             "@type": "Offer",
                             "itemOffered": {
                                 "@type": "Service",
-                                "name": "Compliance Quickcheck",
-                                "description": "Auditierung bestehender KI-Lösungen und Prozesse auf EU AI Act & DSGVO Konformität."
+                                "name": "AI-Readiness & Potenzialanalyse",
+                                "description": "Workflow-Analyse, IT-Infrastruktur-Assessment, Datenschutz-Erstbewertung und Use-Case-Priorisierung mit Roadmap für Praxen am Anfang der KI-Reise.",
+                                "serviceType": "AI Strategy Consulting",
+                                "provider": { "@id": "https://kleiboldt.de/#organization" }
+                            },
+                            "price": "1900",
+                            "priceCurrency": "EUR",
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "price": "1900",
+                                "priceCurrency": "EUR",
+                                "valueAddedTaxIncluded": false
                             }
                         },
                         {
                             "@type": "Offer",
                             "itemOffered": {
                                 "@type": "Service",
-                                "name": "Sovereign AI Implementierung",
-                                "description": "Technische Umsetzung von Open Source KI-Modellen auf eigener Infrastruktur für maximale Datensouveränität."
+                                "name": "Compliance-Quickcheck",
+                                "description": "Auditierung bestehender KI-Lösungen (Doctolib, CGM, Microsoft Dragon Copilot) auf EU AI Act, DSGVO und MDR Konformität. Betreiberpflichten-Analyse, Human Oversight Bewertung, DSFA-Notwendigkeitsprüfung.",
+                                "serviceType": "AI Compliance Audit",
+                                "provider": { "@id": "https://kleiboldt.de/#organization" }
+                            },
+                            "price": "3000",
+                            "priceCurrency": "EUR"
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Sovereign AI Implementation",
+                                "description": "Lokale LLM-Installation (Llama, Mistral, Phi) auf eigener Infrastruktur. Privacy-by-Design-Architektur, Zero-Knowledge-Deployment, § 203 StGB konforme Lösung für maximale Datensouveränität.",
+                                "serviceType": "AI Implementation",
+                                "provider": { "@id": "https://kleiboldt.de/#organization" }
+                            },
+                            "price": "15000",
+                            "priceCurrency": "EUR"
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Technical Compliance Engineering",
+                                "description": "Compliance-as-Code für Health-Tech Startups und KI-Anbieter. Privacy-Proxy-Entwicklung, MDR-Zertifizierungsbegleitung, AI Act Technical Documentation, CE-Marking Vorbereitung.",
+                                "serviceType": "Regulatory Compliance Engineering",
+                                "provider": { "@id": "https://kleiboldt.de/#organization" }
                             }
                         },
                         {
                             "@type": "Offer",
                             "itemOffered": {
                                 "@type": "Service",
-                                "name": "Legal Engineering Retainer",
-                                "description": "Laufende technische und rechtliche Begleitung bei KI-Projekten."
+                                "name": "Klinik-Leistungspaket",
+                                "description": "Drei-Phasen-Ansatz für Kliniken: A) Technische Lastenheft-Spezifikation (Risikoklassifizierung, Data Governance, Logging), B) Procurement & Vendor Management (Ausschreibungen, Vendor Due Diligence, Vertragsgestaltung), C) Implementation Oversight (QMS, Post-Market Monitoring, AI Literacy).",
+                                "serviceType": "Enterprise AI Governance",
+                                "provider": { "@id": "https://kleiboldt.de/#organization" }
                             }
                         }
                     ]
@@ -114,8 +219,25 @@ export default function JsonLd() {
                             "@type": "Answer",
                             "text": "In den meisten Fällen: Ja. Nach Art. 35 DSGVO ist eine DSFA zwingend, wenn 'neue Technologien' mit einem voraussichtlich hohen Risiko für die Rechte Betroffener eingesetzt werden. KI in der Gesundheitsversorgung erfüllt diese Kriterien fast immer (Verarbeitung sensibler Gesundheitsdaten gem. Art. 9 DSGVO + automatisierte Analyse). Starten Sie kein KI-Projekt ohne schriftliche Risikoanalyse."
                         }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Was ist Legal Engineering und warum brauche ich es für KI im Gesundheitswesen?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Legal Engineering bedeutet, Compliance von Anfang an in die Systemarchitektur einzubauen – nicht nachträglich draufzukleben. Im Gesundheitswesen überschneiden sich EU AI Act, MDR und DSGVO, teilweise widersprechen sie sich. Ein Legal Engineer spricht sowohl die Sprache der IT als auch des Rechts und kann rechtssichere Architektur von Tag 1 an liefern – mit einem Ansprechpartner statt drei."
+                        }
                     }
                 ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://kleiboldt.de/#website",
+                "url": "https://kleiboldt.de",
+                "name": "Kleiboldt Legal Engineering",
+                "description": "Healthcare AI Compliance - Rechtssichere KI-Integration für Kliniken und Praxen",
+                "publisher": { "@id": "https://kleiboldt.de/#organization" },
+                "inLanguage": "de-DE"
             }
         ]
     };
